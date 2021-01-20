@@ -16,43 +16,31 @@ class FIFOSystem {
   init() {
     self.orderQueue = .init()
     self.courierQueue = .init()
-
-    self.orderQueue.didPushHandler = { [weak self] in
-      // ako je dostupan kurir u queue onda izbaci taj order i tog kurira jer smo uspjeli napraviti
-      // FIFO STRATEGY
-      print("Order prepared")
-      guard let self = self else { return }
-      if !self.courierQueue.isEmpty {
-        self.courierQueue.pop()
-        self.orderQueue.pop()
-        print("Order picked up")
-      }
-    }
-    
-    self.courierQueue.didPushHandler = { [weak self] in
-      // ako je dostupan order onda izbaci order i kurira jer smo uspjeli napraviti
-      // FIFO STRATEGY
-      print("Courier arrived.")
-      guard let self = self else { return }
-      if !self.orderQueue.isEmpty {
-        self.orderQueue.pop()
-        self.courierQueue.pop()
-        print("Order picked up")
-      }
-    }
   }
 
-  func appendOrder(_ order: Order) {
+  func acceptOrder(_ order: Order) {
     print("Order received")
+    
     let arrivalTime = Double(Int.random(in: 3...15))
     DispatchQueue.main.asyncAfter(deadline: .now() + arrivalTime) {
-      self.courierQueue.push(Courier(orderId: order.id))
+      if self.orderQueue.isEmpty {
+        self.courierQueue.push(Courier(orderId: order.id))
+      } else {
+        self.orderQueue.pop()
+        print("Order picked up")
+      }
     }
-    
-    // start order preparation
     print("Courier dispatched")
+
+    // start order preparation
     DispatchQueue.main.asyncAfter(deadline: .now() + Double(order.prepTime)) {
-      self.orderQueue.push(order)
+      print("Order prepared")
+      if self.courierQueue.isEmpty {
+        self.orderQueue.push(order)
+      } else {
+        self.courierQueue.pop()
+        print("Order picked up")
+      }
     }
   }
 }

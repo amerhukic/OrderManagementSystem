@@ -22,7 +22,8 @@ class SystemSimulator {
         $0.invalidate()
         return
       }
-      fifoSystem.appendOrder(orders[self.orderGeneratorIndex])
+      fifoSystem.acceptOrder(orders[self.orderGeneratorIndex])
+      self.orderGeneratorIndex += 1
     }
   }
 }
