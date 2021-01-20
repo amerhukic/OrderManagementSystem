@@ -22,6 +22,7 @@
 		1910018B25B72EAF000B7BCD /* Courier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1910018A25B72EAF000B7BCD /* Courier.swift */; };
 		197E397125B76DCB00314BDF /* SystemTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197E397025B76DCB00314BDF /* SystemTestViewController.swift */; };
 		197E397C25B76FD700314BDF /* dispatch_orders.json in Resources */ = {isa = PBXBuildFile; fileRef = 197E397B25B76FD700314BDF /* dispatch_orders.json */; };
+		197E398225B85F0B00314BDF /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197E398125B85F0B00314BDF /* Analytics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		1910018A25B72EAF000B7BCD /* Courier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Courier.swift; sourceTree = "<group>"; };
 		197E397025B76DCB00314BDF /* SystemTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemTestViewController.swift; sourceTree = "<group>"; };
 		197E397B25B76FD700314BDF /* dispatch_orders.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dispatch_orders.json; sourceTree = "<group>"; };
+		197E398125B85F0B00314BDF /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				1910017F25B7288B000B7BCD /* Queue.swift */,
+				197E398125B85F0B00314BDF /* Analytics.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				191000BE25B4DEB8000B7BCD /* AppDelegate.swift in Sources */,
 				191000FA25B4E344000B7BCD /* OrderGenerator.swift in Sources */,
 				1910017825B725B5000B7BCD /* FIFOSystem.swift in Sources */,
+				197E398225B85F0B00314BDF /* Analytics.swift in Sources */,
 				191000C025B4DEB8000B7BCD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
