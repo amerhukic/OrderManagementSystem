@@ -18,12 +18,16 @@ class SystemSimulator {
     let orders = orderGenerator.readOrdersFromFile(named: "dispatch_orders")
     Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] in
       guard let self = self else { return }
-      guard self.orderGeneratorIndex < orders.count else {
-        $0.invalidate()
-        return
+      let ordersPerSecond = 50
+      var counter = 0
+      while self.orderGeneratorIndex < orders.count && counter < ordersPerSecond {
+        fifoSystem.acceptOrder(orders[self.orderGeneratorIndex])
+        self.orderGeneratorIndex += 1
+        counter += 1
       }
-      fifoSystem.acceptOrder(orders[self.orderGeneratorIndex])
-      self.orderGeneratorIndex += 1
+      if self.orderGeneratorIndex >= orders.count {
+        $0.invalidate()
+      }
     }
   }
 }
