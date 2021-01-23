@@ -7,4 +7,8 @@
 
 struct Courier: Decodable {
   let orderId: String?
+  
+  init(orderId: String? = nil) {
+    self.orderId = orderId
+  }
 }

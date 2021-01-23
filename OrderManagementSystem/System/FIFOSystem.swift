@@ -25,23 +25,29 @@ class FIFOSystem {
 
   func acceptOrder(_ order: Order) {
     analytics.log(.orderReceived)
-    
-    // dispatch courier
+    dispatchCourier()
+    startPreparing(order)
+  }
+}
+
+private extension FIFOSystem {
+  func dispatchCourier() {
     let arrivalTime = Double(Int.random(in: 3...15))
     courierDispatchQueue.asyncAfter(deadline: .now() + arrivalTime) {
       if self.orderQueue.isEmpty {
-        self.courierQueue.push(Courier(orderId: order.id))
+        self.courierQueue.push(Courier())
       } else {
         if self.orderQueue.pop() != nil {
           self.analytics.log(.orderPickedUp)
         } else {
-          self.courierQueue.push(Courier(orderId: order.id))
+          self.courierQueue.push(Courier())
         }
       }
     }
     analytics.log(.courierDispatched)
-
-    // start order preparation
+  }
+  
+  func startPreparing(_ order: Order) {
     orderDispatchQueue.asyncAfter(deadline: .now() + Double(order.prepTime)) {
       self.analytics.log(.orderPrepared)
       if self.courierQueue.isEmpty {
@@ -56,4 +62,3 @@ class FIFOSystem {
     }
   }
 }
-
