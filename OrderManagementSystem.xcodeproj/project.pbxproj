@@ -18,8 +18,13 @@
 		191000FA25B4E344000B7BCD /* OrderGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191000F925B4E344000B7BCD /* OrderGenerator.swift */; };
 		1910010325B4E64F000B7BCD /* SystemSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1910010225B4E64F000B7BCD /* SystemSimulator.swift */; };
 		1910017825B725B5000B7BCD /* FIFOSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1910017725B725B5000B7BCD /* FIFOSystem.swift */; };
-		1910018025B7288B000B7BCD /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1910017F25B7288B000B7BCD /* Queue.swift */; };
+		1910018025B7288B000B7BCD /* ThreadSafeQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1910017F25B7288B000B7BCD /* ThreadSafeQueue.swift */; };
 		1910018B25B72EAF000B7BCD /* Courier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1910018A25B72EAF000B7BCD /* Courier.swift */; };
+		1972324425BD703500B40BA3 /* OrderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972324325BD703500B40BA3 /* OrderData.swift */; };
+		1972324925BD703F00B40BA3 /* CourierData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972324825BD703F00B40BA3 /* CourierData.swift */; };
+		1972325425BD806E00B40BA3 /* CourierDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972325325BD806E00B40BA3 /* CourierDispatcher.swift */; };
+		1972325925BD807500B40BA3 /* Kitchen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972325825BD807500B40BA3 /* Kitchen.swift */; };
+		1973E3CC25BC6ECF00D0ED13 /* ThreadSafeDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1973E3CB25BC6ECF00D0ED13 /* ThreadSafeDictionary.swift */; };
 		197E397125B76DCB00314BDF /* SystemTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197E397025B76DCB00314BDF /* SystemTestViewController.swift */; };
 		197E397C25B76FD700314BDF /* dispatch_orders.json in Resources */ = {isa = PBXBuildFile; fileRef = 197E397B25B76FD700314BDF /* dispatch_orders.json */; };
 		197E398225B85F0B00314BDF /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197E398125B85F0B00314BDF /* Analytics.swift */; };
@@ -60,8 +65,13 @@
 		191000F925B4E344000B7BCD /* OrderGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderGenerator.swift; sourceTree = "<group>"; };
 		1910010225B4E64F000B7BCD /* SystemSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemSimulator.swift; sourceTree = "<group>"; };
 		1910017725B725B5000B7BCD /* FIFOSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIFOSystem.swift; sourceTree = "<group>"; };
-		1910017F25B7288B000B7BCD /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		1910017F25B7288B000B7BCD /* ThreadSafeQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadSafeQueue.swift; sourceTree = "<group>"; };
 		1910018A25B72EAF000B7BCD /* Courier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Courier.swift; sourceTree = "<group>"; };
+		1972324325BD703500B40BA3 /* OrderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderData.swift; sourceTree = "<group>"; };
+		1972324825BD703F00B40BA3 /* CourierData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourierData.swift; sourceTree = "<group>"; };
+		1972325325BD806E00B40BA3 /* CourierDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourierDispatcher.swift; sourceTree = "<group>"; };
+		1972325825BD807500B40BA3 /* Kitchen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kitchen.swift; sourceTree = "<group>"; };
+		1973E3CB25BC6ECF00D0ED13 /* ThreadSafeDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadSafeDictionary.swift; sourceTree = "<group>"; };
 		197E397025B76DCB00314BDF /* SystemTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemTestViewController.swift; sourceTree = "<group>"; };
 		197E397B25B76FD700314BDF /* dispatch_orders.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dispatch_orders.json; sourceTree = "<group>"; };
 		197E398125B85F0B00314BDF /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
@@ -120,6 +130,7 @@
 				197E397025B76DCB00314BDF /* SystemTestViewController.swift */,
 				1910017D25B725C9000B7BCD /* Simulator */,
 				1910017C25B725C2000B7BCD /* System */,
+				1973E3D325BC7B2600D0ED13 /* Models */,
 				1910017E25B7287E000B7BCD /* Helpers */,
 				191000F825B4E2F8000B7BCD /* Other */,
 			);
@@ -168,9 +179,9 @@
 			isa = PBXGroup;
 			children = (
 				1910017725B725B5000B7BCD /* FIFOSystem.swift */,
-				191000F325B4E2E3000B7BCD /* Order.swift */,
-				191000F925B4E344000B7BCD /* OrderGenerator.swift */,
-				1910018A25B72EAF000B7BCD /* Courier.swift */,
+				197E398125B85F0B00314BDF /* Analytics.swift */,
+				1972325325BD806E00B40BA3 /* CourierDispatcher.swift */,
+				1972325825BD807500B40BA3 /* Kitchen.swift */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -186,10 +197,22 @@
 		1910017E25B7287E000B7BCD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				1910017F25B7288B000B7BCD /* Queue.swift */,
-				197E398125B85F0B00314BDF /* Analytics.swift */,
+				191000F925B4E344000B7BCD /* OrderGenerator.swift */,
+				1973E3CB25BC6ECF00D0ED13 /* ThreadSafeDictionary.swift */,
+				1910017F25B7288B000B7BCD /* ThreadSafeQueue.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1973E3D325BC7B2600D0ED13 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				191000F325B4E2E3000B7BCD /* Order.swift */,
+				1910018A25B72EAF000B7BCD /* Courier.swift */,
+				1972324325BD703500B40BA3 /* OrderData.swift */,
+				1972324825BD703F00B40BA3 /* CourierData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,7 +349,12 @@
 				197E397125B76DCB00314BDF /* SystemTestViewController.swift in Sources */,
 				191000F425B4E2E3000B7BCD /* Order.swift in Sources */,
 				1910018B25B72EAF000B7BCD /* Courier.swift in Sources */,
-				1910018025B7288B000B7BCD /* Queue.swift in Sources */,
+				1972324925BD703F00B40BA3 /* CourierData.swift in Sources */,
+				1972325425BD806E00B40BA3 /* CourierDispatcher.swift in Sources */,
+				1910018025B7288B000B7BCD /* ThreadSafeQueue.swift in Sources */,
+				1972324425BD703500B40BA3 /* OrderData.swift in Sources */,
+				1972325925BD807500B40BA3 /* Kitchen.swift in Sources */,
+				1973E3CC25BC6ECF00D0ED13 /* ThreadSafeDictionary.swift in Sources */,
 				1910010325B4E64F000B7BCD /* SystemSimulator.swift in Sources */,
 				191000BE25B4DEB8000B7BCD /* AppDelegate.swift in Sources */,
 				191000FA25B4E344000B7BCD /* OrderGenerator.swift in Sources */,
