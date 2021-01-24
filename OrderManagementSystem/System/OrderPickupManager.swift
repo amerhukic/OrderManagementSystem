@@ -16,32 +16,31 @@ struct OrderPickupManager {
     
   }
   
-  func courierArrived(_ courier: Courier, onOrderPickedUp orderPickupHandler: (UInt64) -> Void) {
+  func courierArrived(_ courier: Courier,
+                      onOrderPickedUp orderPickupHandler: (UInt64) -> Void,
+                      onCourierWaiting courierWaitingHandler: () -> Void) {
     let now = DispatchTime.now()
-    if self.orderQueue.isEmpty {
-      self.courierQueue.push(CourierData(courier: courier, arrivalTimePoint: now))
-    } else {
-      if let orderData = self.orderQueue.pop() {
-        let timeDifferenceMs = timeCalculator.getMillisecondTimeDifference(now, orderData.preparationTimePoint)
-        orderPickupHandler(timeDifferenceMs)
-      } else {
-        self.courierQueue.push(CourierData(courier: courier, arrivalTimePoint: now))
-      }
+    guard let orderData = orderQueue.pop() else {
+      courierQueue.push(CourierData(courier: courier, arrivalTimePoint: now))
+      courierWaitingHandler()
+      return
     }
+    let timeDifferenceMs = timeCalculator.getMillisecondTimeDifference(now, orderData.preparationTimePoint)
+    orderPickupHandler(timeDifferenceMs)
   }
   
-  func orderPrepared(_ order: Order, onOrderPickedUp orderPickupHandler: (UInt64) -> Void) {
+  // TODO: better name - maybe handlePreparedOrder ?? or 
+  func orderPrepared(_ order: Order,
+                     onOrderPickedUp orderPickupHandler: (UInt64) -> Void,
+                     onOrderWaiting orderWaitingHandler: () -> Void) {
     let now = DispatchTime.now()
-    if self.courierQueue.isEmpty {
-      self.orderQueue.push(OrderData(order: order, preparationTimePoint: now))
-    } else {
-      if let courierData = self.courierQueue.pop() {
-        let timeDifferenceMs = timeCalculator.getMillisecondTimeDifference(now, courierData.arrivalTimePoint)
-        orderPickupHandler(timeDifferenceMs)
-      } else {
-        self.orderQueue.push(OrderData(order: order, preparationTimePoint: now))
-      }
+    guard let courierData = courierQueue.pop() else {
+      orderQueue.push(OrderData(order: order, preparationTimePoint: now))
+      orderWaitingHandler()
+      return
     }
+    let timeDifferenceMs = timeCalculator.getMillisecondTimeDifference(now, courierData.arrivalTimePoint)
+    orderPickupHandler(timeDifferenceMs)
   }
 }
 
@@ -50,12 +49,6 @@ struct PickupTimeCalculator {
     let firstTimeMs = firstTime.uptimeMilliseconds
     let secondTimeMs = secondTime.uptimeMilliseconds
     return (max(firstTimeMs, secondTimeMs) - min(firstTimeMs, secondTimeMs))
-  }
-}
-
-private extension PickupTimeCalculator {
-  func getTimeDifference(_ a: UInt64, _ b: UInt64) -> UInt64 {
-    (max(a, b) - min(a, b)) / 1_000_000
   }
 }
 

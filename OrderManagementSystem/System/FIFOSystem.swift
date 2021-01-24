@@ -28,20 +28,22 @@ class FIFOSystem {
 private extension FIFOSystem {
   func dispatchCourier(for orderId: String) {
     courierDispatcher.dispatchCourier(forOrderId: orderId) {
-      self.analytics.log(.courierArrived)
-      self.orderPickupManager.courierArrived(Courier(orderId: orderId)) {
-        self.analytics.log(.orderWaitTime($0))
-      }
+      self.orderPickupManager.courierArrived(Courier(orderId: orderId), onOrderPickedUp: {
+        self.analytics.log(.courierArrived, .orderWaitTime($0))
+      }, onCourierWaiting: {
+        self.analytics.log(.courierArrived)
+      })
     }
     analytics.log(.courierDispatched)
   }
   
   func startPreparing(_ order: Order) {
     kitchen.prepareOrder(order) {
-      self.analytics.log(.orderPrepared)
-      self.orderPickupManager.orderPrepared(order) {
-        self.analytics.log(.courierWaitTime($0))
-      }
+      self.orderPickupManager.orderPrepared(order, onOrderPickedUp: {
+        self.analytics.log(.orderPrepared, .orderWaitTime($0))
+      }, onOrderWaiting: {
+        self.analytics.log(.orderPrepared)
+      })
     }
   }
 }

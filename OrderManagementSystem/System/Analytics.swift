@@ -45,9 +45,11 @@ struct Analytics {
     self.logger = logger
   }
   
-  func log(_ event: Event) {
+  func log(_ events: Event...) {
     logDispatchQueue.async {
-      self.logger.info("\(event.description)")
+      events.forEach {
+        self.logger.info("\($0.description)")
+      }
     }
   }
 }
