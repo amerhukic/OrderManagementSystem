@@ -13,7 +13,7 @@ class SystemSimulator {
   func startFIFOSystemSimulation() {
     print("Starting FIFO system simulation")
     orderGeneratorIndex = 0
-    let fifoSystem = FIFOSystem()
+    let fifoSystem = OrderManagmentSystem()
     let orderGenerator = OrderGenerator()
     let orders = orderGenerator.readOrdersFromFile(named: "dispatch_orders")
     Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] in

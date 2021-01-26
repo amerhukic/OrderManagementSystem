@@ -7,10 +7,10 @@
 
 import Foundation
 
-class Queue<T> {
+struct Queue<T> {
   private var elements: Array<T> = []
   
-  func push(_ value: T) {
+  mutating func push(_ value: T) {
     elements.append(value)
   }
   
@@ -18,7 +18,7 @@ class Queue<T> {
   // 1. treba implementirati pomocu linkane liste da bi se lakse brisao prvi element
   // 2. provjeriti da li da vracam nil kad nema za pop??? ili ima neki bolji nacin
   // TODO: mora li biti ovo sync??? moze li biti async???
-  func pop() -> T? {
+  mutating func pop() -> T? {
     guard !elements.isEmpty else {
       return nil
     }

@@ -1,5 +1,5 @@
 //
-//  FIFOSystem.swift
+//  OrderManagmentSystem.swift
 //  OrderManagementSystem
 //
 //  Created by Amer Hukić on 19. 1. 2021..
@@ -8,7 +8,7 @@
 import Foundation
 
 // razlog zasto je System Class a ne struct: Escaping closure captures mutating 'self' parameter error u appendOrder
-class FIFOSystem {
+class OrderManagmentSystem {
   private let kitchen = Kitchen()
   private let courierDispatcher = CourierDispatcher()
   private let orderPickupManager = OrderPickupManager()
@@ -31,9 +31,9 @@ class FIFOSystem {
   }
 }
 
-private extension FIFOSystem {
+private extension OrderManagmentSystem {
   func dispatchCourier(for orderId: String) {
-    courierDispatcher.dispatchCourier(forOrderId: orderId) {
+    courierDispatcher.dispatchCourier() {
       self.printAndLog(.courierArrived)
       self.orderPickupManager.courierArrived(Courier(orderId: orderId), onOrderPickedUp: {
         self.printAndLog(.orderPickedUp, .orderWaitTime($0))

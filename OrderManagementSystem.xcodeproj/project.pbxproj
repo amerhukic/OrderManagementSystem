@@ -17,7 +17,7 @@
 		191000F425B4E2E3000B7BCD /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191000F325B4E2E3000B7BCD /* Order.swift */; };
 		191000FA25B4E344000B7BCD /* OrderGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191000F925B4E344000B7BCD /* OrderGenerator.swift */; };
 		1910010325B4E64F000B7BCD /* SystemSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1910010225B4E64F000B7BCD /* SystemSimulator.swift */; };
-		1910017825B725B5000B7BCD /* FIFOSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1910017725B725B5000B7BCD /* FIFOSystem.swift */; };
+		1910017825B725B5000B7BCD /* OrderManagmentSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1910017725B725B5000B7BCD /* OrderManagmentSystem.swift */; };
 		1910018025B7288B000B7BCD /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1910017F25B7288B000B7BCD /* Queue.swift */; };
 		1910018B25B72EAF000B7BCD /* Courier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1910018A25B72EAF000B7BCD /* Courier.swift */; };
 		1972324425BD703500B40BA3 /* OrderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972324325BD703500B40BA3 /* OrderData.swift */; };
@@ -27,6 +27,7 @@
 		1972325E25BDA03D00B40BA3 /* OrderPickupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972325D25BDA03D00B40BA3 /* OrderPickupManager.swift */; };
 		1972327225BE458400B40BA3 /* Printer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972327125BE458400B40BA3 /* Printer.swift */; };
 		1972329525BF32DF00B40BA3 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972329425BF32DF00B40BA3 /* Event.swift */; };
+		197232C825C07F6700B40BA3 /* MatchedOrderPickupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197232C725C07F6700B40BA3 /* MatchedOrderPickupManager.swift */; };
 		1973E3CC25BC6ECF00D0ED13 /* ThreadSafeDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1973E3CB25BC6ECF00D0ED13 /* ThreadSafeDictionary.swift */; };
 		197E397125B76DCB00314BDF /* SystemTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197E397025B76DCB00314BDF /* SystemTestViewController.swift */; };
 		197E397C25B76FD700314BDF /* dispatch_orders.json in Resources */ = {isa = PBXBuildFile; fileRef = 197E397B25B76FD700314BDF /* dispatch_orders.json */; };
@@ -67,7 +68,7 @@
 		191000F325B4E2E3000B7BCD /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		191000F925B4E344000B7BCD /* OrderGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderGenerator.swift; sourceTree = "<group>"; };
 		1910010225B4E64F000B7BCD /* SystemSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemSimulator.swift; sourceTree = "<group>"; };
-		1910017725B725B5000B7BCD /* FIFOSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIFOSystem.swift; sourceTree = "<group>"; };
+		1910017725B725B5000B7BCD /* OrderManagmentSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManagmentSystem.swift; sourceTree = "<group>"; };
 		1910017F25B7288B000B7BCD /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		1910018A25B72EAF000B7BCD /* Courier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Courier.swift; sourceTree = "<group>"; };
 		1972324325BD703500B40BA3 /* OrderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderData.swift; sourceTree = "<group>"; };
@@ -77,6 +78,7 @@
 		1972325D25BDA03D00B40BA3 /* OrderPickupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPickupManager.swift; sourceTree = "<group>"; };
 		1972327125BE458400B40BA3 /* Printer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Printer.swift; sourceTree = "<group>"; };
 		1972329425BF32DF00B40BA3 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		197232C725C07F6700B40BA3 /* MatchedOrderPickupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedOrderPickupManager.swift; sourceTree = "<group>"; };
 		1973E3CB25BC6ECF00D0ED13 /* ThreadSafeDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadSafeDictionary.swift; sourceTree = "<group>"; };
 		197E397025B76DCB00314BDF /* SystemTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemTestViewController.swift; sourceTree = "<group>"; };
 		197E397B25B76FD700314BDF /* dispatch_orders.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dispatch_orders.json; sourceTree = "<group>"; };
@@ -184,10 +186,11 @@
 		1910017C25B725C2000B7BCD /* System */ = {
 			isa = PBXGroup;
 			children = (
-				1910017725B725B5000B7BCD /* FIFOSystem.swift */,
+				1910017725B725B5000B7BCD /* OrderManagmentSystem.swift */,
 				1972325825BD807500B40BA3 /* Kitchen.swift */,
 				1972325325BD806E00B40BA3 /* CourierDispatcher.swift */,
 				1972325D25BDA03D00B40BA3 /* OrderPickupManager.swift */,
+				197232C725C07F6700B40BA3 /* MatchedOrderPickupManager.swift */,
 				197E398125B85F0B00314BDF /* Statistics.swift */,
 				1972329425BF32DF00B40BA3 /* Event.swift */,
 			);
@@ -361,6 +364,7 @@
 				1972324925BD703F00B40BA3 /* CourierData.swift in Sources */,
 				1972325E25BDA03D00B40BA3 /* OrderPickupManager.swift in Sources */,
 				1972329525BF32DF00B40BA3 /* Event.swift in Sources */,
+				197232C825C07F6700B40BA3 /* MatchedOrderPickupManager.swift in Sources */,
 				1972325425BD806E00B40BA3 /* CourierDispatcher.swift in Sources */,
 				1910018025B7288B000B7BCD /* Queue.swift in Sources */,
 				1972324425BD703500B40BA3 /* OrderData.swift in Sources */,
@@ -370,7 +374,7 @@
 				1972327225BE458400B40BA3 /* Printer.swift in Sources */,
 				191000BE25B4DEB8000B7BCD /* AppDelegate.swift in Sources */,
 				191000FA25B4E344000B7BCD /* OrderGenerator.swift in Sources */,
-				1910017825B725B5000B7BCD /* FIFOSystem.swift in Sources */,
+				1910017825B725B5000B7BCD /* OrderManagmentSystem.swift in Sources */,
 				197E398225B85F0B00314BDF /* Statistics.swift in Sources */,
 				191000C025B4DEB8000B7BCD /* SceneDelegate.swift in Sources */,
 			);

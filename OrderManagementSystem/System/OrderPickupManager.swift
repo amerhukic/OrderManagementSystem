@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct OrderPickupManager {
+class OrderPickupManager {
   private var orderQueue = Queue<OrderData>()
   private var courierQueue = Queue<CourierData>()
   private let timeCalculator = PickupTimeCalculator()
@@ -16,11 +16,11 @@ struct OrderPickupManager {
   func courierArrived(_ courier: Courier, onOrderPickedUp orderPickupHandler: @escaping (UInt64) -> Void) {
     let now = DispatchTime.now()
     executionQueue.async {
-      guard let orderData = orderQueue.pop() else {
-        courierQueue.push(CourierData(courier: courier, arrivalTimePoint: now))
+      guard let orderData = self.orderQueue.pop() else {
+        self.courierQueue.push(CourierData(courier: courier, arrivalTimePoint: now))
         return
       }
-      let timeDifferenceMs = timeCalculator.getMillisecondTimeDifference(now, orderData.preparationTimePoint)
+      let timeDifferenceMs = self.timeCalculator.getMillisecondTimeDifference(now, orderData.preparationTimePoint)
       orderPickupHandler(timeDifferenceMs)
     }
   }
@@ -29,11 +29,11 @@ struct OrderPickupManager {
   func orderPrepared(_ order: Order, onOrderPickedUp orderPickupHandler: @escaping (UInt64) -> Void) {
     let now = DispatchTime.now()
     executionQueue.async {
-      guard let courierData = courierQueue.pop() else {
-        orderQueue.push(OrderData(order: order, preparationTimePoint: now))
+      guard let courierData = self.courierQueue.pop() else {
+        self.orderQueue.push(OrderData(order: order, preparationTimePoint: now))
         return
       }
-      let timeDifferenceMs = timeCalculator.getMillisecondTimeDifference(now, courierData.arrivalTimePoint)
+      let timeDifferenceMs = self.timeCalculator.getMillisecondTimeDifference(now, courierData.arrivalTimePoint)
       orderPickupHandler(timeDifferenceMs)
     }
   }
