@@ -37,10 +37,7 @@ private extension FIFOSystem {
       self.printAndLog(.courierArrived)
       self.orderPickupManager.courierArrived(Courier(orderId: orderId), onOrderPickedUp: {
         self.printAndLog(.orderPickedUp, .orderWaitTime($0))
-   //     self.printFinalStatisticsIfPossible()
-      }, onCourierWaiting: {
-        // TODO: izbrisati ovaj closure jer ne treba
-//        self.printAndLog(.courierArrived)
+        self.printFinalStatisticsIfPossible()
       })
     }
     printAndLog(.courierDispatched)
@@ -51,9 +48,7 @@ private extension FIFOSystem {
       self.printAndLog(.orderPrepared)
       self.orderPickupManager.orderPrepared(order, onOrderPickedUp: {
         self.printAndLog(.orderPickedUp, .courierWaitTime($0))
-   //     self.printFinalStatisticsIfPossible()
-      }, onOrderWaiting: {
-       // self.printAndLog(.orderPrepared)
+        self.printFinalStatisticsIfPossible()
       })
     }
   }

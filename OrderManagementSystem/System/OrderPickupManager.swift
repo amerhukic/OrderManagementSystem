@@ -8,40 +8,34 @@
 import Foundation
 
 struct OrderPickupManager {
-  private var orderQueue = ThreadSafeQueue<OrderData>()
-  private var courierQueue = ThreadSafeQueue<CourierData>()
+  private var orderQueue = Queue<OrderData>()
+  private var courierQueue = Queue<CourierData>()
   private let timeCalculator = PickupTimeCalculator()
+  private let executionQueue = DispatchQueue(label: "OrderPickupManager.serial.dispatch.queue")
   
-  init() {
-    
-  }
-  
-  func courierArrived(_ courier: Courier,
-                      onOrderPickedUp orderPickupHandler: (UInt64) -> Void,
-                      onCourierWaiting courierWaitingHandler: () -> Void) {
+  func courierArrived(_ courier: Courier, onOrderPickedUp orderPickupHandler: @escaping (UInt64) -> Void) {
     let now = DispatchTime.now()
-    guard let orderData = orderQueue.pop() else {
-      courierQueue.push(CourierData(courier: courier, arrivalTimePoint: now))
-      courierWaitingHandler()
-      return
+    executionQueue.async {
+      guard let orderData = orderQueue.pop() else {
+        courierQueue.push(CourierData(courier: courier, arrivalTimePoint: now))
+        return
+      }
+      let timeDifferenceMs = timeCalculator.getMillisecondTimeDifference(now, orderData.preparationTimePoint)
+      orderPickupHandler(timeDifferenceMs)
     }
-    let timeDifferenceMs = timeCalculator.getMillisecondTimeDifference(now, orderData.preparationTimePoint)
-    orderPickupHandler(timeDifferenceMs)
   }
   
   // TODO: better name - maybe handlePreparedOrder ?? or 
-  func orderPrepared(_ order: Order,
-                     onOrderPickedUp orderPickupHandler: (UInt64) -> Void,
-                     onOrderWaiting orderWaitingHandler: () -> Void) {
+  func orderPrepared(_ order: Order, onOrderPickedUp orderPickupHandler: @escaping (UInt64) -> Void) {
     let now = DispatchTime.now()
-    guard let courierData = courierQueue.pop() else {
-      //TODO: MOZE SE DESITI DA ZADNJI PUT KAD SE ORDER I COURIER DODJU U ISTO VRIJEME OBOJICA ODU nA QUEUE ZA CEKANJE JER NISU SINHRONIZOVANI
-      orderQueue.push(OrderData(order: order, preparationTimePoint: now))
-      orderWaitingHandler()
-      return
+    executionQueue.async {
+      guard let courierData = courierQueue.pop() else {
+        orderQueue.push(OrderData(order: order, preparationTimePoint: now))
+        return
+      }
+      let timeDifferenceMs = timeCalculator.getMillisecondTimeDifference(now, courierData.arrivalTimePoint)
+      orderPickupHandler(timeDifferenceMs)
     }
-    let timeDifferenceMs = timeCalculator.getMillisecondTimeDifference(now, courierData.arrivalTimePoint)
-    orderPickupHandler(timeDifferenceMs)
   }
 }
 
