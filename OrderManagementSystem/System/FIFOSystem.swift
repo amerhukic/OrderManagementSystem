@@ -9,41 +9,68 @@ import Foundation
 
 // razlog zasto je System Class a ne struct: Escaping closure captures mutating 'self' parameter error u appendOrder
 class FIFOSystem {
-  private var analytics: Analytics
   private let kitchen = Kitchen()
   private let courierDispatcher = CourierDispatcher()
   private let orderPickupManager = OrderPickupManager()
-  
+  private let printer = Printer()
+  private var statistics: Statistics
+  private var isAcceptingOrders = true
+
   init() {
-    self.analytics = .init()
+    self.statistics = .init()
   }
 
   func acceptOrder(_ order: Order) {
-    analytics.log(.orderReceived)
+    printAndLog(.orderReceived)
     dispatchCourier(for: order.id)
     startPreparing(order)
+  }
+  
+  func stopAcceptingOrders() {
+    isAcceptingOrders = false
   }
 }
 
 private extension FIFOSystem {
   func dispatchCourier(for orderId: String) {
     courierDispatcher.dispatchCourier(forOrderId: orderId) {
+      self.printAndLog(.courierArrived)
       self.orderPickupManager.courierArrived(Courier(orderId: orderId), onOrderPickedUp: {
-        self.analytics.log(.courierArrived, .orderWaitTime($0))
+        self.printAndLog(.orderPickedUp, .orderWaitTime($0))
+   //     self.printFinalStatisticsIfPossible()
       }, onCourierWaiting: {
-        self.analytics.log(.courierArrived)
+        // TODO: izbrisati ovaj closure jer ne treba
+//        self.printAndLog(.courierArrived)
       })
     }
-    analytics.log(.courierDispatched)
+    printAndLog(.courierDispatched)
   }
   
   func startPreparing(_ order: Order) {
     kitchen.prepareOrder(order) {
+      self.printAndLog(.orderPrepared)
       self.orderPickupManager.orderPrepared(order, onOrderPickedUp: {
-        self.analytics.log(.orderPrepared, .orderWaitTime($0))
+        self.printAndLog(.orderPickedUp, .courierWaitTime($0))
+   //     self.printFinalStatisticsIfPossible()
       }, onOrderWaiting: {
-        self.analytics.log(.orderPrepared)
+       // self.printAndLog(.orderPrepared)
       })
     }
+  }
+  
+  func printAndLog(_ events: Event...) {
+    printer.print(events.map { $0.description })
+    statistics.log(events)
+  }
+  
+  func printFinalStatisticsIfPossible() {
+    print("AMER: \(isAcceptingOrders) \(statistics.receivedOrdersCount) \(statistics.pickedUpOrdersCount)")
+    guard !isAcceptingOrders && statistics.areAllOrdersPickedUp else {
+      return
+    }
+    let averageOrderWaitTime = statistics.getAverageOrderWaitTime()
+    let averageCourierWaitTime = statistics.getAverageCourierWaitTime()
+    printer.print([Event.averageOrderWaitTime(averageOrderWaitTime).description,
+                   Event.averateCourierWaitTime(averageCourierWaitTime).description])
   }
 }

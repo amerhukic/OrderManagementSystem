@@ -35,6 +35,7 @@ struct OrderPickupManager {
                      onOrderWaiting orderWaitingHandler: () -> Void) {
     let now = DispatchTime.now()
     guard let courierData = courierQueue.pop() else {
+      //TODO: MOZE SE DESITI DA ZADNJI PUT KAD SE ORDER I COURIER DODJU U ISTO VRIJEME OBOJICA ODU nA QUEUE ZA CEKANJE JER NISU SINHRONIZOVANI
       orderQueue.push(OrderData(order: order, preparationTimePoint: now))
       orderWaitingHandler()
       return

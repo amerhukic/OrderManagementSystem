@@ -27,6 +27,7 @@ class SystemSimulator {
       }
       if self.orderGeneratorIndex >= orders.count {
         $0.invalidate()
+        fifoSystem.stopAcceptingOrders()
       }
     }
   }

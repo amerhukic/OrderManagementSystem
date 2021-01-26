@@ -13,6 +13,7 @@ class ThreadSafeQueue<T> {
   private let queue = DispatchQueue(label: "threadsafe.queue", attributes: .concurrent)
   
   func push(_ value: T) {
+    // TODO: zasto ovdje barrier?? ako je ovdje treba li u popu???
     queue.async(flags: .barrier) {
       self.elements.append(value)
     }
