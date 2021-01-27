@@ -1,5 +1,5 @@
 //
-//  Statistics.swift
+//  StatisticsTracker.swift
 //  OrderManagementSystem
 //
 //  Created by Amer Hukić on 20. 1. 2021..
@@ -7,11 +7,9 @@
 
 import Foundation
 
-// TODO: maybe rename to AverageWaitTimeTracker ?
-struct Statistics {
-  // todo private
-   var receivedOrdersCount = 0
-   var pickedUpOrdersCount = 0
+struct StatisticsTracker {
+  private var receivedOrdersCount = 0
+  private var pickedUpOrdersCount = 0
   private var orderWaitTimes = [UInt64]()
   private var courierWaitTimes = [UInt64]()
   
@@ -19,7 +17,6 @@ struct Statistics {
     receivedOrdersCount == pickedUpOrdersCount
   }
   
-  // TODO: mora li biti thread safe zbog += 1 ???
   mutating func log(_ events: [Event]) {
     events.forEach {
       switch $0 {

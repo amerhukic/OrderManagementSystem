@@ -13,11 +13,11 @@ class OrderManagmentSystem {
   private let courierDispatcher = CourierDispatcher()
   private let orderPickupManager = OrderPickupManager()
   private let printer = Printer()
-  private var statistics: Statistics
+  private var statisticsTracker: StatisticsTracker
   private var isAcceptingOrders = true
 
   init() {
-    self.statistics = .init()
+    self.statisticsTracker = .init()
   }
 
   func acceptOrder(_ order: Order) {
@@ -55,16 +55,15 @@ private extension OrderManagmentSystem {
   
   func printAndLog(_ events: Event...) {
     printer.print(events.map { $0.description })
-    statistics.log(events)
+    statisticsTracker.log(events)
   }
   
   func printFinalStatisticsIfPossible() {
-    print("AMER: \(isAcceptingOrders) \(statistics.receivedOrdersCount) \(statistics.pickedUpOrdersCount)")
-    guard !isAcceptingOrders && statistics.areAllOrdersPickedUp else {
+    guard !isAcceptingOrders && statisticsTracker.areAllOrdersPickedUp else {
       return
     }
-    let averageOrderWaitTime = statistics.getAverageOrderWaitTime()
-    let averageCourierWaitTime = statistics.getAverageCourierWaitTime()
+    let averageOrderWaitTime = statisticsTracker.getAverageOrderWaitTime()
+    let averageCourierWaitTime = statisticsTracker.getAverageCourierWaitTime()
     printer.print([Event.averageOrderWaitTime(averageOrderWaitTime).description,
                    Event.averateCourierWaitTime(averageCourierWaitTime).description])
   }
