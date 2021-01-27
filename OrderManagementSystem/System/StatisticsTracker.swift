@@ -7,11 +7,13 @@
 
 import Foundation
 
+typealias TimeIntervalMilliseconds = UInt64
+
 struct StatisticsTracker {
   private var receivedOrdersCount = 0
   private var pickedUpOrdersCount = 0
-  private var orderWaitTimes = [UInt64]()
-  private var courierWaitTimes = [UInt64]()
+  private var orderWaitTimes = [TimeIntervalMilliseconds]()
+  private var courierWaitTimes = [TimeIntervalMilliseconds]()
   
   var areAllOrdersPickedUp: Bool {
     receivedOrdersCount == pickedUpOrdersCount
@@ -34,15 +36,13 @@ struct StatisticsTracker {
     }
   }
   
-  func getAverageOrderWaitTime() -> UInt64 {
+  func getAverageOrderWaitTime() -> TimeIntervalMilliseconds {
     let sum = orderWaitTimes.reduce(0, +)
-    // TODO: check if we loose precision here because of int division
     return sum / UInt64(orderWaitTimes.count)
   }
   
-  func getAverageCourierWaitTime() -> UInt64 {
+  func getAverageCourierWaitTime() -> TimeIntervalMilliseconds {
     let sum = courierWaitTimes.reduce(0, +)
-    // TODO: check if we loose precision here because of int division
     return sum / UInt64(orderWaitTimes.count)
   }
 }

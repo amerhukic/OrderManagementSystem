@@ -13,7 +13,7 @@ class MatchedOrderPickupManager {
   private let timeCalculator = PickupTimeCalculator()
   private let executionQueue = DispatchQueue(label: "MatchedOrderPickupManager.serial.dispatch.queue")
   
-  func sendCourierForPickup(_ courier: Courier, onOrderPickedUp orderPickupHandler: @escaping (UInt64) -> Void) {
+  func sendCourierForPickup(_ courier: Courier, onOrderPickedUp orderPickupHandler: @escaping (TimeIntervalMilliseconds) -> Void) {
     let now = DispatchTime.now()
     executionQueue.async {
       guard let orderData = self.orderDictionary[courier.orderId] else {
@@ -25,7 +25,7 @@ class MatchedOrderPickupManager {
     }
   }
   
-  func sendOrderForPickup(_ order: Order, onOrderPickedUp orderPickupHandler: @escaping (UInt64) -> Void) {
+  func sendOrderForPickup(_ order: Order, onOrderPickedUp orderPickupHandler: @escaping (TimeIntervalMilliseconds) -> Void) {
     let now = DispatchTime.now()
     executionQueue.async {
       guard let courierData = self.courierDictionary[order.id] else {

@@ -13,7 +13,7 @@ class OrderPickupManager {
   private let timeCalculator = PickupTimeCalculator()
   private let executionQueue = DispatchQueue(label: "OrderPickupManager.serial.dispatch.queue")
   
-  func sendCourierForPickup(_ courier: Courier, onOrderPickedUp orderPickupHandler: @escaping (UInt64) -> Void) {
+  func sendCourierForPickup(_ courier: Courier, onOrderPickedUp orderPickupHandler: @escaping (TimeIntervalMilliseconds) -> Void) {
     let now = DispatchTime.now()
     executionQueue.async {
       guard let orderData = self.orderQueue.pop() else {
@@ -25,7 +25,7 @@ class OrderPickupManager {
     }
   }
   
-  func sendOrderForPickup(_ order: Order, onOrderPickedUp orderPickupHandler: @escaping (UInt64) -> Void) {
+  func sendOrderForPickup(_ order: Order, onOrderPickedUp orderPickupHandler: @escaping (TimeIntervalMilliseconds) -> Void) {
     let now = DispatchTime.now()
     executionQueue.async {
       guard let courierData = self.courierQueue.pop() else {
@@ -39,7 +39,7 @@ class OrderPickupManager {
 }
 
 struct PickupTimeCalculator {
-  func getMillisecondTimeDifference(_ firstTime: DispatchTime, _ secondTime: DispatchTime) -> UInt64 {
+  func getMillisecondTimeDifference(_ firstTime: DispatchTime, _ secondTime: DispatchTime) -> TimeIntervalMilliseconds {
     let firstTimeMs = firstTime.uptimeMilliseconds
     let secondTimeMs = secondTime.uptimeMilliseconds
     return (max(firstTimeMs, secondTimeMs) - min(firstTimeMs, secondTimeMs))
@@ -47,7 +47,7 @@ struct PickupTimeCalculator {
 }
 
 extension DispatchTime {
-  var uptimeMilliseconds: UInt64 {
+  var uptimeMilliseconds: TimeIntervalMilliseconds {
     uptimeNanoseconds / 1_000_000
   }
 }

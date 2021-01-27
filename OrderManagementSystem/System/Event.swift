@@ -13,10 +13,10 @@ enum Event {
   case courierDispatched
   case courierArrived
   case orderPickedUp
-  case orderWaitTime(UInt64)
-  case courierWaitTime(UInt64)
-  case averageOrderWaitTime(UInt64)
-  case averateCourierWaitTime(UInt64)
+  case orderWaitTime(TimeIntervalMilliseconds)
+  case courierWaitTime(TimeIntervalMilliseconds)
+  case averageOrderWaitTime(TimeIntervalMilliseconds)
+  case averateCourierWaitTime(TimeIntervalMilliseconds)
   
   var description: String {
     switch self {
