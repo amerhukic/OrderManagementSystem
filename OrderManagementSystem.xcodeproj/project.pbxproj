@@ -24,7 +24,7 @@
 		1972324925BD703F00B40BA3 /* CourierData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972324825BD703F00B40BA3 /* CourierData.swift */; };
 		1972325425BD806E00B40BA3 /* CourierDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972325325BD806E00B40BA3 /* CourierDispatcher.swift */; };
 		1972325925BD807500B40BA3 /* Kitchen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972325825BD807500B40BA3 /* Kitchen.swift */; };
-		1972325E25BDA03D00B40BA3 /* OrderPickupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972325D25BDA03D00B40BA3 /* OrderPickupManager.swift */; };
+		1972325E25BDA03D00B40BA3 /* FIFOOrderPickupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972325D25BDA03D00B40BA3 /* FIFOOrderPickupManager.swift */; };
 		1972327225BE458400B40BA3 /* Printer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972327125BE458400B40BA3 /* Printer.swift */; };
 		1972329525BF32DF00B40BA3 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972329425BF32DF00B40BA3 /* Event.swift */; };
 		197232C825C07F6700B40BA3 /* MatchedOrderPickupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197232C725C07F6700B40BA3 /* MatchedOrderPickupManager.swift */; };
@@ -75,7 +75,7 @@
 		1972324825BD703F00B40BA3 /* CourierData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourierData.swift; sourceTree = "<group>"; };
 		1972325325BD806E00B40BA3 /* CourierDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourierDispatcher.swift; sourceTree = "<group>"; };
 		1972325825BD807500B40BA3 /* Kitchen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kitchen.swift; sourceTree = "<group>"; };
-		1972325D25BDA03D00B40BA3 /* OrderPickupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPickupManager.swift; sourceTree = "<group>"; };
+		1972325D25BDA03D00B40BA3 /* FIFOOrderPickupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIFOOrderPickupManager.swift; sourceTree = "<group>"; };
 		1972327125BE458400B40BA3 /* Printer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Printer.swift; sourceTree = "<group>"; };
 		1972329425BF32DF00B40BA3 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		197232C725C07F6700B40BA3 /* MatchedOrderPickupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedOrderPickupManager.swift; sourceTree = "<group>"; };
@@ -190,7 +190,7 @@
 				1910017725B725B5000B7BCD /* OrderManagmentSystem.swift */,
 				1972325825BD807500B40BA3 /* Kitchen.swift */,
 				1972325325BD806E00B40BA3 /* CourierDispatcher.swift */,
-				1972325D25BDA03D00B40BA3 /* OrderPickupManager.swift */,
+				1972325D25BDA03D00B40BA3 /* FIFOOrderPickupManager.swift */,
 				197232C725C07F6700B40BA3 /* MatchedOrderPickupManager.swift */,
 				197E398125B85F0B00314BDF /* StatisticsTracker.swift */,
 				1972329425BF32DF00B40BA3 /* Event.swift */,
@@ -370,7 +370,7 @@
 				191000F425B4E2E3000B7BCD /* Order.swift in Sources */,
 				1910018B25B72EAF000B7BCD /* Courier.swift in Sources */,
 				1972324925BD703F00B40BA3 /* CourierData.swift in Sources */,
-				1972325E25BDA03D00B40BA3 /* OrderPickupManager.swift in Sources */,
+				1972325E25BDA03D00B40BA3 /* FIFOOrderPickupManager.swift in Sources */,
 				1972329525BF32DF00B40BA3 /* Event.swift in Sources */,
 				197232C825C07F6700B40BA3 /* MatchedOrderPickupManager.swift in Sources */,
 				1972325425BD806E00B40BA3 /* CourierDispatcher.swift in Sources */,

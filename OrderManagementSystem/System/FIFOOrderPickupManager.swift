@@ -1,5 +1,5 @@
 //
-//  OrderPickupManager.swift
+//  FIFOOrderPickupManager.swift
 //  OrderManagementSystem
 //
 //  Created by Amer Hukić on 24. 1. 2021..
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class OrderPickupManager {
+class FIFOOrderPickupManager {
   private var orderQueue = Queue<OrderData>()
   private var courierQueue = Queue<CourierData>()
   private let executionQueue = DispatchQueue(label: "OrderPickupManager.serial.dispatch.queue")

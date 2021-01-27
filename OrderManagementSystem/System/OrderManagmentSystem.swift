@@ -11,7 +11,7 @@ import Foundation
 class OrderManagmentSystem {
   private let kitchen = Kitchen()
   private let courierDispatcher = CourierDispatcher()
-  private let orderPickupManager = OrderPickupManager()
+  private let orderPickupManager = FIFOOrderPickupManager()
   private let printer = Printer()
   private var statisticsTracker: StatisticsTracker
   private var isAcceptingOrders = true
