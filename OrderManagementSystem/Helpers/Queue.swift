@@ -8,20 +8,41 @@
 import Foundation
 
 struct Queue<T> {
-  private var elements: Array<T> = []
+  private var array = [T?]()
+  private var head = 0
   
-  mutating func push(_ value: T) {
-    elements.append(value)
+  var isEmpty: Bool {
+    return count == 0
   }
   
-  // TODO: complexity je On jer se radi o arrayu
-  // 1. treba implementirati pomocu linkane liste da bi se lakse brisao prvi element
-  // 2. provjeriti da li da vracam nil kad nema za pop??? ili ima neki bolji nacin
-  // TODO: mora li biti ovo sync??? moze li biti async???
+  var count: Int {
+    return array.count - head
+  }
+  
+  mutating func push(_ element: T) {
+    array.append(element)
+  }
+  
   mutating func pop() -> T? {
-    guard !elements.isEmpty else {
-      return nil
+    guard head < array.count, let element = array[head] else { return nil }
+    
+    array[head] = nil
+    head += 1
+    
+    let percentage = Double(head)/Double(array.count)
+    if array.count > 50 && percentage > 0.25 {
+      array.removeFirst(head)
+      head = 0
     }
-    return elements.removeFirst()
+    
+    return element
+  }
+  
+  var front: T? {
+    if isEmpty {
+      return nil
+    } else {
+      return array[head]
+    }
   }
 }
