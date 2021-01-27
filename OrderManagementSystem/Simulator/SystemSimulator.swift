@@ -10,12 +10,13 @@ import Foundation
 class SystemSimulator {
   private var orderGeneratorIndex = 0
   
+  // TODO: refactor try i ostalo pregledati 
   func startFIFOSystemSimulation() {
     print("Starting FIFO system simulation")
     orderGeneratorIndex = 0
     let fifoSystem = OrderManagmentSystem()
-    let orderGenerator = OrderGenerator()
-    let orders = orderGenerator.readOrdersFromFile(named: "dispatch_orders")
+    let orderLoader = OrderLoader()
+    let orders = (try? orderLoader.loadOrders(fromFileNamed: "dispatch_orders")) ?? []
     Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] in
       guard let self = self else { return }
       let ordersPerSecond = 50

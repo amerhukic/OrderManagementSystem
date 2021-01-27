@@ -15,7 +15,7 @@
 		191000D525B4DEB8000B7BCD /* OrderManagementSystemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191000D425B4DEB8000B7BCD /* OrderManagementSystemTests.swift */; };
 		191000E025B4DEB8000B7BCD /* OrderManagementSystemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191000DF25B4DEB8000B7BCD /* OrderManagementSystemUITests.swift */; };
 		191000F425B4E2E3000B7BCD /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191000F325B4E2E3000B7BCD /* Order.swift */; };
-		191000FA25B4E344000B7BCD /* OrderGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191000F925B4E344000B7BCD /* OrderGenerator.swift */; };
+		191000FA25B4E344000B7BCD /* OrderLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191000F925B4E344000B7BCD /* OrderLoader.swift */; };
 		1910010325B4E64F000B7BCD /* SystemSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1910010225B4E64F000B7BCD /* SystemSimulator.swift */; };
 		1910017825B725B5000B7BCD /* OrderManagmentSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1910017725B725B5000B7BCD /* OrderManagmentSystem.swift */; };
 		1910018025B7288B000B7BCD /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1910017F25B7288B000B7BCD /* Queue.swift */; };
@@ -66,7 +66,7 @@
 		191000DF25B4DEB8000B7BCD /* OrderManagementSystemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManagementSystemUITests.swift; sourceTree = "<group>"; };
 		191000E125B4DEB8000B7BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		191000F325B4E2E3000B7BCD /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
-		191000F925B4E344000B7BCD /* OrderGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderGenerator.swift; sourceTree = "<group>"; };
+		191000F925B4E344000B7BCD /* OrderLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderLoader.swift; sourceTree = "<group>"; };
 		1910010225B4E64F000B7BCD /* SystemSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemSimulator.swift; sourceTree = "<group>"; };
 		1910017725B725B5000B7BCD /* OrderManagmentSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManagmentSystem.swift; sourceTree = "<group>"; };
 		1910017F25B7288B000B7BCD /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
@@ -208,7 +208,7 @@
 		1910017E25B7287E000B7BCD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				191000F925B4E344000B7BCD /* OrderGenerator.swift */,
+				191000F925B4E344000B7BCD /* OrderLoader.swift */,
 				1973E3CB25BC6ECF00D0ED13 /* ThreadSafeDictionary.swift */,
 				1910017F25B7288B000B7BCD /* Queue.swift */,
 				1972327125BE458400B40BA3 /* Printer.swift */,
@@ -373,7 +373,7 @@
 				1910010325B4E64F000B7BCD /* SystemSimulator.swift in Sources */,
 				1972327225BE458400B40BA3 /* Printer.swift in Sources */,
 				191000BE25B4DEB8000B7BCD /* AppDelegate.swift in Sources */,
-				191000FA25B4E344000B7BCD /* OrderGenerator.swift in Sources */,
+				191000FA25B4E344000B7BCD /* OrderLoader.swift in Sources */,
 				1910017825B725B5000B7BCD /* OrderManagmentSystem.swift in Sources */,
 				197E398225B85F0B00314BDF /* Statistics.swift in Sources */,
 				191000C025B4DEB8000B7BCD /* SceneDelegate.swift in Sources */,
