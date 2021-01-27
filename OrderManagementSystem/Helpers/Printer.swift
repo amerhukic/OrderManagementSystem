@@ -11,6 +11,10 @@ import Foundation
 struct Printer {
   private let queue = DispatchQueue(label: "printing.serial.queue")
   private let logger = Logger()
+  
+  func print(_ item: String) {
+    print([item])
+  }
 
   func print(_ items: [String]) {
     queue.async {

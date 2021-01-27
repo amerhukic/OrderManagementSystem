@@ -10,11 +10,11 @@ import Foundation
 class MatchedOrderPickupManager {
   private var orderDictionary = [String: OrderData]()
   private var courierDictionary = [String: CourierData]()
-  private let executionQueue = DispatchQueue(label: "MatchedOrderPickupManager.serial.dispatch.queue")
+  private let queue = DispatchQueue(label: "MatchedOrderPickupManager.serial.dispatch.queue")
   
   func sendCourierForPickup(_ courier: Courier, onOrderPickedUp orderPickupHandler: @escaping (TimeIntervalMilliseconds) -> Void) {
     let now = DispatchTime.now()
-    executionQueue.async {
+    queue.async {
       guard let orderData = self.orderDictionary[courier.orderId] else {
         self.courierDictionary[courier.orderId] = CourierData(courier: courier, arrivalTimePoint: now)
         return
@@ -26,7 +26,7 @@ class MatchedOrderPickupManager {
   
   func sendOrderForPickup(_ order: Order, onOrderPickedUp orderPickupHandler: @escaping (TimeIntervalMilliseconds) -> Void) {
     let now = DispatchTime.now()
-    executionQueue.async {
+    queue.async {
       guard let courierData = self.courierDictionary[order.id] else {
         self.orderDictionary[order.id] = OrderData(order: order, preparationTimePoint: now)
         return

@@ -7,7 +7,6 @@
 
 import Foundation
 
-// razlog zasto je System Class a ne struct: Escaping closure captures mutating 'self' parameter error u appendOrder
 class OrderManagmentSystem {
   private let kitchen = Kitchen()
   private let courierDispatcher = CourierDispatcher()
