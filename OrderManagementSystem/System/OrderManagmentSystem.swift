@@ -35,7 +35,7 @@ private extension OrderManagmentSystem {
   func dispatchCourier(for orderId: String) {
     courierDispatcher.dispatchCourier() {
       self.printAndLog(.courierArrived)
-      self.orderPickupManager.courierArrived(Courier(orderId: orderId), onOrderPickedUp: {
+      self.orderPickupManager.sendCourierForPickup(Courier(orderId: orderId), onOrderPickedUp: {
         self.printAndLog(.orderPickedUp, .orderWaitTime($0))
         self.printFinalStatisticsIfPossible()
       })
@@ -46,7 +46,7 @@ private extension OrderManagmentSystem {
   func startPreparing(_ order: Order) {
     kitchen.prepareOrder(order) {
       self.printAndLog(.orderPrepared)
-      self.orderPickupManager.orderPrepared(order, onOrderPickedUp: {
+      self.orderPickupManager.sendOrderForPickup(order, onOrderPickedUp: {
         self.printAndLog(.orderPickedUp, .courierWaitTime($0))
         self.printFinalStatisticsIfPossible()
       })
