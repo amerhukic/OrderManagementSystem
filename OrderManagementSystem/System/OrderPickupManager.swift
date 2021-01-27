@@ -10,7 +10,6 @@ import Foundation
 class OrderPickupManager {
   private var orderQueue = Queue<OrderData>()
   private var courierQueue = Queue<CourierData>()
-  private let timeCalculator = PickupTimeCalculator()
   private let executionQueue = DispatchQueue(label: "OrderPickupManager.serial.dispatch.queue")
   
   func sendCourierForPickup(_ courier: Courier, onOrderPickedUp orderPickupHandler: @escaping (TimeIntervalMilliseconds) -> Void) {
@@ -20,7 +19,7 @@ class OrderPickupManager {
         self.courierQueue.push(CourierData(courier: courier, arrivalTimePoint: now))
         return
       }
-      let timeDifferenceMs = self.timeCalculator.getMillisecondTimeDifference(now, orderData.preparationTimePoint)
+      let timeDifferenceMs = now.absoluteMillisecondsDifference(from: orderData.preparationTimePoint)
       orderPickupHandler(timeDifferenceMs)
     }
   }
@@ -32,22 +31,8 @@ class OrderPickupManager {
         self.orderQueue.push(OrderData(order: order, preparationTimePoint: now))
         return
       }
-      let timeDifferenceMs = self.timeCalculator.getMillisecondTimeDifference(now, courierData.arrivalTimePoint)
+      let timeDifferenceMs = now.absoluteMillisecondsDifference(from: courierData.arrivalTimePoint)
       orderPickupHandler(timeDifferenceMs)
     }
-  }
-}
-
-struct PickupTimeCalculator {
-  func getMillisecondTimeDifference(_ firstTime: DispatchTime, _ secondTime: DispatchTime) -> TimeIntervalMilliseconds {
-    let firstTimeMs = firstTime.uptimeMilliseconds
-    let secondTimeMs = secondTime.uptimeMilliseconds
-    return (max(firstTimeMs, secondTimeMs) - min(firstTimeMs, secondTimeMs))
-  }
-}
-
-extension DispatchTime {
-  var uptimeMilliseconds: TimeIntervalMilliseconds {
-    uptimeNanoseconds / 1_000_000
   }
 }

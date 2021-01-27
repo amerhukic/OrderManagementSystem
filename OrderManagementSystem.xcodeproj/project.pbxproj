@@ -28,6 +28,7 @@
 		1972327225BE458400B40BA3 /* Printer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972327125BE458400B40BA3 /* Printer.swift */; };
 		1972329525BF32DF00B40BA3 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972329425BF32DF00B40BA3 /* Event.swift */; };
 		197232C825C07F6700B40BA3 /* MatchedOrderPickupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197232C725C07F6700B40BA3 /* MatchedOrderPickupManager.swift */; };
+		1972331625C1FC5600B40BA3 /* DispatchTime+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972331525C1FC5600B40BA3 /* DispatchTime+Utilities.swift */; };
 		197E397125B76DCB00314BDF /* SystemTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197E397025B76DCB00314BDF /* SystemTestViewController.swift */; };
 		197E397C25B76FD700314BDF /* dispatch_orders.json in Resources */ = {isa = PBXBuildFile; fileRef = 197E397B25B76FD700314BDF /* dispatch_orders.json */; };
 		197E398225B85F0B00314BDF /* StatisticsTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197E398125B85F0B00314BDF /* StatisticsTracker.swift */; };
@@ -78,6 +79,7 @@
 		1972327125BE458400B40BA3 /* Printer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Printer.swift; sourceTree = "<group>"; };
 		1972329425BF32DF00B40BA3 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		197232C725C07F6700B40BA3 /* MatchedOrderPickupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedOrderPickupManager.swift; sourceTree = "<group>"; };
+		1972331525C1FC5600B40BA3 /* DispatchTime+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchTime+Utilities.swift"; sourceTree = "<group>"; };
 		197E397025B76DCB00314BDF /* SystemTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemTestViewController.swift; sourceTree = "<group>"; };
 		197E397B25B76FD700314BDF /* dispatch_orders.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dispatch_orders.json; sourceTree = "<group>"; };
 		197E398125B85F0B00314BDF /* StatisticsTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTracker.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				1910017C25B725C2000B7BCD /* System */,
 				1973E3D325BC7B2600D0ED13 /* Models */,
 				1910017E25B7287E000B7BCD /* Helpers */,
+				1972331425C1FC4200B40BA3 /* Extensions */,
 				191000F825B4E2F8000B7BCD /* Other */,
 			);
 			path = OrderManagementSystem;
@@ -211,6 +214,14 @@
 				1972327125BE458400B40BA3 /* Printer.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1972331425C1FC4200B40BA3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1972331525C1FC5600B40BA3 /* DispatchTime+Utilities.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		1973E3D325BC7B2600D0ED13 /* Models */ = {
@@ -365,6 +376,7 @@
 				1972325425BD806E00B40BA3 /* CourierDispatcher.swift in Sources */,
 				1910018025B7288B000B7BCD /* Queue.swift in Sources */,
 				1972324425BD703500B40BA3 /* OrderData.swift in Sources */,
+				1972331625C1FC5600B40BA3 /* DispatchTime+Utilities.swift in Sources */,
 				1972325925BD807500B40BA3 /* Kitchen.swift in Sources */,
 				1910010325B4E64F000B7BCD /* SystemSimulator.swift in Sources */,
 				1972327225BE458400B40BA3 /* Printer.swift in Sources */,
