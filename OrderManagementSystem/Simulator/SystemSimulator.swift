@@ -27,7 +27,7 @@ class SystemSimulator {
     }
     orderIndex = 0
     let fifoSystem = OrderManagmentSystem()
-    Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] in
+    Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] timer in
       guard let self = self else { return }
       let ordersPerSecond = 50
       var counter = 0
@@ -37,7 +37,7 @@ class SystemSimulator {
         counter += 1
       }
       if self.orderIndex >= orders.count {
-        $0.invalidate()
+        timer.invalidate()
         fifoSystem.stopAcceptingOrders()
       }
     }
