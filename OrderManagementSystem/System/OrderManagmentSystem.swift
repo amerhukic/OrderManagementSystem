@@ -32,22 +32,22 @@ class OrderManagmentSystem {
 
 private extension OrderManagmentSystem {
   func dispatchCourier(for orderId: String) {
-    courierDispatcher.dispatchCourier() {
-      self.printAndLog(.courierArrived)
-      self.orderPickupManager.sendCourierForPickup(Courier(orderId: orderId), onOrderPickedUp: { orderWaitTime in
-        self.printAndLog(.orderPickedUp, .orderWaitTime(orderWaitTime))
-        self.printFinalStatisticsIfPossible()
+    courierDispatcher.dispatchCourier() { [weak self] in
+      self?.printAndLog(.courierArrived)
+      self?.orderPickupManager.sendCourierForPickup(Courier(orderId: orderId), onOrderPickedUp: { orderWaitTime in
+        self?.printAndLog(.orderPickedUp, .orderWaitTime(orderWaitTime))
+        self?.printFinalStatisticsIfPossible()
       })
     }
     printAndLog(.courierDispatched)
   }
   
   func startPreparing(_ order: Order) {
-    kitchen.prepareOrder(order) {
-      self.printAndLog(.orderPrepared)
-      self.orderPickupManager.sendOrderForPickup(order, onOrderPickedUp: { courierWaitTime in
-        self.printAndLog(.orderPickedUp, .courierWaitTime(courierWaitTime))
-        self.printFinalStatisticsIfPossible()
+    kitchen.prepareOrder(order) { [weak self] in
+      self?.printAndLog(.orderPrepared)
+      self?.orderPickupManager.sendOrderForPickup(order, onOrderPickedUp: { courierWaitTime in
+        self?.printAndLog(.orderPickedUp, .courierWaitTime(courierWaitTime))
+        self?.printFinalStatisticsIfPossible()
       })
     }
   }

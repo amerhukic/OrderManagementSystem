@@ -14,9 +14,9 @@ class MatchedOrderPickupManager {
   
   func sendCourierForPickup(_ courier: Courier, onOrderPickedUp orderPickupHandler: @escaping (TimeIntervalMilliseconds) -> Void) {
     let now = DispatchTime.now()
-    queue.async {
-      guard let orderData = self.orderDictionary[courier.orderId] else {
-        self.courierDictionary[courier.orderId] = CourierData(courier: courier, arrivalTimePoint: now)
+    queue.async { [weak self] in
+      guard let orderData = self?.orderDictionary[courier.orderId] else {
+        self?.courierDictionary[courier.orderId] = CourierData(courier: courier, arrivalTimePoint: now)
         return
       }
       let timeDifferenceMs = now.absoluteMillisecondsDifference(from: orderData.preparationTimePoint)
@@ -26,9 +26,9 @@ class MatchedOrderPickupManager {
   
   func sendOrderForPickup(_ order: Order, onOrderPickedUp orderPickupHandler: @escaping (TimeIntervalMilliseconds) -> Void) {
     let now = DispatchTime.now()
-    queue.async {
-      guard let courierData = self.courierDictionary[order.id] else {
-        self.orderDictionary[order.id] = OrderData(order: order, preparationTimePoint: now)
+    queue.async { [weak self] in
+      guard let courierData = self?.courierDictionary[order.id] else {
+        self?.orderDictionary[order.id] = OrderData(order: order, preparationTimePoint: now)
         return
       }
       let timeDifferenceMs = now.absoluteMillisecondsDifference(from: courierData.arrivalTimePoint)

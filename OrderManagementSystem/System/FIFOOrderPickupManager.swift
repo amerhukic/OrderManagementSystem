@@ -14,9 +14,9 @@ class FIFOOrderPickupManager {
   
   func sendCourierForPickup(_ courier: Courier, onOrderPickedUp orderPickupHandler: @escaping (TimeIntervalMilliseconds) -> Void) {
     let now = DispatchTime.now()
-    executionQueue.async {
-      guard let orderData = self.orderQueue.pop() else {
-        self.courierQueue.push(CourierData(courier: courier, arrivalTimePoint: now))
+    executionQueue.async { [weak self] in
+      guard let orderData = self?.orderQueue.pop() else {
+        self?.courierQueue.push(CourierData(courier: courier, arrivalTimePoint: now))
         return
       }
       let timeDifferenceMs = now.absoluteMillisecondsDifference(from: orderData.preparationTimePoint)
@@ -26,9 +26,9 @@ class FIFOOrderPickupManager {
   
   func sendOrderForPickup(_ order: Order, onOrderPickedUp orderPickupHandler: @escaping (TimeIntervalMilliseconds) -> Void) {
     let now = DispatchTime.now()
-    executionQueue.async {
-      guard let courierData = self.courierQueue.pop() else {
-        self.orderQueue.push(OrderData(order: order, preparationTimePoint: now))
+    executionQueue.async { [weak self] in
+      guard let courierData = self?.courierQueue.pop() else {
+        self?.orderQueue.push(OrderData(order: order, preparationTimePoint: now))
         return
       }
       let timeDifferenceMs = now.absoluteMillisecondsDifference(from: courierData.arrivalTimePoint)
