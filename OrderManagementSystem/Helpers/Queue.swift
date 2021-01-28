@@ -23,7 +23,7 @@ struct Queue<T> {
     array.append(element)
   }
   
-  mutating func pop() -> T? {
+  @discardableResult mutating func pop() -> T? {
     guard head < array.count, let element = array[head] else { return nil }
     
     array[head] = nil
@@ -36,13 +36,5 @@ struct Queue<T> {
     }
     
     return element
-  }
-  
-  var front: T? {
-    if isEmpty {
-      return nil
-    } else {
-      return array[head]
-    }
   }
 }
