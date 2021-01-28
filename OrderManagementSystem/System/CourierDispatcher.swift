@@ -11,7 +11,7 @@ struct CourierDispatcher {
   private let courierDispatchQueue: DispatchQueue
   
   init() {
-    self.courierDispatchQueue = DispatchQueue(label: "courier.dispatch.queue", attributes: .concurrent)
+    self.courierDispatchQueue = DispatchQueue(label: "courier.dispatcher.concurrent.queue", attributes: .concurrent)
   }
   
   func dispatchCourier(completion: @escaping () -> Void) {

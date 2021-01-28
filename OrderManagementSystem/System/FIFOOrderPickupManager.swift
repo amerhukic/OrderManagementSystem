@@ -10,7 +10,7 @@ import Foundation
 class FIFOOrderPickupManager {
   private var orderQueue = Queue<OrderData>()
   private var courierQueue = Queue<CourierData>()
-  private let executionQueue = DispatchQueue(label: "OrderPickupManager.serial.dispatch.queue")
+  private let executionQueue = DispatchQueue(label: "fifo.order.pickup.manager.serial.queue")
   
   func sendCourierForPickup(_ courier: Courier, onOrderPickedUp orderPickupHandler: @escaping (TimeIntervalMilliseconds) -> Void) {
     let now = DispatchTime.now()

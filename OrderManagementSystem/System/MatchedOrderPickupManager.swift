@@ -10,7 +10,7 @@ import Foundation
 class MatchedOrderPickupManager {
   private var orderDictionary = [String: OrderData]()
   private var courierDictionary = [String: CourierData]()
-  private let queue = DispatchQueue(label: "MatchedOrderPickupManager.serial.dispatch.queue")
+  private let queue = DispatchQueue(label: "matched.order.pickup.manager.serial.queue")
   
   func sendCourierForPickup(_ courier: Courier, onOrderPickedUp orderPickupHandler: @escaping (TimeIntervalMilliseconds) -> Void) {
     let now = DispatchTime.now()

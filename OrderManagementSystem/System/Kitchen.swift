@@ -11,7 +11,7 @@ struct Kitchen {
   private let orderDispatchQueue: DispatchQueue
 
   init() {
-    self.orderDispatchQueue = DispatchQueue(label: "order.dispatch.queue", attributes: .concurrent)
+    self.orderDispatchQueue = DispatchQueue(label: "kitchen.concurrent.queue", attributes: .concurrent)
   }
   
   func prepareOrder(_ order: Order, completion: @escaping () -> Void) {

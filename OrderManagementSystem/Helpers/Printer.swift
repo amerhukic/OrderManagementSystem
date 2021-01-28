@@ -9,7 +9,7 @@ import os.log
 import Foundation
 
 struct Printer {
-  private let queue = DispatchQueue(label: "printing.serial.queue")
+  private let queue = DispatchQueue(label: "printer.serial.queue")
   private let logger = Logger()
   
   func print(_ item: String) {
