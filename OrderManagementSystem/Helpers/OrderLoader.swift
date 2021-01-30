@@ -8,9 +8,20 @@
 import Foundation
 
 struct OrderLoader {
-  enum Error: Swift.Error {
+  enum Error: Swift.Error, Equatable {
     case fileNotFound(name: String)
     case fileDecodingFailed(name: String, Swift.Error)
+    
+    static func == (lhs: OrderLoader.Error, rhs: OrderLoader.Error) -> Bool {
+      switch (lhs, rhs) {
+      case (.fileNotFound(let a), .fileNotFound(let b)) where a == b:
+        return true
+      case (.fileDecodingFailed(let a, _), .fileDecodingFailed(let b, _)) where a == b:
+        return true
+      default:
+        return false
+      }
+    }
   }
   
   func loadOrders(fromFileNamed fileName: String, in bundle: Bundle = .main) throws -> [Order] {

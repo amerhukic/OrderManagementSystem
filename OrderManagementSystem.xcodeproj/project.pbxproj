@@ -13,7 +13,6 @@
 		191000C725B4DEB8000B7BCD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 191000C625B4DEB8000B7BCD /* Preview Assets.xcassets */; };
 		191000CA25B4DEB8000B7BCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 191000C825B4DEB8000B7BCD /* LaunchScreen.storyboard */; };
 		191000D525B4DEB8000B7BCD /* OrderManagementSystemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191000D425B4DEB8000B7BCD /* OrderManagementSystemTests.swift */; };
-		191000E025B4DEB8000B7BCD /* OrderManagementSystemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191000DF25B4DEB8000B7BCD /* OrderManagementSystemUITests.swift */; };
 		191000F425B4E2E3000B7BCD /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191000F325B4E2E3000B7BCD /* Order.swift */; };
 		191000FA25B4E344000B7BCD /* OrderLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191000F925B4E344000B7BCD /* OrderLoader.swift */; };
 		1910010325B4E64F000B7BCD /* SystemSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1910010225B4E64F000B7BCD /* SystemSimulator.swift */; };
@@ -33,17 +32,12 @@
 		197E397C25B76FD700314BDF /* dispatch_orders.json in Resources */ = {isa = PBXBuildFile; fileRef = 197E397B25B76FD700314BDF /* dispatch_orders.json */; };
 		197E398225B85F0B00314BDF /* StatisticsTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197E398125B85F0B00314BDF /* StatisticsTracker.swift */; };
 		19CAA35125C36ADA002E5940 /* QueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAA35025C36ADA002E5940 /* QueueTests.swift */; };
+		19CAA35625C3731F002E5940 /* OrderLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAA35525C3731F002E5940 /* OrderLoaderTests.swift */; };
+		19CAA38C25C533CD002E5940 /* empty-file.json in Resources */ = {isa = PBXBuildFile; fileRef = 19CAA38B25C533CD002E5940 /* empty-file.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		191000D125B4DEB8000B7BCD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 191000B225B4DEB7000B7BCD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 191000B925B4DEB8000B7BCD;
-			remoteInfo = OrderManagementSystem;
-		};
-		191000DC25B4DEB8000B7BCD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 191000B225B4DEB7000B7BCD /* Project object */;
 			proxyType = 1;
@@ -63,9 +57,6 @@
 		191000D025B4DEB8000B7BCD /* OrderManagementSystemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrderManagementSystemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		191000D425B4DEB8000B7BCD /* OrderManagementSystemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManagementSystemTests.swift; sourceTree = "<group>"; };
 		191000D625B4DEB8000B7BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		191000DB25B4DEB8000B7BCD /* OrderManagementSystemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrderManagementSystemUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		191000DF25B4DEB8000B7BCD /* OrderManagementSystemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManagementSystemUITests.swift; sourceTree = "<group>"; };
-		191000E125B4DEB8000B7BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		191000F325B4E2E3000B7BCD /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		191000F925B4E344000B7BCD /* OrderLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderLoader.swift; sourceTree = "<group>"; };
 		1910010225B4E64F000B7BCD /* SystemSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemSimulator.swift; sourceTree = "<group>"; };
@@ -85,6 +76,8 @@
 		197E397B25B76FD700314BDF /* dispatch_orders.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dispatch_orders.json; sourceTree = "<group>"; };
 		197E398125B85F0B00314BDF /* StatisticsTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTracker.swift; sourceTree = "<group>"; };
 		19CAA35025C36ADA002E5940 /* QueueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueTests.swift; sourceTree = "<group>"; };
+		19CAA35525C3731F002E5940 /* OrderLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderLoaderTests.swift; sourceTree = "<group>"; };
+		19CAA38B25C533CD002E5940 /* empty-file.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "empty-file.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,13 +95,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		191000D825B4DEB8000B7BCD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -117,7 +103,6 @@
 			children = (
 				191000BC25B4DEB8000B7BCD /* OrderManagementSystem */,
 				191000D325B4DEB8000B7BCD /* OrderManagementSystemTests */,
-				191000DE25B4DEB8000B7BCD /* OrderManagementSystemUITests */,
 				191000BB25B4DEB8000B7BCD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -127,7 +112,6 @@
 			children = (
 				191000BA25B4DEB8000B7BCD /* OrderManagementSystem.app */,
 				191000D025B4DEB8000B7BCD /* OrderManagementSystemTests.xctest */,
-				191000DB25B4DEB8000B7BCD /* OrderManagementSystemUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,20 +143,12 @@
 		191000D325B4DEB8000B7BCD /* OrderManagementSystemTests */ = {
 			isa = PBXGroup;
 			children = (
+				19CAA37D25C52FC6002E5940 /* TestFiles */,
 				19CAA34425C362B2002E5940 /* Helpers */,
 				191000D425B4DEB8000B7BCD /* OrderManagementSystemTests.swift */,
 				191000D625B4DEB8000B7BCD /* Info.plist */,
 			);
 			path = OrderManagementSystemTests;
-			sourceTree = "<group>";
-		};
-		191000DE25B4DEB8000B7BCD /* OrderManagementSystemUITests */ = {
-			isa = PBXGroup;
-			children = (
-				191000DF25B4DEB8000B7BCD /* OrderManagementSystemUITests.swift */,
-				191000E125B4DEB8000B7BCD /* Info.plist */,
-			);
-			path = OrderManagementSystemUITests;
 			sourceTree = "<group>";
 		};
 		191000F825B4E2F8000B7BCD /* Other */ = {
@@ -241,9 +217,18 @@
 		19CAA34425C362B2002E5940 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				19CAA35525C3731F002E5940 /* OrderLoaderTests.swift */,
 				19CAA35025C36ADA002E5940 /* QueueTests.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		19CAA37D25C52FC6002E5940 /* TestFiles */ = {
+			isa = PBXGroup;
+			children = (
+				19CAA38B25C533CD002E5940 /* empty-file.json */,
+			);
+			path = TestFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,24 +269,6 @@
 			productReference = 191000D025B4DEB8000B7BCD /* OrderManagementSystemTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		191000DA25B4DEB8000B7BCD /* OrderManagementSystemUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 191000EA25B4DEB8000B7BCD /* Build configuration list for PBXNativeTarget "OrderManagementSystemUITests" */;
-			buildPhases = (
-				191000D725B4DEB8000B7BCD /* Sources */,
-				191000D825B4DEB8000B7BCD /* Frameworks */,
-				191000D925B4DEB8000B7BCD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				191000DD25B4DEB8000B7BCD /* PBXTargetDependency */,
-			);
-			name = OrderManagementSystemUITests;
-			productName = OrderManagementSystemUITests;
-			productReference = 191000DB25B4DEB8000B7BCD /* OrderManagementSystemUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -315,10 +282,6 @@
 						CreatedOnToolsVersion = 12.3;
 					};
 					191000CF25B4DEB8000B7BCD = {
-						CreatedOnToolsVersion = 12.3;
-						TestTargetID = 191000B925B4DEB8000B7BCD;
-					};
-					191000DA25B4DEB8000B7BCD = {
 						CreatedOnToolsVersion = 12.3;
 						TestTargetID = 191000B925B4DEB8000B7BCD;
 					};
@@ -339,7 +302,6 @@
 			targets = (
 				191000B925B4DEB8000B7BCD /* OrderManagementSystem */,
 				191000CF25B4DEB8000B7BCD /* OrderManagementSystemTests */,
-				191000DA25B4DEB8000B7BCD /* OrderManagementSystemUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -360,13 +322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		191000D925B4DEB8000B7BCD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				19CAA38C25C533CD002E5940 /* empty-file.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,14 +361,7 @@
 			files = (
 				191000D525B4DEB8000B7BCD /* OrderManagementSystemTests.swift in Sources */,
 				19CAA35125C36ADA002E5940 /* QueueTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		191000D725B4DEB8000B7BCD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				191000E025B4DEB8000B7BCD /* OrderManagementSystemUITests.swift in Sources */,
+				19CAA35625C3731F002E5940 /* OrderLoaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,11 +372,6 @@
 			isa = PBXTargetDependency;
 			target = 191000B925B4DEB8000B7BCD /* OrderManagementSystem */;
 			targetProxy = 191000D125B4DEB8000B7BCD /* PBXContainerItemProxy */;
-		};
-		191000DD25B4DEB8000B7BCD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 191000B925B4DEB8000B7BCD /* OrderManagementSystem */;
-			targetProxy = 191000DC25B4DEB8000B7BCD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -645,46 +589,6 @@
 			};
 			name = Release;
 		};
-		191000EB25B4DEB8000B7BCD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TSG7U2M54S;
-				INFOPLIST_FILE = OrderManagementSystemUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.amerhukic.OrderManagementSystemUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = OrderManagementSystem;
-			};
-			name = Debug;
-		};
-		191000EC25B4DEB8000B7BCD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TSG7U2M54S;
-				INFOPLIST_FILE = OrderManagementSystemUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.amerhukic.OrderManagementSystemUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = OrderManagementSystem;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -711,15 +615,6 @@
 			buildConfigurations = (
 				191000E825B4DEB8000B7BCD /* Debug */,
 				191000E925B4DEB8000B7BCD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		191000EA25B4DEB8000B7BCD /* Build configuration list for PBXNativeTarget "OrderManagementSystemUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				191000EB25B4DEB8000B7BCD /* Debug */,
-				191000EC25B4DEB8000B7BCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
