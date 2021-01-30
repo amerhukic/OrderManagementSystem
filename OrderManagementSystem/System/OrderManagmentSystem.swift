@@ -61,9 +61,17 @@ private extension OrderManagmentSystem {
     guard !isAcceptingOrders && statisticsTracker.areAllOrdersPickedUp else {
       return
     }
-    let averageOrderWaitTime = statisticsTracker.getAverageOrderWaitTime()
-    let averageCourierWaitTime = statisticsTracker.getAverageCourierWaitTime()
-    printer.print([Event.averageOrderWaitTime(averageOrderWaitTime).description,
-                   Event.averateCourierWaitTime(averageCourierWaitTime).description])
+    
+    if let averageOrderWaitTime = statisticsTracker.getAverageOrderWaitTime() {
+      printer.print(Event.averageOrderWaitTime(averageOrderWaitTime).description)
+    } else {
+      printer.print("Unable to calculate average order wait time. No order was processed.")
+    }
+    
+    if let averageCourierWaitTime = statisticsTracker.getAverageCourierWaitTime() {
+      printer.print(Event.averateCourierWaitTime(averageCourierWaitTime).description)
+    } else {
+      printer.print("Unable to calculate average courier wait time. No order was processed.")
+    }
   }
 }
