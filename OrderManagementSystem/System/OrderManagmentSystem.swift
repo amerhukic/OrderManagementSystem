@@ -43,7 +43,7 @@ private extension OrderManagmentSystem {
   }
   
   func startPreparing(_ order: Order) {
-    kitchen.prepareOrder(order) { [weak self] in
+    kitchen.startPreparingOrder(prepTime: order.prepTime) { [weak self] in
       self?.printAndLog(.orderPrepared)
       self?.orderPickupManager.sendOrderForPickup(order, onOrderPickedUp: { courierWaitTime in
         self?.printAndLog(.orderPickedUp, .courierWaitTime(courierWaitTime))

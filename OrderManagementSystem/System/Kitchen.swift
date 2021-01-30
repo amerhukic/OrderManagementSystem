@@ -8,15 +8,15 @@
 import Foundation
 
 struct Kitchen {
-  private let orderDispatchQueue: DispatchQueue
+  private let queue: DispatchQueue
 
-  init() {
-    self.orderDispatchQueue = DispatchQueue(label: "kitchen.concurrent.queue", attributes: .concurrent)
+  init(queue: DispatchQueue = DispatchQueue(label: "kitchen.concurrent.queue", attributes: .concurrent)) {
+    self.queue = queue
   }
   
-  func prepareOrder(_ order: Order, completion: @escaping () -> Void) {
-    orderDispatchQueue.asyncAfter(deadline: .now() + Double(order.prepTime)) {
-      completion()
+  func startPreparingOrder(prepTime: Int, onOrderPrepared: @escaping () -> Void) {
+    queue.asyncAfter(deadline: .now() + Double(prepTime)) {
+      onOrderPrepared()
     }
   }
 }

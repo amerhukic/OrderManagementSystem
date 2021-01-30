@@ -39,6 +39,7 @@
 		19CAA3AE25C54101002E5940 /* EventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAA3AD25C54101002E5940 /* EventTests.swift */; };
 		19CAA3B425C542CD002E5940 /* StatisticsTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAA3B325C542CD002E5940 /* StatisticsTrackerTests.swift */; };
 		19CAA3C225C5ED67002E5940 /* CourierDispatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAA3C125C5ED67002E5940 /* CourierDispatcherTests.swift */; };
+		19CAA3C825C5F099002E5940 /* KitchenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAA3C725C5F099002E5940 /* KitchenTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		19CAA3AD25C54101002E5940 /* EventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTests.swift; sourceTree = "<group>"; };
 		19CAA3B325C542CD002E5940 /* StatisticsTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTrackerTests.swift; sourceTree = "<group>"; };
 		19CAA3C125C5ED67002E5940 /* CourierDispatcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourierDispatcherTests.swift; sourceTree = "<group>"; };
+		19CAA3C725C5F099002E5940 /* KitchenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitchenTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +257,7 @@
 		19CAA3AC25C540F9002E5940 /* System */ = {
 			isa = PBXGroup;
 			children = (
+				19CAA3C725C5F099002E5940 /* KitchenTests.swift */,
 				19CAA3C125C5ED67002E5940 /* CourierDispatcherTests.swift */,
 				19CAA3B325C542CD002E5940 /* StatisticsTrackerTests.swift */,
 				19CAA3AD25C54101002E5940 /* EventTests.swift */,
@@ -397,6 +400,7 @@
 				19CAA35125C36ADA002E5940 /* QueueTests.swift in Sources */,
 				19CAA3AE25C54101002E5940 /* EventTests.swift in Sources */,
 				19CAA39D25C538E2002E5940 /* OrderTests.swift in Sources */,
+				19CAA3C825C5F099002E5940 /* KitchenTests.swift in Sources */,
 				19CAA35625C3731F002E5940 /* OrderLoaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
