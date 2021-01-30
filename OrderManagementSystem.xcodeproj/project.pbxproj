@@ -34,6 +34,8 @@
 		19CAA35125C36ADA002E5940 /* QueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAA35025C36ADA002E5940 /* QueueTests.swift */; };
 		19CAA35625C3731F002E5940 /* OrderLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAA35525C3731F002E5940 /* OrderLoaderTests.swift */; };
 		19CAA38C25C533CD002E5940 /* empty-file.json in Resources */ = {isa = PBXBuildFile; fileRef = 19CAA38B25C533CD002E5940 /* empty-file.json */; };
+		19CAA39D25C538E2002E5940 /* OrderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAA39C25C538E2002E5940 /* OrderTests.swift */; };
+		19CAA3A325C53F8F002E5940 /* orders.json in Resources */ = {isa = PBXBuildFile; fileRef = 19CAA3A225C53F8F002E5940 /* orders.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		19CAA35025C36ADA002E5940 /* QueueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueTests.swift; sourceTree = "<group>"; };
 		19CAA35525C3731F002E5940 /* OrderLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderLoaderTests.swift; sourceTree = "<group>"; };
 		19CAA38B25C533CD002E5940 /* empty-file.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "empty-file.json"; sourceTree = "<group>"; };
+		19CAA39C25C538E2002E5940 /* OrderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTests.swift; sourceTree = "<group>"; };
+		19CAA3A225C53F8F002E5940 /* orders.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = orders.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,8 +147,9 @@
 		191000D325B4DEB8000B7BCD /* OrderManagementSystemTests */ = {
 			isa = PBXGroup;
 			children = (
-				19CAA37D25C52FC6002E5940 /* TestFiles */,
+				19CAA39B25C538D0002E5940 /* Models */,
 				19CAA34425C362B2002E5940 /* Helpers */,
+				19CAA37D25C52FC6002E5940 /* TestFiles */,
 				191000D425B4DEB8000B7BCD /* OrderManagementSystemTests.swift */,
 				191000D625B4DEB8000B7BCD /* Info.plist */,
 			);
@@ -227,8 +232,17 @@
 			isa = PBXGroup;
 			children = (
 				19CAA38B25C533CD002E5940 /* empty-file.json */,
+				19CAA3A225C53F8F002E5940 /* orders.json */,
 			);
 			path = TestFiles;
+			sourceTree = "<group>";
+		};
+		19CAA39B25C538D0002E5940 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				19CAA39C25C538E2002E5940 /* OrderTests.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +336,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19CAA3A325C53F8F002E5940 /* orders.json in Resources */,
 				19CAA38C25C533CD002E5940 /* empty-file.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +376,7 @@
 			files = (
 				191000D525B4DEB8000B7BCD /* OrderManagementSystemTests.swift in Sources */,
 				19CAA35125C36ADA002E5940 /* QueueTests.swift in Sources */,
+				19CAA39D25C538E2002E5940 /* OrderTests.swift in Sources */,
 				19CAA35625C3731F002E5940 /* OrderLoaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
