@@ -38,6 +38,7 @@
 		19CAA3A325C53F8F002E5940 /* orders.json in Resources */ = {isa = PBXBuildFile; fileRef = 19CAA3A225C53F8F002E5940 /* orders.json */; };
 		19CAA3AE25C54101002E5940 /* EventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAA3AD25C54101002E5940 /* EventTests.swift */; };
 		19CAA3B425C542CD002E5940 /* StatisticsTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAA3B325C542CD002E5940 /* StatisticsTrackerTests.swift */; };
+		19CAA3C225C5ED67002E5940 /* CourierDispatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAA3C125C5ED67002E5940 /* CourierDispatcherTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		19CAA3A225C53F8F002E5940 /* orders.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = orders.json; sourceTree = "<group>"; };
 		19CAA3AD25C54101002E5940 /* EventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTests.swift; sourceTree = "<group>"; };
 		19CAA3B325C542CD002E5940 /* StatisticsTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTrackerTests.swift; sourceTree = "<group>"; };
+		19CAA3C125C5ED67002E5940 /* CourierDispatcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourierDispatcherTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +255,7 @@
 		19CAA3AC25C540F9002E5940 /* System */ = {
 			isa = PBXGroup;
 			children = (
+				19CAA3C125C5ED67002E5940 /* CourierDispatcherTests.swift */,
 				19CAA3B325C542CD002E5940 /* StatisticsTrackerTests.swift */,
 				19CAA3AD25C54101002E5940 /* EventTests.swift */,
 			);
@@ -388,6 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19CAA3C225C5ED67002E5940 /* CourierDispatcherTests.swift in Sources */,
 				191000D525B4DEB8000B7BCD /* OrderManagementSystemTests.swift in Sources */,
 				19CAA3B425C542CD002E5940 /* StatisticsTrackerTests.swift in Sources */,
 				19CAA35125C36ADA002E5940 /* QueueTests.swift in Sources */,
