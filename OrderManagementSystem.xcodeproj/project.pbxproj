@@ -12,7 +12,6 @@
 		191000C425B4DEB8000B7BCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 191000C325B4DEB8000B7BCD /* Assets.xcassets */; };
 		191000C725B4DEB8000B7BCD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 191000C625B4DEB8000B7BCD /* Preview Assets.xcassets */; };
 		191000CA25B4DEB8000B7BCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 191000C825B4DEB8000B7BCD /* LaunchScreen.storyboard */; };
-		191000D525B4DEB8000B7BCD /* OrderManagementSystemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191000D425B4DEB8000B7BCD /* OrderManagementSystemTests.swift */; };
 		191000F425B4E2E3000B7BCD /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191000F325B4E2E3000B7BCD /* Order.swift */; };
 		191000FA25B4E344000B7BCD /* OrderLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191000F925B4E344000B7BCD /* OrderLoader.swift */; };
 		1910010325B4E64F000B7BCD /* SystemSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1910010225B4E64F000B7BCD /* SystemSimulator.swift */; };
@@ -65,7 +64,6 @@
 		191000C925B4DEB8000B7BCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		191000CB25B4DEB8000B7BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		191000D025B4DEB8000B7BCD /* OrderManagementSystemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrderManagementSystemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		191000D425B4DEB8000B7BCD /* OrderManagementSystemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManagementSystemTests.swift; sourceTree = "<group>"; };
 		191000D625B4DEB8000B7BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		191000F325B4E2E3000B7BCD /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		191000F925B4E344000B7BCD /* OrderLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderLoader.swift; sourceTree = "<group>"; };
@@ -168,7 +166,6 @@
 				19CAA39B25C538D0002E5940 /* Models */,
 				19CAA34425C362B2002E5940 /* Helpers */,
 				19CAA37D25C52FC6002E5940 /* TestFiles */,
-				191000D425B4DEB8000B7BCD /* OrderManagementSystemTests.swift */,
 				191000D625B4DEB8000B7BCD /* Info.plist */,
 			);
 			path = OrderManagementSystemTests;
@@ -417,7 +414,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				19CAA3C225C5ED67002E5940 /* CourierDispatcherTests.swift in Sources */,
-				191000D525B4DEB8000B7BCD /* OrderManagementSystemTests.swift in Sources */,
 				19CAA3B425C542CD002E5940 /* StatisticsTrackerTests.swift in Sources */,
 				19CAA35125C36ADA002E5940 /* QueueTests.swift in Sources */,
 				19CAA3E925C603BD002E5940 /* UptimeTrackerMock.swift in Sources */,
