@@ -37,18 +37,10 @@ struct StatisticsTracker {
   }
   
   func getAverageOrderWaitTime() -> TimeIntervalMilliseconds? {
-    if orderWaitTimes.isEmpty {
-      return nil
-    }
-    let sum = orderWaitTimes.reduce(0, +)
-    return sum / UInt64(orderWaitTimes.count)
+    return orderWaitTimes.average
   }
   
   func getAverageCourierWaitTime() -> TimeIntervalMilliseconds? {
-    if courierWaitTimes.isEmpty {
-      return nil
-    }
-    let sum = courierWaitTimes.reduce(0, +)
-    return sum / UInt64(courierWaitTimes.count)
+    return courierWaitTimes.average
   }
 }

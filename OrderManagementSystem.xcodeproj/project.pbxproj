@@ -18,6 +18,7 @@
 		1910017825B725B5000B7BCD /* OrderManagmentSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1910017725B725B5000B7BCD /* OrderManagmentSystem.swift */; };
 		1910018025B7288B000B7BCD /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1910017F25B7288B000B7BCD /* Queue.swift */; };
 		1910018B25B72EAF000B7BCD /* Courier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1910018A25B72EAF000B7BCD /* Courier.swift */; };
+		193A294925C745BE00C6A5B8 /* Array+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193A294825C745BE00C6A5B8 /* Array+Utilities.swift */; };
 		1972324425BD703500B40BA3 /* OrderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972324325BD703500B40BA3 /* OrderData.swift */; };
 		1972324925BD703F00B40BA3 /* CourierData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972324825BD703F00B40BA3 /* CourierData.swift */; };
 		1972325425BD806E00B40BA3 /* CourierDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972325325BD806E00B40BA3 /* CourierDispatcher.swift */; };
@@ -71,6 +72,7 @@
 		1910017725B725B5000B7BCD /* OrderManagmentSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManagmentSystem.swift; sourceTree = "<group>"; };
 		1910017F25B7288B000B7BCD /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		1910018A25B72EAF000B7BCD /* Courier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Courier.swift; sourceTree = "<group>"; };
+		193A294825C745BE00C6A5B8 /* Array+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Utilities.swift"; sourceTree = "<group>"; };
 		1972324325BD703500B40BA3 /* OrderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderData.swift; sourceTree = "<group>"; };
 		1972324825BD703F00B40BA3 /* CourierData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourierData.swift; sourceTree = "<group>"; };
 		1972325325BD806E00B40BA3 /* CourierDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourierDispatcher.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 			children = (
 				1972331525C1FC5600B40BA3 /* DispatchTime+Utilities.swift */,
 				19CAA3E325C60078002E5940 /* UInt64+Utilities.swift */,
+				193A294825C745BE00C6A5B8 /* Array+Utilities.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				1972325425BD806E00B40BA3 /* CourierDispatcher.swift in Sources */,
 				1910018025B7288B000B7BCD /* Queue.swift in Sources */,
 				1972324425BD703500B40BA3 /* OrderData.swift in Sources */,
+				193A294925C745BE00C6A5B8 /* Array+Utilities.swift in Sources */,
 				19CAA3E425C60078002E5940 /* UInt64+Utilities.swift in Sources */,
 				1972331625C1FC5600B40BA3 /* DispatchTime+Utilities.swift in Sources */,
 				1972325925BD807500B40BA3 /* Kitchen.swift in Sources */,
