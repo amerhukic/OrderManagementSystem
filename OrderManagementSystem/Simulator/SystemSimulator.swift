@@ -11,6 +11,7 @@ import Foundation
 class SystemSimulator {
   private let printer = Printer()
   private var orderIndex = 0
+  private let fifoSystem = OrderManagmentSystem()
   
   func startFIFOSystemSimulation() {
     printer.print("----------------------------------------------------------")
@@ -26,19 +27,18 @@ class SystemSimulator {
       return
     }
     orderIndex = 0
-    let fifoSystem = OrderManagmentSystem()
     Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] timer in
       guard let self = self else { return }
       let ordersPerSecond = 50
       var counter = 0
       while self.orderIndex < orders.count && counter < ordersPerSecond {
-        fifoSystem.acceptOrder(orders[self.orderIndex])
+        self.fifoSystem.acceptOrder(orders[self.orderIndex])
         self.orderIndex += 1
         counter += 1
       }
       if self.orderIndex >= orders.count {
         timer.invalidate()
-        fifoSystem.stopAcceptingOrders()
+        self.fifoSystem.stopAcceptingOrders()
       }
     }
   }
