@@ -40,6 +40,10 @@
 		19CAA3B425C542CD002E5940 /* StatisticsTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAA3B325C542CD002E5940 /* StatisticsTrackerTests.swift */; };
 		19CAA3C225C5ED67002E5940 /* CourierDispatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAA3C125C5ED67002E5940 /* CourierDispatcherTests.swift */; };
 		19CAA3C825C5F099002E5940 /* KitchenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAA3C725C5F099002E5940 /* KitchenTests.swift */; };
+		19CAA3CE25C5F78D002E5940 /* MatchedOrderPickupManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAA3CD25C5F78D002E5940 /* MatchedOrderPickupManagerTests.swift */; };
+		19CAA3DE25C5FBD5002E5940 /* UptimeTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAA3DD25C5FBD5002E5940 /* UptimeTracker.swift */; };
+		19CAA3E425C60078002E5940 /* UInt64+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAA3E325C60078002E5940 /* UInt64+Utilities.swift */; };
+		19CAA3E925C603BD002E5940 /* UptimeTrackerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAA3E825C603BD002E5940 /* UptimeTrackerMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +94,10 @@
 		19CAA3B325C542CD002E5940 /* StatisticsTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTrackerTests.swift; sourceTree = "<group>"; };
 		19CAA3C125C5ED67002E5940 /* CourierDispatcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourierDispatcherTests.swift; sourceTree = "<group>"; };
 		19CAA3C725C5F099002E5940 /* KitchenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitchenTests.swift; sourceTree = "<group>"; };
+		19CAA3CD25C5F78D002E5940 /* MatchedOrderPickupManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedOrderPickupManagerTests.swift; sourceTree = "<group>"; };
+		19CAA3DD25C5FBD5002E5940 /* UptimeTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UptimeTracker.swift; sourceTree = "<group>"; };
+		19CAA3E325C60078002E5940 /* UInt64+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UInt64+Utilities.swift"; sourceTree = "<group>"; };
+		19CAA3E825C603BD002E5940 /* UptimeTrackerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UptimeTrackerMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +163,7 @@
 		191000D325B4DEB8000B7BCD /* OrderManagementSystemTests */ = {
 			isa = PBXGroup;
 			children = (
+				19CAA3E725C60388002E5940 /* Mocks */,
 				19CAA3AC25C540F9002E5940 /* System */,
 				19CAA39B25C538D0002E5940 /* Models */,
 				19CAA34425C362B2002E5940 /* Helpers */,
@@ -205,6 +214,7 @@
 				191000F925B4E344000B7BCD /* OrderLoader.swift */,
 				1910017F25B7288B000B7BCD /* Queue.swift */,
 				1972327125BE458400B40BA3 /* Printer.swift */,
+				19CAA3DD25C5FBD5002E5940 /* UptimeTracker.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -213,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				1972331525C1FC5600B40BA3 /* DispatchTime+Utilities.swift */,
+				19CAA3E325C60078002E5940 /* UInt64+Utilities.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -257,12 +268,21 @@
 		19CAA3AC25C540F9002E5940 /* System */ = {
 			isa = PBXGroup;
 			children = (
+				19CAA3CD25C5F78D002E5940 /* MatchedOrderPickupManagerTests.swift */,
 				19CAA3C725C5F099002E5940 /* KitchenTests.swift */,
 				19CAA3C125C5ED67002E5940 /* CourierDispatcherTests.swift */,
 				19CAA3B325C542CD002E5940 /* StatisticsTrackerTests.swift */,
 				19CAA3AD25C54101002E5940 /* EventTests.swift */,
 			);
 			path = System;
+			sourceTree = "<group>";
+		};
+		19CAA3E725C60388002E5940 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				19CAA3E825C603BD002E5940 /* UptimeTrackerMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,6 +398,7 @@
 				1972325425BD806E00B40BA3 /* CourierDispatcher.swift in Sources */,
 				1910018025B7288B000B7BCD /* Queue.swift in Sources */,
 				1972324425BD703500B40BA3 /* OrderData.swift in Sources */,
+				19CAA3E425C60078002E5940 /* UInt64+Utilities.swift in Sources */,
 				1972331625C1FC5600B40BA3 /* DispatchTime+Utilities.swift in Sources */,
 				1972325925BD807500B40BA3 /* Kitchen.swift in Sources */,
 				1910010325B4E64F000B7BCD /* SystemSimulator.swift in Sources */,
@@ -385,6 +406,7 @@
 				191000BE25B4DEB8000B7BCD /* AppDelegate.swift in Sources */,
 				191000FA25B4E344000B7BCD /* OrderLoader.swift in Sources */,
 				1910017825B725B5000B7BCD /* OrderManagmentSystem.swift in Sources */,
+				19CAA3DE25C5FBD5002E5940 /* UptimeTracker.swift in Sources */,
 				197E398225B85F0B00314BDF /* StatisticsTracker.swift in Sources */,
 				191000C025B4DEB8000B7BCD /* SceneDelegate.swift in Sources */,
 			);
@@ -398,8 +420,10 @@
 				191000D525B4DEB8000B7BCD /* OrderManagementSystemTests.swift in Sources */,
 				19CAA3B425C542CD002E5940 /* StatisticsTrackerTests.swift in Sources */,
 				19CAA35125C36ADA002E5940 /* QueueTests.swift in Sources */,
+				19CAA3E925C603BD002E5940 /* UptimeTrackerMock.swift in Sources */,
 				19CAA3AE25C54101002E5940 /* EventTests.swift in Sources */,
 				19CAA39D25C538E2002E5940 /* OrderTests.swift in Sources */,
+				19CAA3CE25C5F78D002E5940 /* MatchedOrderPickupManagerTests.swift in Sources */,
 				19CAA3C825C5F099002E5940 /* KitchenTests.swift in Sources */,
 				19CAA35625C3731F002E5940 /* OrderLoaderTests.swift in Sources */,
 			);

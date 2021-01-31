@@ -11,8 +11,4 @@ extension DispatchTime {
   var uptimeMilliseconds: TimeIntervalMilliseconds {
     uptimeNanoseconds / 1_000_000
   }
-  
-  func absoluteMillisecondsDifference(from dispatchTime: DispatchTime) -> TimeIntervalMilliseconds {
-    return (max(uptimeMilliseconds, dispatchTime.uptimeMilliseconds) - min(uptimeMilliseconds, dispatchTime.uptimeMilliseconds))
-  }
 }

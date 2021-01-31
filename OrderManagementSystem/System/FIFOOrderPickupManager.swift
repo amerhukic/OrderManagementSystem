@@ -1,38 +1,38 @@
+////
+////  FIFOOrderPickupManager.swift
+////  OrderManagementSystem
+////
+////  Created by Amer Hukić on 24. 1. 2021..
+////
 //
-//  FIFOOrderPickupManager.swift
-//  OrderManagementSystem
+//import Foundation
 //
-//  Created by Amer Hukić on 24. 1. 2021..
-//
-
-import Foundation
-
-class FIFOOrderPickupManager {
-  private var orderQueue = Queue<OrderData>()
-  private var courierQueue = Queue<CourierData>()
-  private let executionQueue = DispatchQueue(label: "fifo.order.pickup.manager.serial.queue")
-  
-  func sendCourierForPickup(_ courier: Courier, onOrderPickedUp orderPickupHandler: @escaping (TimeIntervalMilliseconds) -> Void) {
-    let now = DispatchTime.now()
-    executionQueue.async { [weak self] in
-      guard let orderData = self?.orderQueue.pop() else {
-        self?.courierQueue.push(CourierData(courier: courier, arrivalTimePoint: now))
-        return
-      }
-      let timeDifferenceMs = now.absoluteMillisecondsDifference(from: orderData.preparationTimePoint)
-      orderPickupHandler(timeDifferenceMs)
-    }
-  }
-  
-  func sendOrderForPickup(_ order: Order, onOrderPickedUp orderPickupHandler: @escaping (TimeIntervalMilliseconds) -> Void) {
-    let now = DispatchTime.now()
-    executionQueue.async { [weak self] in
-      guard let courierData = self?.courierQueue.pop() else {
-        self?.orderQueue.push(OrderData(order: order, preparationTimePoint: now))
-        return
-      }
-      let timeDifferenceMs = now.absoluteMillisecondsDifference(from: courierData.arrivalTimePoint)
-      orderPickupHandler(timeDifferenceMs)
-    }
-  }
-}
+//class FIFOOrderPickupManager {
+//  private var orderQueue = Queue<OrderData>()
+//  private var courierQueue = Queue<CourierData>()
+//  private let executionQueue = DispatchQueue(label: "fifo.order.pickup.manager.serial.queue")
+//  
+//  func sendCourierForPickup(_ courier: Courier, onOrderPickedUp orderPickupHandler: @escaping (TimeIntervalMilliseconds) -> Void) {
+//    let now = DispatchTime.now()
+//    executionQueue.async { [weak self] in
+//      guard let orderData = self?.orderQueue.pop() else {
+//        self?.courierQueue.push(CourierData(courier: courier, arrivalTimePoint: now))
+//        return
+//      }
+//      let timeDifferenceMs = now.absoluteMillisecondsDifference(from: orderData.preparationTimePoint)
+//      orderPickupHandler(timeDifferenceMs)
+//    }
+//  }
+//  
+//  func sendOrderForPickup(_ order: Order, onOrderPickedUp orderPickupHandler: @escaping (TimeIntervalMilliseconds) -> Void) {
+//    let now = DispatchTime.now()
+//    executionQueue.async { [weak self] in
+//      guard let courierData = self?.courierQueue.pop() else {
+//        self?.orderQueue.push(OrderData(order: order, preparationTimePoint: now))
+//        return
+//      }
+//      let timeDifferenceMs = now.absoluteMillisecondsDifference(from: courierData.arrivalTimePoint)
+//      orderPickupHandler(timeDifferenceMs)
+//    }
+//  }
+//}

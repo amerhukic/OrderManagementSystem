@@ -9,5 +9,5 @@ import Foundation
 
 struct CourierData {
   let courier: Courier
-  let arrivalTimePoint: DispatchTime
+  let arrivalTimePoint: TimeIntervalMilliseconds
 }

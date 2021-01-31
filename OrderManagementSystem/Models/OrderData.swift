@@ -9,5 +9,5 @@ import Foundation
 
 struct OrderData {
   let order: Order
-  let preparationTimePoint: DispatchTime
+  let preparationTimePoint: TimeIntervalMilliseconds
 }
