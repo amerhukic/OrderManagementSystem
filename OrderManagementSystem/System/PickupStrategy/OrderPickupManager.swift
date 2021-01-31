@@ -1,5 +1,5 @@
 //
-//  MatchedOrderPickupManager.swift
+//  OrderPickupManager.swift
 //  OrderManagementSystem
 //
 //  Created by Amer Hukić on 26. 1. 2021..
@@ -7,13 +7,14 @@
 
 import Foundation
 
-class MatchedOrderPickupManager {
-  private var orderDictionary = [String: OrderData]()
-  private var courierDictionary = [String: CourierData]()
-  private let lock = NSLock()
+class OrderPickupManager {
+  private let waitingContainer: CourierOrderWaitingContainer
   private let uptimeTracker: UptimeTracking
+  private let lock = NSLock()
   
-  init(uptimeTracker: UptimeTracking = UptimeTracker()) {
+  init(waitingContainer: CourierOrderWaitingContainer,
+       uptimeTracker: UptimeTracking = UptimeTracker()) {
+    self.waitingContainer = waitingContainer
     self.uptimeTracker = uptimeTracker
   }
   
@@ -23,8 +24,8 @@ class MatchedOrderPickupManager {
     defer {
       lock.unlock()
     }
-    guard let orderData = orderDictionary[courier.orderId] else {
-      courierDictionary[courier.orderId] = CourierData(courier: courier, arrivalTimePoint: timePoint)
+    guard let orderData = waitingContainer.getOrderData(forCourier: courier) else {
+      waitingContainer.storeCourierData(CourierData(courier: courier, arrivalTimePoint: timePoint))
       return
     }
     let timeDifferenceMs = timePoint.absoluteDifference(from: orderData.preparationTimePoint)
@@ -37,8 +38,8 @@ class MatchedOrderPickupManager {
     defer {
       lock.unlock()
     }
-    guard let courierData = courierDictionary[order.id] else {
-      orderDictionary[order.id] = OrderData(order: order, preparationTimePoint: timePoint)
+    guard let courierData = waitingContainer.getCourierData(forOrder: order) else {
+      waitingContainer.storeOrderData(OrderData(order: order, preparationTimePoint: timePoint))
       return
     }
     let timeDifferenceMs = timePoint.absoluteDifference(from: courierData.arrivalTimePoint)

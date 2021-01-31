@@ -19,14 +19,18 @@
 		1910018025B7288B000B7BCD /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1910017F25B7288B000B7BCD /* Queue.swift */; };
 		1910018B25B72EAF000B7BCD /* Courier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1910018A25B72EAF000B7BCD /* Courier.swift */; };
 		193A294925C745BE00C6A5B8 /* Array+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193A294825C745BE00C6A5B8 /* Array+Utilities.swift */; };
+		193A294D25C7499000C6A5B8 /* MatchedCourierOrderContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193A294C25C7499000C6A5B8 /* MatchedCourierOrderContainer.swift */; };
+		193A295225C7662F00C6A5B8 /* CourierOrderWaitingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193A295125C7662F00C6A5B8 /* CourierOrderWaitingContainer.swift */; };
+		193A295D25C7678D00C6A5B8 /* FIFOCourierOrderContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193A295C25C7678D00C6A5B8 /* FIFOCourierOrderContainer.swift */; };
+		193A296525C76DC600C6A5B8 /* EmptyCourierOrderWaitingContainerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193A296425C76DC600C6A5B8 /* EmptyCourierOrderWaitingContainerMock.swift */; };
+		193A296925C76F1B00C6A5B8 /* CourierOrderWaitingContainerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193A296825C76F1B00C6A5B8 /* CourierOrderWaitingContainerMock.swift */; };
 		1972324425BD703500B40BA3 /* OrderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972324325BD703500B40BA3 /* OrderData.swift */; };
 		1972324925BD703F00B40BA3 /* CourierData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972324825BD703F00B40BA3 /* CourierData.swift */; };
 		1972325425BD806E00B40BA3 /* CourierDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972325325BD806E00B40BA3 /* CourierDispatcher.swift */; };
 		1972325925BD807500B40BA3 /* Kitchen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972325825BD807500B40BA3 /* Kitchen.swift */; };
-		1972325E25BDA03D00B40BA3 /* FIFOOrderPickupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972325D25BDA03D00B40BA3 /* FIFOOrderPickupManager.swift */; };
 		1972327225BE458400B40BA3 /* Printer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972327125BE458400B40BA3 /* Printer.swift */; };
 		1972329525BF32DF00B40BA3 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972329425BF32DF00B40BA3 /* Event.swift */; };
-		197232C825C07F6700B40BA3 /* MatchedOrderPickupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197232C725C07F6700B40BA3 /* MatchedOrderPickupManager.swift */; };
+		197232C825C07F6700B40BA3 /* OrderPickupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197232C725C07F6700B40BA3 /* OrderPickupManager.swift */; };
 		1972331625C1FC5600B40BA3 /* DispatchTime+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972331525C1FC5600B40BA3 /* DispatchTime+Utilities.swift */; };
 		197E397125B76DCB00314BDF /* SystemTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197E397025B76DCB00314BDF /* SystemTestViewController.swift */; };
 		197E397C25B76FD700314BDF /* dispatch_orders.json in Resources */ = {isa = PBXBuildFile; fileRef = 197E397B25B76FD700314BDF /* dispatch_orders.json */; };
@@ -40,7 +44,7 @@
 		19CAA3B425C542CD002E5940 /* StatisticsTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAA3B325C542CD002E5940 /* StatisticsTrackerTests.swift */; };
 		19CAA3C225C5ED67002E5940 /* CourierDispatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAA3C125C5ED67002E5940 /* CourierDispatcherTests.swift */; };
 		19CAA3C825C5F099002E5940 /* KitchenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAA3C725C5F099002E5940 /* KitchenTests.swift */; };
-		19CAA3CE25C5F78D002E5940 /* MatchedOrderPickupManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAA3CD25C5F78D002E5940 /* MatchedOrderPickupManagerTests.swift */; };
+		19CAA3CE25C5F78D002E5940 /* OrderPickupManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAA3CD25C5F78D002E5940 /* OrderPickupManagerTests.swift */; };
 		19CAA3DE25C5FBD5002E5940 /* UptimeTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAA3DD25C5FBD5002E5940 /* UptimeTracker.swift */; };
 		19CAA3E425C60078002E5940 /* UInt64+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAA3E325C60078002E5940 /* UInt64+Utilities.swift */; };
 		19CAA3E925C603BD002E5940 /* UptimeTrackerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAA3E825C603BD002E5940 /* UptimeTrackerMock.swift */; };
@@ -73,14 +77,18 @@
 		1910017F25B7288B000B7BCD /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		1910018A25B72EAF000B7BCD /* Courier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Courier.swift; sourceTree = "<group>"; };
 		193A294825C745BE00C6A5B8 /* Array+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Utilities.swift"; sourceTree = "<group>"; };
+		193A294C25C7499000C6A5B8 /* MatchedCourierOrderContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedCourierOrderContainer.swift; sourceTree = "<group>"; };
+		193A295125C7662F00C6A5B8 /* CourierOrderWaitingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourierOrderWaitingContainer.swift; sourceTree = "<group>"; };
+		193A295C25C7678D00C6A5B8 /* FIFOCourierOrderContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIFOCourierOrderContainer.swift; sourceTree = "<group>"; };
+		193A296425C76DC600C6A5B8 /* EmptyCourierOrderWaitingContainerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCourierOrderWaitingContainerMock.swift; sourceTree = "<group>"; };
+		193A296825C76F1B00C6A5B8 /* CourierOrderWaitingContainerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourierOrderWaitingContainerMock.swift; sourceTree = "<group>"; };
 		1972324325BD703500B40BA3 /* OrderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderData.swift; sourceTree = "<group>"; };
 		1972324825BD703F00B40BA3 /* CourierData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourierData.swift; sourceTree = "<group>"; };
 		1972325325BD806E00B40BA3 /* CourierDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourierDispatcher.swift; sourceTree = "<group>"; };
 		1972325825BD807500B40BA3 /* Kitchen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kitchen.swift; sourceTree = "<group>"; };
-		1972325D25BDA03D00B40BA3 /* FIFOOrderPickupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIFOOrderPickupManager.swift; sourceTree = "<group>"; };
 		1972327125BE458400B40BA3 /* Printer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Printer.swift; sourceTree = "<group>"; };
 		1972329425BF32DF00B40BA3 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		197232C725C07F6700B40BA3 /* MatchedOrderPickupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedOrderPickupManager.swift; sourceTree = "<group>"; };
+		197232C725C07F6700B40BA3 /* OrderPickupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPickupManager.swift; sourceTree = "<group>"; };
 		1972331525C1FC5600B40BA3 /* DispatchTime+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchTime+Utilities.swift"; sourceTree = "<group>"; };
 		197E397025B76DCB00314BDF /* SystemTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemTestViewController.swift; sourceTree = "<group>"; };
 		197E397B25B76FD700314BDF /* dispatch_orders.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dispatch_orders.json; sourceTree = "<group>"; };
@@ -94,7 +102,7 @@
 		19CAA3B325C542CD002E5940 /* StatisticsTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTrackerTests.swift; sourceTree = "<group>"; };
 		19CAA3C125C5ED67002E5940 /* CourierDispatcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourierDispatcherTests.swift; sourceTree = "<group>"; };
 		19CAA3C725C5F099002E5940 /* KitchenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitchenTests.swift; sourceTree = "<group>"; };
-		19CAA3CD25C5F78D002E5940 /* MatchedOrderPickupManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedOrderPickupManagerTests.swift; sourceTree = "<group>"; };
+		19CAA3CD25C5F78D002E5940 /* OrderPickupManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPickupManagerTests.swift; sourceTree = "<group>"; };
 		19CAA3DD25C5FBD5002E5940 /* UptimeTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UptimeTracker.swift; sourceTree = "<group>"; };
 		19CAA3E325C60078002E5940 /* UInt64+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UInt64+Utilities.swift"; sourceTree = "<group>"; };
 		19CAA3E825C603BD002E5940 /* UptimeTrackerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UptimeTrackerMock.swift; sourceTree = "<group>"; };
@@ -191,10 +199,8 @@
 				1910017725B725B5000B7BCD /* OrderManagmentSystem.swift */,
 				1972325825BD807500B40BA3 /* Kitchen.swift */,
 				1972325325BD806E00B40BA3 /* CourierDispatcher.swift */,
-				1972325D25BDA03D00B40BA3 /* FIFOOrderPickupManager.swift */,
-				197232C725C07F6700B40BA3 /* MatchedOrderPickupManager.swift */,
 				197E398125B85F0B00314BDF /* StatisticsTracker.swift */,
-				1972329425BF32DF00B40BA3 /* Event.swift */,
+				193A295025C765FE00C6A5B8 /* PickupStrategy */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -214,8 +220,20 @@
 				1910017F25B7288B000B7BCD /* Queue.swift */,
 				1972327125BE458400B40BA3 /* Printer.swift */,
 				19CAA3DD25C5FBD5002E5940 /* UptimeTracker.swift */,
+				1972329425BF32DF00B40BA3 /* Event.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		193A295025C765FE00C6A5B8 /* PickupStrategy */ = {
+			isa = PBXGroup;
+			children = (
+				197232C725C07F6700B40BA3 /* OrderPickupManager.swift */,
+				193A294C25C7499000C6A5B8 /* MatchedCourierOrderContainer.swift */,
+				193A295C25C7678D00C6A5B8 /* FIFOCourierOrderContainer.swift */,
+				193A295125C7662F00C6A5B8 /* CourierOrderWaitingContainer.swift */,
+			);
+			path = PickupStrategy;
 			sourceTree = "<group>";
 		};
 		1972331425C1FC4200B40BA3 /* Extensions */ = {
@@ -268,7 +286,7 @@
 		19CAA3AC25C540F9002E5940 /* System */ = {
 			isa = PBXGroup;
 			children = (
-				19CAA3CD25C5F78D002E5940 /* MatchedOrderPickupManagerTests.swift */,
+				19CAA3CD25C5F78D002E5940 /* OrderPickupManagerTests.swift */,
 				19CAA3C725C5F099002E5940 /* KitchenTests.swift */,
 				19CAA3C125C5ED67002E5940 /* CourierDispatcherTests.swift */,
 				19CAA3B325C542CD002E5940 /* StatisticsTrackerTests.swift */,
@@ -281,6 +299,8 @@
 			isa = PBXGroup;
 			children = (
 				19CAA3E825C603BD002E5940 /* UptimeTrackerMock.swift */,
+				193A296425C76DC600C6A5B8 /* EmptyCourierOrderWaitingContainerMock.swift */,
+				193A296825C76F1B00C6A5B8 /* CourierOrderWaitingContainerMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -390,11 +410,11 @@
 			files = (
 				197E397125B76DCB00314BDF /* SystemTestViewController.swift in Sources */,
 				191000F425B4E2E3000B7BCD /* Order.swift in Sources */,
+				193A295D25C7678D00C6A5B8 /* FIFOCourierOrderContainer.swift in Sources */,
 				1910018B25B72EAF000B7BCD /* Courier.swift in Sources */,
 				1972324925BD703F00B40BA3 /* CourierData.swift in Sources */,
-				1972325E25BDA03D00B40BA3 /* FIFOOrderPickupManager.swift in Sources */,
 				1972329525BF32DF00B40BA3 /* Event.swift in Sources */,
-				197232C825C07F6700B40BA3 /* MatchedOrderPickupManager.swift in Sources */,
+				197232C825C07F6700B40BA3 /* OrderPickupManager.swift in Sources */,
 				1972325425BD806E00B40BA3 /* CourierDispatcher.swift in Sources */,
 				1910018025B7288B000B7BCD /* Queue.swift in Sources */,
 				1972324425BD703500B40BA3 /* OrderData.swift in Sources */,
@@ -404,6 +424,8 @@
 				1972325925BD807500B40BA3 /* Kitchen.swift in Sources */,
 				1910010325B4E64F000B7BCD /* SystemSimulator.swift in Sources */,
 				1972327225BE458400B40BA3 /* Printer.swift in Sources */,
+				193A295225C7662F00C6A5B8 /* CourierOrderWaitingContainer.swift in Sources */,
+				193A294D25C7499000C6A5B8 /* MatchedCourierOrderContainer.swift in Sources */,
 				191000BE25B4DEB8000B7BCD /* AppDelegate.swift in Sources */,
 				191000FA25B4E344000B7BCD /* OrderLoader.swift in Sources */,
 				1910017825B725B5000B7BCD /* OrderManagmentSystem.swift in Sources */,
@@ -421,9 +443,11 @@
 				19CAA3B425C542CD002E5940 /* StatisticsTrackerTests.swift in Sources */,
 				19CAA35125C36ADA002E5940 /* QueueTests.swift in Sources */,
 				19CAA3E925C603BD002E5940 /* UptimeTrackerMock.swift in Sources */,
+				193A296525C76DC600C6A5B8 /* EmptyCourierOrderWaitingContainerMock.swift in Sources */,
 				19CAA3AE25C54101002E5940 /* EventTests.swift in Sources */,
+				193A296925C76F1B00C6A5B8 /* CourierOrderWaitingContainerMock.swift in Sources */,
 				19CAA39D25C538E2002E5940 /* OrderTests.swift in Sources */,
-				19CAA3CE25C5F78D002E5940 /* MatchedOrderPickupManagerTests.swift in Sources */,
+				19CAA3CE25C5F78D002E5940 /* OrderPickupManagerTests.swift in Sources */,
 				19CAA3C825C5F099002E5940 /* KitchenTests.swift in Sources */,
 				19CAA35625C3731F002E5940 /* OrderLoaderTests.swift in Sources */,
 			);

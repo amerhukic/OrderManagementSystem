@@ -10,7 +10,7 @@ import Foundation
 class OrderManagmentSystem {
   private let kitchen = Kitchen()
   private let courierDispatcher = CourierDispatcher()
-  private let orderPickupManager = MatchedOrderPickupManager()
+  private let orderPickupManager = OrderPickupManager(waitingContainer: MatchedCourierOrderContainer())
   private let printer = Printer()
   private var statisticsTracker: StatisticsTracker
   private var isAcceptingOrders = true
