@@ -25,6 +25,7 @@
 		193A296525C76DC600C6A5B8 /* EmptyCourierOrderWaitingContainerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193A296425C76DC600C6A5B8 /* EmptyCourierOrderWaitingContainerMock.swift */; };
 		193A296925C76F1B00C6A5B8 /* CourierOrderWaitingContainerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193A296825C76F1B00C6A5B8 /* CourierOrderWaitingContainerMock.swift */; };
 		193A296D25C771DA00C6A5B8 /* MatchedCourierOrderContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193A296C25C771DA00C6A5B8 /* MatchedCourierOrderContainerTests.swift */; };
+		193A297325C7775D00C6A5B8 /* FIFOCourierOrderWaitingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193A297225C7775D00C6A5B8 /* FIFOCourierOrderWaitingContainer.swift */; };
 		1972324425BD703500B40BA3 /* OrderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972324325BD703500B40BA3 /* OrderData.swift */; };
 		1972324925BD703F00B40BA3 /* CourierData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972324825BD703F00B40BA3 /* CourierData.swift */; };
 		1972325425BD806E00B40BA3 /* CourierDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972325325BD806E00B40BA3 /* CourierDispatcher.swift */; };
@@ -84,6 +85,7 @@
 		193A296425C76DC600C6A5B8 /* EmptyCourierOrderWaitingContainerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCourierOrderWaitingContainerMock.swift; sourceTree = "<group>"; };
 		193A296825C76F1B00C6A5B8 /* CourierOrderWaitingContainerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourierOrderWaitingContainerMock.swift; sourceTree = "<group>"; };
 		193A296C25C771DA00C6A5B8 /* MatchedCourierOrderContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedCourierOrderContainerTests.swift; sourceTree = "<group>"; };
+		193A297225C7775D00C6A5B8 /* FIFOCourierOrderWaitingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIFOCourierOrderWaitingContainer.swift; sourceTree = "<group>"; };
 		1972324325BD703500B40BA3 /* OrderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderData.swift; sourceTree = "<group>"; };
 		1972324825BD703F00B40BA3 /* CourierData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourierData.swift; sourceTree = "<group>"; };
 		1972325325BD806E00B40BA3 /* CourierDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourierDispatcher.swift; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 			children = (
 				19CAA3CD25C5F78D002E5940 /* OrderPickupManagerTests.swift */,
 				193A296C25C771DA00C6A5B8 /* MatchedCourierOrderContainerTests.swift */,
+				193A297225C7775D00C6A5B8 /* FIFOCourierOrderWaitingContainer.swift */,
 				19CAA3C725C5F099002E5940 /* KitchenTests.swift */,
 				19CAA3C125C5ED67002E5940 /* CourierDispatcherTests.swift */,
 				19CAA3B325C542CD002E5940 /* StatisticsTrackerTests.swift */,
@@ -449,6 +452,7 @@
 				193A296525C76DC600C6A5B8 /* EmptyCourierOrderWaitingContainerMock.swift in Sources */,
 				19CAA3AE25C54101002E5940 /* EventTests.swift in Sources */,
 				193A296925C76F1B00C6A5B8 /* CourierOrderWaitingContainerMock.swift in Sources */,
+				193A297325C7775D00C6A5B8 /* FIFOCourierOrderWaitingContainer.swift in Sources */,
 				193A296D25C771DA00C6A5B8 /* MatchedCourierOrderContainerTests.swift in Sources */,
 				19CAA39D25C538E2002E5940 /* OrderTests.swift in Sources */,
 				19CAA3CE25C5F78D002E5940 /* OrderPickupManagerTests.swift in Sources */,
