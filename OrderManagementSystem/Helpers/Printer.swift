@@ -2,25 +2,12 @@
 //  Printer.swift
 //  OrderManagementSystem
 //
-//  Created by Amer Hukić on 25. 1. 2021..
+//  Created by Amer Hukić on 1. 2. 2021..
 //
 
-import os.log
 import Foundation
 
-struct Printer {
-  private let queue = DispatchQueue(label: "printer.serial.queue")
-  private let logger = Logger()
-  
-  func print(_ item: String) {
-    print([item])
-  }
-
-  func print(_ items: [String]) {
-    queue.async {
-      items.forEach {
-        self.logger.info("\($0)")
-      }
-    }
-  }
+protocol Printer {
+  func print(_ item: String)
+  func print(_ items: [String])
 }

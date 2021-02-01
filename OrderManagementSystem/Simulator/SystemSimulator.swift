@@ -9,7 +9,7 @@ import Foundation
 
 // TODO: more refactoring
 class SystemSimulator {
-  private let printer = Printer()
+  private let printer = ConsolePrinter()
   private var orderIndex = 0
   private let fifoSystem = OrderManagmentSystem(pickupStrategy: .fifo)
   

@@ -10,12 +10,12 @@ import Foundation
 class OrderManagmentSystem {
   private let kitchen = Kitchen()
   private let courierDispatcher = CourierDispatcher()
-  private let printer = Printer()
   private var statisticsTracker = StatisticsTracker()
   private var isAcceptingOrders = true
   private let orderPickupManager: OrderPickupManager
+  private let printer: Printer
 
-  init(pickupStrategy: PickupStrategy) {
+  init(pickupStrategy: PickupStrategy, printer: Printer = ConsolePrinter()) {
     var container: CourierOrderPickupContainer
     switch pickupStrategy {
     case .fifo:
@@ -24,6 +24,7 @@ class OrderManagmentSystem {
       container = MatchedCourierOrderPickupContainer()
     }
     orderPickupManager = OrderPickupManager(container: container)
+    self.printer = printer
   }
 
   func acceptOrder(_ order: Order) {
@@ -34,6 +35,7 @@ class OrderManagmentSystem {
   
   func stopAcceptingOrders() {
     isAcceptingOrders = false
+    printFinalStatisticsIfPossible()
   }
 }
 

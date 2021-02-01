@@ -28,11 +28,14 @@
 		193A297325C7775D00C6A5B8 /* FIFOCourierOrderPickupContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193A297225C7775D00C6A5B8 /* FIFOCourierOrderPickupContainer.swift */; };
 		193A297925C7821900C6A5B8 /* OrderManagementSystemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193A297825C7821900C6A5B8 /* OrderManagementSystemTests.swift */; };
 		193A298325C784BC00C6A5B8 /* PickupStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193A298225C784BC00C6A5B8 /* PickupStrategy.swift */; };
+		193A29A325C78E8100C6A5B8 /* Printer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193A29A225C78E8100C6A5B8 /* Printer.swift */; };
+		193A29B025C7920500C6A5B8 /* CachingPrinterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193A299C25C78E4600C6A5B8 /* CachingPrinterMock.swift */; };
+		193A29BD25C7928C00C6A5B8 /* dispatch_orders.json in Resources */ = {isa = PBXBuildFile; fileRef = 197E397B25B76FD700314BDF /* dispatch_orders.json */; };
 		1972324425BD703500B40BA3 /* OrderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972324325BD703500B40BA3 /* OrderData.swift */; };
 		1972324925BD703F00B40BA3 /* CourierData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972324825BD703F00B40BA3 /* CourierData.swift */; };
 		1972325425BD806E00B40BA3 /* CourierDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972325325BD806E00B40BA3 /* CourierDispatcher.swift */; };
 		1972325925BD807500B40BA3 /* Kitchen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972325825BD807500B40BA3 /* Kitchen.swift */; };
-		1972327225BE458400B40BA3 /* Printer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972327125BE458400B40BA3 /* Printer.swift */; };
+		1972327225BE458400B40BA3 /* ConsolePrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972327125BE458400B40BA3 /* ConsolePrinter.swift */; };
 		1972329525BF32DF00B40BA3 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972329425BF32DF00B40BA3 /* Event.swift */; };
 		197232C825C07F6700B40BA3 /* OrderPickupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197232C725C07F6700B40BA3 /* OrderPickupManager.swift */; };
 		1972331625C1FC5600B40BA3 /* DispatchTime+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972331525C1FC5600B40BA3 /* DispatchTime+Utilities.swift */; };
@@ -90,11 +93,13 @@
 		193A297225C7775D00C6A5B8 /* FIFOCourierOrderPickupContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIFOCourierOrderPickupContainer.swift; sourceTree = "<group>"; };
 		193A297825C7821900C6A5B8 /* OrderManagementSystemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManagementSystemTests.swift; sourceTree = "<group>"; };
 		193A298225C784BC00C6A5B8 /* PickupStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupStrategy.swift; sourceTree = "<group>"; };
+		193A299C25C78E4600C6A5B8 /* CachingPrinterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachingPrinterMock.swift; sourceTree = "<group>"; };
+		193A29A225C78E8100C6A5B8 /* Printer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Printer.swift; sourceTree = "<group>"; };
 		1972324325BD703500B40BA3 /* OrderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderData.swift; sourceTree = "<group>"; };
 		1972324825BD703F00B40BA3 /* CourierData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourierData.swift; sourceTree = "<group>"; };
 		1972325325BD806E00B40BA3 /* CourierDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourierDispatcher.swift; sourceTree = "<group>"; };
 		1972325825BD807500B40BA3 /* Kitchen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kitchen.swift; sourceTree = "<group>"; };
-		1972327125BE458400B40BA3 /* Printer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Printer.swift; sourceTree = "<group>"; };
+		1972327125BE458400B40BA3 /* ConsolePrinter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsolePrinter.swift; sourceTree = "<group>"; };
 		1972329425BF32DF00B40BA3 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		197232C725C07F6700B40BA3 /* OrderPickupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPickupManager.swift; sourceTree = "<group>"; };
 		1972331525C1FC5600B40BA3 /* DispatchTime+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchTime+Utilities.swift"; sourceTree = "<group>"; };
@@ -226,7 +231,8 @@
 			children = (
 				191000F925B4E344000B7BCD /* OrderLoader.swift */,
 				1910017F25B7288B000B7BCD /* Queue.swift */,
-				1972327125BE458400B40BA3 /* Printer.swift */,
+				193A29A225C78E8100C6A5B8 /* Printer.swift */,
+				1972327125BE458400B40BA3 /* ConsolePrinter.swift */,
 				19CAA3DD25C5FBD5002E5940 /* UptimeTracker.swift */,
 				1972329425BF32DF00B40BA3 /* Event.swift */,
 			);
@@ -313,6 +319,7 @@
 				19CAA3E825C603BD002E5940 /* UptimeTrackerMock.swift */,
 				193A296425C76DC600C6A5B8 /* EmptyCourierOrderPickupContainerMock.swift */,
 				193A296825C76F1B00C6A5B8 /* CourierOrderPickupContainerMock.swift */,
+				193A299C25C78E4600C6A5B8 /* CachingPrinterMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -408,6 +415,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				193A29BD25C7928C00C6A5B8 /* dispatch_orders.json in Resources */,
 				19CAA3A325C53F8F002E5940 /* orders.json in Resources */,
 				19CAA38C25C533CD002E5940 /* empty-file.json in Resources */,
 			);
@@ -422,6 +430,7 @@
 			files = (
 				197E397125B76DCB00314BDF /* SystemTestViewController.swift in Sources */,
 				191000F425B4E2E3000B7BCD /* Order.swift in Sources */,
+				193A29A325C78E8100C6A5B8 /* Printer.swift in Sources */,
 				193A295D25C7678D00C6A5B8 /* FIFOCourierOrderPickupContainer.swift in Sources */,
 				1910018B25B72EAF000B7BCD /* Courier.swift in Sources */,
 				1972324925BD703F00B40BA3 /* CourierData.swift in Sources */,
@@ -436,7 +445,7 @@
 				1972331625C1FC5600B40BA3 /* DispatchTime+Utilities.swift in Sources */,
 				1972325925BD807500B40BA3 /* Kitchen.swift in Sources */,
 				1910010325B4E64F000B7BCD /* SystemSimulator.swift in Sources */,
-				1972327225BE458400B40BA3 /* Printer.swift in Sources */,
+				1972327225BE458400B40BA3 /* ConsolePrinter.swift in Sources */,
 				193A295225C7662F00C6A5B8 /* CourierOrderPickupContainer.swift in Sources */,
 				193A294D25C7499000C6A5B8 /* MatchedCourierOrderPickupContainer.swift in Sources */,
 				191000BE25B4DEB8000B7BCD /* AppDelegate.swift in Sources */,
@@ -452,6 +461,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				193A29B025C7920500C6A5B8 /* CachingPrinterMock.swift in Sources */,
 				19CAA3C225C5ED67002E5940 /* CourierDispatcherTests.swift in Sources */,
 				19CAA3B425C542CD002E5940 /* StatisticsTrackerTests.swift in Sources */,
 				19CAA35125C36ADA002E5940 /* QueueTests.swift in Sources */,
