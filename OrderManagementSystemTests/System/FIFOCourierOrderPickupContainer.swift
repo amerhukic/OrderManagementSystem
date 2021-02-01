@@ -1,5 +1,5 @@
 //
-//  FIFOCourierOrderWaitingContainer.swift
+//  FIFOCourierOrderPickupContainer.swift
 //  OrderManagementSystemTests
 //
 //  Created by Amer Hukić on 1. 2. 2021..
@@ -9,11 +9,11 @@ import XCTest
 @testable import OrderManagementSystem
 
 class FIFOCourierOrderContainerTests: XCTestCase {
-  var container: FIFOCourierOrderWaitingContainer!
+  var container: FIFOCourierOrderPickupContainer!
   
   override func setUp() {
     super.setUp()
-    container = FIFOCourierOrderWaitingContainer()
+    container = FIFOCourierOrderPickupContainer()
   }
   
   func testGettingCourierDataReturnsNilWhenNoCourierIsAvailable() {

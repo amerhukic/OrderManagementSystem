@@ -10,7 +10,7 @@ import XCTest
 
 class OrderPickupManagerTests: XCTestCase {
   func testOrderPickupHandlerNotCalledWhenNoCurrierIsWaiting() {
-    let manager = OrderPickupManager(waitingContainer: EmptyCourierOrderWaitingContainerMock())
+    let manager = OrderPickupManager(container: EmptyCourierOrderPickupContainerMock())
     let order = Order(id: "1", name: "Banan Split", prepTime: 1)
     
     manager.sendOrderForPickup(order) { _ in
@@ -19,7 +19,7 @@ class OrderPickupManagerTests: XCTestCase {
   }
   
   func testOrderPickupHandlerNotCalledWhenNoOrderIsWaiting() {
-    let manager = OrderPickupManager(waitingContainer: EmptyCourierOrderWaitingContainerMock())
+    let manager = OrderPickupManager(container: EmptyCourierOrderPickupContainerMock())
     let courier = Courier(orderId: "1")
     
     manager.sendCourierForPickup(courier) { _ in
@@ -28,7 +28,7 @@ class OrderPickupManagerTests: XCTestCase {
   }
   
   func testOrderPickupHandlerCalledWhenCourierArrivesAndOrderIsWaiting() {
-    let manager = OrderPickupManager(waitingContainer: CourierOrderWaitingContainerMock(), uptimeTracker: UptimeTrackerMock())
+    let manager = OrderPickupManager(container: CourierOrderPickupContainerMock(), uptimeTracker: UptimeTrackerMock())
     let courier = Courier(orderId: "1")
     var waitTime: TimeIntervalMilliseconds?
     
@@ -39,7 +39,7 @@ class OrderPickupManagerTests: XCTestCase {
   }
   
   func testOrderPickupHandlerCalledWhenOrderArrivesAndCourierIsWaiting() {
-    let manager = OrderPickupManager(waitingContainer: CourierOrderWaitingContainerMock(), uptimeTracker: UptimeTrackerMock())
+    let manager = OrderPickupManager(container: CourierOrderPickupContainerMock(), uptimeTracker: UptimeTrackerMock())
     let order = Order(id: "1", name: "Banana Split", prepTime: 1)
     var waitTime: TimeIntervalMilliseconds?
 

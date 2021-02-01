@@ -1,5 +1,5 @@
 //
-//  MatchedCourierOrderWaitingContainer.swift
+//  MatchedCourierOrderPickupContainer.swift
 //  OrderManagementSystem
 //
 //  Created by Amer Hukić on 31. 1. 2021..
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MatchedCourierOrderWaitingContainer: CourierOrderWaitingContainer {
+class MatchedCourierOrderPickupContainer: CourierOrderPickupContainer {
   private var orderDictionary = [String: OrderData]()
   private var courierDictionary = [String: CourierData]()
   

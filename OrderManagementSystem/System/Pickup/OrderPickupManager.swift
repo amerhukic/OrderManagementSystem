@@ -8,13 +8,13 @@
 import Foundation
 
 class OrderPickupManager {
-  private let waitingContainer: CourierOrderWaitingContainer
+  private let container: CourierOrderPickupContainer
   private let uptimeTracker: UptimeTracking
   private let lock = NSLock()
   
-  init(waitingContainer: CourierOrderWaitingContainer,
+  init(container: CourierOrderPickupContainer,
        uptimeTracker: UptimeTracking = UptimeTracker()) {
-    self.waitingContainer = waitingContainer
+    self.container = container
     self.uptimeTracker = uptimeTracker
   }
   
@@ -24,8 +24,8 @@ class OrderPickupManager {
     defer {
       lock.unlock()
     }
-    guard let orderData = waitingContainer.getOrderData(forCourier: courier) else {
-      waitingContainer.storeCourierData(CourierData(courier: courier, arrivalTimePoint: timePoint))
+    guard let orderData = container.getOrderData(forCourier: courier) else {
+      container.storeCourierData(CourierData(courier: courier, arrivalTimePoint: timePoint))
       return
     }
     let timeDifferenceMs = timePoint.absoluteDifference(from: orderData.preparationTimePoint)
@@ -38,8 +38,8 @@ class OrderPickupManager {
     defer {
       lock.unlock()
     }
-    guard let courierData = waitingContainer.getCourierData(forOrder: order) else {
-      waitingContainer.storeOrderData(OrderData(order: order, preparationTimePoint: timePoint))
+    guard let courierData = container.getCourierData(forOrder: order) else {
+      container.storeOrderData(OrderData(order: order, preparationTimePoint: timePoint))
       return
     }
     let timeDifferenceMs = timePoint.absoluteDifference(from: courierData.arrivalTimePoint)

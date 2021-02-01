@@ -1,5 +1,5 @@
 //
-//  CourierOrderWaitingContainerMock.swift
+//  CourierOrderPickupContainerMock.swift
 //  OrderManagementSystemTests
 //
 //  Created by Amer Hukić on 1. 2. 2021..
@@ -7,7 +7,7 @@
 
 @testable import OrderManagementSystem
 
-class CourierOrderWaitingContainerMock: CourierOrderWaitingContainer {
+class CourierOrderPickupContainerMock: CourierOrderPickupContainer {
   func storeCourierData(_ courierData: CourierData) {}
   
   func storeOrderData(_ orderData: OrderData) {}

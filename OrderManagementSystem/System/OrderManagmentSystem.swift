@@ -16,14 +16,14 @@ class OrderManagmentSystem {
   private let orderPickupManager: OrderPickupManager
 
   init(pickupStrategy: PickupStrategy) {
-    var container: CourierOrderWaitingContainer
+    var container: CourierOrderPickupContainer
     switch pickupStrategy {
     case .fifo:
-      container = FIFOCourierOrderWaitingContainer()
+      container = FIFOCourierOrderPickupContainer()
     case .matched:
-      container = MatchedCourierOrderWaitingContainer()
+      container = MatchedCourierOrderPickupContainer()
     }
-    orderPickupManager = OrderPickupManager(waitingContainer: container)
+    orderPickupManager = OrderPickupManager(container: container)
   }
 
   func acceptOrder(_ order: Order) {
