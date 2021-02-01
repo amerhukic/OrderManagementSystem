@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Helper data structure for storing order's arrival time point
 struct OrderData {
   let order: Order
   let preparationTimePoint: TimeIntervalMilliseconds

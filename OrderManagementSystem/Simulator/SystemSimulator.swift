@@ -7,7 +7,6 @@
 
 import Foundation
 
-// TODO: more refactoring
 class SystemSimulator {
   private let printer = ConsolePrinter()
   private var orderIndex = 0

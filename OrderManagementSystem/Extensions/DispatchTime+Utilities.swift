@@ -8,6 +8,8 @@
 import Foundation
 
 extension DispatchTime {
+  
+  /// Returns the number of milliseconds since boot, excluding any time the system spent asleep.
   var uptimeMilliseconds: TimeIntervalMilliseconds {
     return uptimeNanoseconds / 1_000_000
   }

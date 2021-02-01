@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Protocol for printing values
 protocol Printer {
   func print(_ item: String)
   func print(_ items: [String])

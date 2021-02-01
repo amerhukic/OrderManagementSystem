@@ -7,7 +7,10 @@
 
 import Foundation
 
+/// Helper class used for loading `Order`s from json files
 struct OrderLoader {
+  
+  /// Error that represents different errors that can occur when loading `Order`s from json file
   enum Error: Swift.Error, Equatable {
     case fileNotFound(name: String)
     case fileDecodingFailed(name: String, Swift.Error)
@@ -24,6 +27,12 @@ struct OrderLoader {
     }
   }
   
+  /// Loads the `Order`s from a json file in the specified bundle.
+  /// - Parameters:
+  ///   - fileName: Name of the json file
+  ///   - bundle: Bundle where the file is stored
+  /// - Throws: `OrderLoader.Error` if the file is not found or if `Order` decoding fails.
+  /// - Returns: An array of `Order`s that were created from the json file.
   func loadOrders(fromFileNamed fileName: String, in bundle: Bundle = .main) throws -> [Order] {
     guard let url = bundle.url(forResource: fileName, withExtension: "json") else {
       throw Error.fileNotFound(name: fileName)

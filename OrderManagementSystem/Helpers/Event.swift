@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Represents different events that can occur when the order management system is running
 enum Event {
   case orderReceived
   case orderPrepared
@@ -18,6 +19,7 @@ enum Event {
   case averageOrderWaitTime(TimeIntervalMilliseconds)
   case averateCourierWaitTime(TimeIntervalMilliseconds)
   
+  /// Description of the event
   var description: String {
     switch self {
     case .orderReceived:

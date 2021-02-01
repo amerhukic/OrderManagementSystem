@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Protocol that defines storing and retrieving of orders and couriers that are waiting for pickup
 protocol CourierOrderPickupContainer {
   func storeCourierData(_ courierData: CourierData)
   func storeOrderData(_ orderData: OrderData)

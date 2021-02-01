@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Helper data structure for storing courier's arrival time point
 struct CourierData {
   let courier: Courier
   let arrivalTimePoint: TimeIntervalMilliseconds

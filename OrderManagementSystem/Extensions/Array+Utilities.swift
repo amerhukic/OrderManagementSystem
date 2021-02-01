@@ -8,6 +8,8 @@
 import Foundation
 
 extension Array where Element == UInt64 {
+  
+  /// The average value of all integers in the array or `nil` if it is empty.
   var average: UInt64? {
     if isEmpty {
       return nil
