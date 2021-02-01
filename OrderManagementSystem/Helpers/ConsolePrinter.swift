@@ -2,7 +2,7 @@
 //  ConsolePrinter.swift
 //  OrderManagementSystem
 //
-//  Created by Amer Hukić on 25. 1. 2021..
+//  Created by Amer Hukić on 25. 1. 2021.
 //
 
 import os.log

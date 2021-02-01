@@ -2,7 +2,7 @@
 //  OrderPickupManager.swift
 //  OrderManagementSystem
 //
-//  Created by Amer Hukić on 26. 1. 2021..
+//  Created by Amer Hukić on 26. 1. 2021.
 //
 
 import Foundation

@@ -2,7 +2,7 @@
 //  CourierOrderPickupContainer.swift
 //  OrderManagementSystem
 //
-//  Created by Amer Hukić on 31. 1. 2021..
+//  Created by Amer Hukić on 31. 1. 2021.
 //
 
 import Foundation

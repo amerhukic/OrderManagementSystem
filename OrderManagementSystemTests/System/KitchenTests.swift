@@ -2,7 +2,7 @@
 //  KitchenTests.swift
 //  OrderManagementSystemTests
 //
-//  Created by Amer Hukić on 30. 1. 2021..
+//  Created by Amer Hukić on 30. 1. 2021.
 //
 
 import XCTest

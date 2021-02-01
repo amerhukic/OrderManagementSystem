@@ -2,7 +2,7 @@
 //  SystemSimulator.swift
 //  OrderManagementSystem
 //
-//  Created by Amer Hukić on 17. 1. 2021..
+//  Created by Amer Hukić on 17. 1. 2021.
 //
 
 import Foundation

@@ -2,7 +2,7 @@
 //  OrderLoaderTests.swift
 //  OrderManagementSystemTests
 //
-//  Created by Amer Hukić on 28. 1. 2021..
+//  Created by Amer Hukić on 28. 1. 2021.
 //
 
 import XCTest
