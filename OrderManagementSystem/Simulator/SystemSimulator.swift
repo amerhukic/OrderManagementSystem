@@ -13,7 +13,7 @@ class SystemSimulator {
   private var orderIndex = 0
   private let fifoSystem = OrderManagmentSystem(pickupStrategy: .fifo)
   
-  func startFIFOSystemSimulation() {
+  func startFIFOSystemSimulation(completion: @escaping () -> Void) {
     printer.print("----------------------------------------------------------")
     printer.print("Starting FIFO strategy order management system simulation")
     printer.print("----------------------------------------------------------")
@@ -38,7 +38,7 @@ class SystemSimulator {
       }
       if self.orderIndex >= orders.count {
         timer.invalidate()
-        self.fifoSystem.calculateAverageWaitTimeStatistics()
+        self.fifoSystem.calculateAverageWaitTimeStatistics(completion: completion)
       }
     }
   }
