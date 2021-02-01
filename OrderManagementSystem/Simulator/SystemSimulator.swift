@@ -38,7 +38,7 @@ class SystemSimulator {
       }
       if self.orderIndex >= orders.count {
         timer.invalidate()
-        self.fifoSystem.stopAcceptingOrders()
+        self.fifoSystem.calculateAverageWaitTimeStatistics()
       }
     }
   }

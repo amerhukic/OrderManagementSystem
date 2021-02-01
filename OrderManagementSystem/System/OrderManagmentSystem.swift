@@ -11,9 +11,10 @@ class OrderManagmentSystem {
   private let kitchen = Kitchen()
   private let courierDispatcher = CourierDispatcher()
   private var statisticsTracker = StatisticsTracker()
-  private var isAcceptingOrders = true
+  private var shouldPrintStatistics = false
   private let orderPickupManager: OrderPickupManager
   private let printer: Printer
+  private var statisticsCalculationCompletion: (() -> Void)?
 
   init(pickupStrategy: PickupStrategy, printer: Printer = ConsolePrinter()) {
     var container: CourierOrderPickupContainer
@@ -33,9 +34,10 @@ class OrderManagmentSystem {
     startPreparing(order)
   }
   
-  func stopAcceptingOrders() {
-    isAcceptingOrders = false
-    printFinalStatisticsIfPossible()
+  func calculateAverageWaitTimeStatistics(completion: (() -> Void)? = nil) {
+    statisticsCalculationCompletion = completion
+    shouldPrintStatistics = true
+    printStatisticsIfFinishedProcessing()
   }
 }
 
@@ -45,7 +47,7 @@ private extension OrderManagmentSystem {
       self?.printAndLog(.courierArrived)
       self?.orderPickupManager.sendCourierForPickup(Courier(orderId: orderId), onOrderPickedUp: { orderWaitTime in
         self?.printAndLog(.orderPickedUp, .orderWaitTime(orderWaitTime))
-        self?.printFinalStatisticsIfPossible()
+        self?.printStatisticsIfFinishedProcessing()
       })
     }
     printAndLog(.courierDispatched)
@@ -56,7 +58,7 @@ private extension OrderManagmentSystem {
       self?.printAndLog(.orderPrepared)
       self?.orderPickupManager.sendOrderForPickup(order, onOrderPickedUp: { courierWaitTime in
         self?.printAndLog(.orderPickedUp, .courierWaitTime(courierWaitTime))
-        self?.printFinalStatisticsIfPossible()
+        self?.printStatisticsIfFinishedProcessing()
       })
     }
   }
@@ -66,21 +68,16 @@ private extension OrderManagmentSystem {
     statisticsTracker.log(events)
   }
   
-  func printFinalStatisticsIfPossible() {
-    guard !isAcceptingOrders && statisticsTracker.areAllOrdersPickedUp else {
+  func printStatisticsIfFinishedProcessing() {
+    guard shouldPrintStatistics && statisticsTracker.areAllOrdersPickedUp else {
       return
     }
     
-    if let averageOrderWaitTime = statisticsTracker.getAverageOrderWaitTime() {
-      printer.print(Event.averageOrderWaitTime(averageOrderWaitTime).description)
-    } else {
-      printer.print("Unable to calculate average order wait time. No order was processed.")
-    }
+    let averageOrderWaitTime = statisticsTracker.getAverageOrderWaitTime() ?? 0
+    printer.print(Event.averageOrderWaitTime(averageOrderWaitTime).description)
+    let averageCourierWaitTime = statisticsTracker.getAverageCourierWaitTime() ?? 0
+    printer.print(Event.averateCourierWaitTime(averageCourierWaitTime).description)
     
-    if let averageCourierWaitTime = statisticsTracker.getAverageCourierWaitTime() {
-      printer.print(Event.averateCourierWaitTime(averageCourierWaitTime).description)
-    } else {
-      printer.print("Unable to calculate average courier wait time. No order was processed.")
-    }
+    statisticsCalculationCompletion?()
   }
 }

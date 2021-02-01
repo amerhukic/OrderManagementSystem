@@ -12,6 +12,6 @@ class SystemTestViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    simulator.startFIFOSystemSimulation()
+    //simulator.startFIFOSystemSimulation()
   }
 }
