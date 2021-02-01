@@ -13,6 +13,6 @@ protocol UptimeTracking {
 
 struct UptimeTracker: UptimeTracking {
   func currentUptimeMilliseconds() -> TimeIntervalMilliseconds {
-    DispatchTime.now().uptimeMilliseconds
+    return DispatchTime.now().uptimeMilliseconds
   }
 }

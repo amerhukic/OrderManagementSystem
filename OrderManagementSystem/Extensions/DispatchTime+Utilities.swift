@@ -9,6 +9,6 @@ import Foundation
 
 extension DispatchTime {
   var uptimeMilliseconds: TimeIntervalMilliseconds {
-    uptimeNanoseconds / 1_000_000
+    return uptimeNanoseconds / 1_000_000
   }
 }

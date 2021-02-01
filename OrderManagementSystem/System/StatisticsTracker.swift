@@ -16,7 +16,7 @@ struct StatisticsTracker {
   private var courierWaitTimes = [TimeIntervalMilliseconds]()
   
   var areAllOrdersPickedUp: Bool {
-    receivedOrdersCount == pickedUpOrdersCount
+    return receivedOrdersCount == pickedUpOrdersCount
   }
   
   mutating func log(_ events: [Event]) {

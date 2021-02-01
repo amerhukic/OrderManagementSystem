@@ -9,6 +9,6 @@ import Foundation
 
 extension UInt64 {
   func absoluteDifference(from number: UInt64) -> TimeIntervalMilliseconds {
-    self > number ? (self - number) : (number - self)
+    return self > number ? (self - number) : (number - self)
   }
 }
