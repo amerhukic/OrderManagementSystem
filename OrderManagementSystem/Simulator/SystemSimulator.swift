@@ -9,13 +9,18 @@ import Foundation
 
 class SystemSimulator {
   private let printer = ConsolePrinter()
-  private var orderIndex = 0
-  private let fifoSystem = OrderManagmentSystem(pickupStrategy: .fifo)
+  private var system: OrderManagmentSystem?
   
-  func startFIFOSystemSimulation(completion: @escaping () -> Void) {
-    printer.print("----------------------------------------------------------")
-    printer.print("Starting FIFO strategy order management system simulation")
-    printer.print("----------------------------------------------------------")
+  /// Starts the simulation of the order handling with the specified strategy. Each second 2 orders are sent to the system.
+  /// - Parameters:
+  ///   - strategy: The order pickup strategy used by the system
+  ///   - completion: Completion callback called when the order processing completes
+  func startSystemSimulation(withPickupStrategy strategy: PickupStrategy, completion: @escaping () -> Void) {
+    printer.print("-------------------------------------------------------------------------")
+    printer.print("Starting \(strategy.rawValue) strategy order management system simulation")
+    printer.print("-------------------------------------------------------------------------")
+
+    // Load orders form file
     let orderLoader = OrderLoader()
     var orders: [Order]
     let fileName = "dispatch_orders"
@@ -25,19 +30,26 @@ class SystemSimulator {
       printer.print("Unable to load orders from \(fileName). Error: \(error.localizedDescription)")
       return
     }
-    orderIndex = 0
+    
+    // Create a system with specified pickup strategy
+    system = OrderManagmentSystem(pickupStrategy: strategy)
+
+    // Send 2 orders per second
+    let ordersPerSecond = 2
+    var orderIndex = 0
     Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] timer in
       guard let self = self else { return }
-      let ordersPerSecond = 50
-      var counter = 0
-      while self.orderIndex < orders.count && counter < ordersPerSecond {
-        self.fifoSystem.acceptOrder(orders[self.orderIndex])
-        self.orderIndex += 1
-        counter += 1
+      var sentOrderCounter = 0
+      while orderIndex < orders.count && sentOrderCounter < ordersPerSecond {
+        self.system?.acceptOrder(orders[orderIndex])
+        orderIndex += 1
+        sentOrderCounter += 1
       }
-      if self.orderIndex >= orders.count {
+      
+      // If all orders are sent to the system - calculate the average wait time statistics
+      if orderIndex >= orders.count {
         timer.invalidate()
-        self.fifoSystem.calculateAverageWaitTimeStatistics(completion: completion)
+        self.system?.calculateAverageWaitTimeStatistics(completion: completion)
       }
     }
   }

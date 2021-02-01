@@ -50,7 +50,7 @@ private extension SystemTestViewController {
     fifoSystemSimulationButton.isEnabled = false
     matchedSystemSimulationButton.isEnabled = false
     activityIndicator.startAnimating()
-    simulator.startFIFOSystemSimulation() { [weak self] in
+    simulator.startSystemSimulation(withPickupStrategy: .fifo) { [weak self] in
       DispatchQueue.main.async {
         self?.activityIndicator.stopAnimating()
         self?.fifoSystemSimulationButton.isEnabled = true
@@ -64,7 +64,7 @@ private extension SystemTestViewController {
     fifoSystemSimulationButton.isEnabled = false
     matchedSystemSimulationButton.isEnabled = false
     activityIndicator.startAnimating()
-    simulator.startFIFOSystemSimulation() { [weak self] in
+    simulator.startSystemSimulation(withPickupStrategy: .matched) { [weak self] in
       DispatchQueue.main.async {
         self?.activityIndicator.stopAnimating()
         self?.fifoSystemSimulationButton.isEnabled = true
