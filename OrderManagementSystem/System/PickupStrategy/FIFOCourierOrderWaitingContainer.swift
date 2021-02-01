@@ -1,5 +1,5 @@
 //
-//  FIFOCourierOrderContainer.swift
+//  FIFOCourierOrderWaitingContainer.swift
 //  OrderManagementSystem
 //
 //  Created by Amer Hukić on 31. 1. 2021..
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class FIFOCourierOrderContainer: CourierOrderWaitingContainer {
+class FIFOCourierOrderWaitingContainer: CourierOrderWaitingContainer {
   private var orderQueue = Queue<OrderData>()
   private var courierQueue = Queue<CourierData>()
   

@@ -9,11 +9,11 @@ import XCTest
 @testable import OrderManagementSystem
 
 class FIFOCourierOrderContainerTests: XCTestCase {
-  var container: FIFOCourierOrderContainer!
+  var container: FIFOCourierOrderWaitingContainer!
   
   override func setUp() {
     super.setUp()
-    container = FIFOCourierOrderContainer()
+    container = FIFOCourierOrderWaitingContainer()
   }
   
   func testGettingCourierDataReturnsNilWhenNoCourierIsAvailable() {

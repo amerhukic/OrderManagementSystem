@@ -9,11 +9,11 @@ import XCTest
 @testable import OrderManagementSystem
 
 class MatchedCourierOrderContainerTests: XCTestCase {
-  var container: MatchedCourierOrderContainer!
+  var container: MatchedCourierOrderWaitingContainer!
   
   override func setUp() {
     super.setUp()
-    container = MatchedCourierOrderContainer()
+    container = MatchedCourierOrderWaitingContainer()
   }
   
   func testGettingCourierDataReturnsNilWhenNoOrderMatches() {
