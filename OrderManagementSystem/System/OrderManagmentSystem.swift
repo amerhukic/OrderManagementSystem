@@ -10,13 +10,20 @@ import Foundation
 class OrderManagmentSystem {
   private let kitchen = Kitchen()
   private let courierDispatcher = CourierDispatcher()
-  private let orderPickupManager = OrderPickupManager(waitingContainer: FIFOCourierOrderWaitingContainer())
   private let printer = Printer()
-  private var statisticsTracker: StatisticsTracker
+  private var statisticsTracker = StatisticsTracker()
   private var isAcceptingOrders = true
+  private let orderPickupManager: OrderPickupManager
 
-  init() {
-    self.statisticsTracker = .init()
+  init(pickupStrategy: PickupStrategy) {
+    var container: CourierOrderWaitingContainer
+    switch pickupStrategy {
+    case .fifo:
+      container = FIFOCourierOrderWaitingContainer()
+    case .matched:
+      container = MatchedCourierOrderWaitingContainer()
+    }
+    orderPickupManager = OrderPickupManager(waitingContainer: container)
   }
 
   func acceptOrder(_ order: Order) {

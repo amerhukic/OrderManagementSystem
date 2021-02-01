@@ -11,7 +11,7 @@ import Foundation
 class SystemSimulator {
   private let printer = Printer()
   private var orderIndex = 0
-  private let fifoSystem = OrderManagmentSystem()
+  private let fifoSystem = OrderManagmentSystem(pickupStrategy: .fifo)
   
   func startFIFOSystemSimulation() {
     printer.print("----------------------------------------------------------")
