@@ -39,3 +39,11 @@ The project was developed as an iOS app that is used to run the simulation. To r
 3. The app will show 2 buttons that correspond to the 2 courier dispatch strategies - FIFO and matched.
 4. Tap one of the buttons to run the simulation with the desired strategy.
 5. The system will output events (order received, order prepared, courier dispatched, courier arrived, order picked up) in the Xcode console. Once the simulation finishes the average waiting time will be shown in the Xcode console.
+
+## Author
+
+[Amer Hukić](https://amerhukic.com)
+
+## License
+
+OrderManagementSystem is licensed under the MIT license. Check the [LICENSE](LICENSE) file for details.
