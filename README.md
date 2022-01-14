@@ -45,8 +45,15 @@ The project was developed as an iOS app that is used to run the simulation. To r
 For those who are interested in how the output looks like, here are some example runs:
 
 <details> 
-  <summary>FIFO strategy simulation</summary>
+  <summary>
+  
   ```
+  FIFO strategy simulation
+  ```
+  
+  </summary>
+  
+```
 2022-01-14 09:22:09.722676+0100 OrderManagementSystem[9962:490547] -------------------------------------------------------------------------
 2022-01-14 09:22:09.724332+0100 OrderManagementSystem[9962:490547] Starting First-in-first-out strategy order management system simulation
 2022-01-14 09:22:09.724484+0100 OrderManagementSystem[9962:490547] -------------------------------------------------------------------------
@@ -845,7 +852,821 @@ For those who are interested in how the output looks like, here are some example
 2022-01-14 09:23:30.728949+0100 OrderManagementSystem[9962:490547] Average order wait time: 1490 ms
 2022-01-14 09:23:30.729311+0100 OrderManagementSystem[9962:490547] Average courier wait time: 1027 ms
 ```
+
 </details>
+
+<details> 
+  <summary>
+  
+  ```
+  Matched strategy simulation
+  ```
+  
+  </summary>
+  
+```
+2022-01-14 09:27:58.634446+0100 OrderManagementSystem[9962:497627] -------------------------------------------------------------------------
+2022-01-14 09:27:58.634845+0100 OrderManagementSystem[9962:497627] Starting Matched strategy order management system simulation
+2022-01-14 09:27:58.634983+0100 OrderManagementSystem[9962:497627] -------------------------------------------------------------------------
+2022-01-14 09:27:59.638085+0100 OrderManagementSystem[9962:497627] Order received
+2022-01-14 09:27:59.638293+0100 OrderManagementSystem[9962:497627] Courier dispatched
+2022-01-14 09:27:59.638876+0100 OrderManagementSystem[9962:497627] Order received
+2022-01-14 09:27:59.639086+0100 OrderManagementSystem[9962:497627] Courier dispatched
+2022-01-14 09:28:00.637473+0100 OrderManagementSystem[9962:497627] Order received
+2022-01-14 09:28:00.637574+0100 OrderManagementSystem[9962:497627] Courier dispatched
+2022-01-14 09:28:00.637879+0100 OrderManagementSystem[9962:497627] Order received
+2022-01-14 09:28:00.637981+0100 OrderManagementSystem[9962:497627] Courier dispatched
+2022-01-14 09:28:01.638696+0100 OrderManagementSystem[9962:497627] Order received
+2022-01-14 09:28:01.638929+0100 OrderManagementSystem[9962:497627] Courier dispatched
+2022-01-14 09:28:01.639407+0100 OrderManagementSystem[9962:497627] Order received
+2022-01-14 09:28:01.639581+0100 OrderManagementSystem[9962:497627] Courier dispatched
+2022-01-14 09:28:02.637405+0100 OrderManagementSystem[9962:497627] Order received
+2022-01-14 09:28:02.637550+0100 OrderManagementSystem[9962:497627] Courier dispatched
+2022-01-14 09:28:02.637899+0100 OrderManagementSystem[9962:497627] Order received
+2022-01-14 09:28:02.637997+0100 OrderManagementSystem[9962:497627] Courier dispatched
+2022-01-14 09:28:03.638384+0100 OrderManagementSystem[9962:505470] Order received
+2022-01-14 09:28:03.638889+0100 OrderManagementSystem[9962:505470] Order prepared
+2022-01-14 09:28:03.639298+0100 OrderManagementSystem[9962:505470] Courier arrived
+2022-01-14 09:28:03.639476+0100 OrderManagementSystem[9962:505470] Courier dispatched
+2022-01-14 09:28:03.639818+0100 OrderManagementSystem[9962:505470] Order received
+2022-01-14 09:28:03.639983+0100 OrderManagementSystem[9962:505470] Courier dispatched
+2022-01-14 09:28:03.640308+0100 OrderManagementSystem[9962:505470] Order picked up
+2022-01-14 09:28:03.640603+0100 OrderManagementSystem[9962:505470] Food wait time: 0 ms
+2022-01-14 09:28:04.637682+0100 OrderManagementSystem[9962:505470] Order received
+2022-01-14 09:28:04.637847+0100 OrderManagementSystem[9962:505470] Courier dispatched
+2022-01-14 09:28:04.638239+0100 OrderManagementSystem[9962:505470] Order received
+2022-01-14 09:28:04.638379+0100 OrderManagementSystem[9962:505470] Courier dispatched
+2022-01-14 09:28:05.638656+0100 OrderManagementSystem[9962:505470] Order received
+2022-01-14 09:28:05.638961+0100 OrderManagementSystem[9962:505470] Courier dispatched
+2022-01-14 09:28:05.639506+0100 OrderManagementSystem[9962:505470] Order received
+2022-01-14 09:28:05.639697+0100 OrderManagementSystem[9962:505470] Courier dispatched
+2022-01-14 09:28:06.637417+0100 OrderManagementSystem[9962:505470] Order received
+2022-01-14 09:28:06.637537+0100 OrderManagementSystem[9962:505470] Courier dispatched
+2022-01-14 09:28:06.637836+0100 OrderManagementSystem[9962:505470] Order received
+2022-01-14 09:28:06.637924+0100 OrderManagementSystem[9962:505470] Courier dispatched
+2022-01-14 09:28:06.926548+0100 OrderManagementSystem[9962:505471] Order prepared
+2022-01-14 09:28:06.927047+0100 OrderManagementSystem[9962:505471] Order prepared
+2022-01-14 09:28:06.927487+0100 OrderManagementSystem[9962:505471] Courier arrived
+2022-01-14 09:28:07.638109+0100 OrderManagementSystem[9962:505170] Courier arrived
+2022-01-14 09:28:07.638471+0100 OrderManagementSystem[9962:505170] Order received
+2022-01-14 09:28:07.638888+0100 OrderManagementSystem[9962:505170] Courier arrived
+2022-01-14 09:28:07.639020+0100 OrderManagementSystem[9962:505170] Courier dispatched
+2022-01-14 09:28:07.639289+0100 OrderManagementSystem[9962:505170] Order received
+2022-01-14 09:28:07.639386+0100 OrderManagementSystem[9962:505170] Courier dispatched
+2022-01-14 09:28:08.037052+0100 OrderManagementSystem[9962:505470] Order prepared
+2022-01-14 09:28:08.037686+0100 OrderManagementSystem[9962:505470] Courier arrived
+2022-01-14 09:28:08.038088+0100 OrderManagementSystem[9962:505470] Order picked up
+2022-01-14 09:28:08.038541+0100 OrderManagementSystem[9962:505470] Food wait time: 1110 ms
+2022-01-14 09:28:08.637570+0100 OrderManagementSystem[9962:505470] Order received
+2022-01-14 09:28:08.637724+0100 OrderManagementSystem[9962:505470] Courier dispatched
+2022-01-14 09:28:08.638220+0100 OrderManagementSystem[9962:505470] Order received
+2022-01-14 09:28:08.638415+0100 OrderManagementSystem[9962:505470] Courier dispatched
+2022-01-14 09:28:08.638853+0100 OrderManagementSystem[9962:505470] Courier arrived
+2022-01-14 09:28:08.639170+0100 OrderManagementSystem[9962:505470] Order prepared
+2022-01-14 09:28:09.638251+0100 OrderManagementSystem[9962:505470] Order received
+2022-01-14 09:28:09.638455+0100 OrderManagementSystem[9962:505470] Courier dispatched
+2022-01-14 09:28:09.638927+0100 OrderManagementSystem[9962:505470] Order received
+2022-01-14 09:28:09.639080+0100 OrderManagementSystem[9962:505470] Courier dispatched
+2022-01-14 09:28:09.639479+0100 OrderManagementSystem[9962:505470] Order prepared
+2022-01-14 09:28:10.638289+0100 OrderManagementSystem[9962:505470] Order received
+2022-01-14 09:28:10.638554+0100 OrderManagementSystem[9962:505470] Courier dispatched
+2022-01-14 09:28:10.639104+0100 OrderManagementSystem[9962:505470] Order received
+2022-01-14 09:28:10.639283+0100 OrderManagementSystem[9962:505470] Courier dispatched
+2022-01-14 09:28:11.531790+0100 OrderManagementSystem[9962:497627] Order prepared
+2022-01-14 09:28:11.532191+0100 OrderManagementSystem[9962:497627] Order picked up
+2022-01-14 09:28:11.532542+0100 OrderManagementSystem[9962:497627] Courier wait time: 4605 ms
+2022-01-14 09:28:11.638729+0100 OrderManagementSystem[9962:497627] Order received
+2022-01-14 09:28:11.638952+0100 OrderManagementSystem[9962:497627] Courier dispatched
+2022-01-14 09:28:11.639432+0100 OrderManagementSystem[9962:497627] Order received
+2022-01-14 09:28:11.639642+0100 OrderManagementSystem[9962:497627] Courier dispatched
+2022-01-14 09:28:11.640182+0100 OrderManagementSystem[9962:497627] Order prepared
+2022-01-14 09:28:11.640670+0100 OrderManagementSystem[9962:497627] Courier arrived
+2022-01-14 09:28:11.641064+0100 OrderManagementSystem[9962:497627] Order picked up
+2022-01-14 09:28:11.641466+0100 OrderManagementSystem[9962:497627] Food wait time: 4712 ms
+2022-01-14 09:28:12.638858+0100 OrderManagementSystem[9962:497627] Order received
+2022-01-14 09:28:12.639210+0100 OrderManagementSystem[9962:497627] Courier dispatched
+2022-01-14 09:28:12.639697+0100 OrderManagementSystem[9962:497627] Order received
+2022-01-14 09:28:12.639869+0100 OrderManagementSystem[9962:497627] Courier dispatched
+2022-01-14 09:28:12.640221+0100 OrderManagementSystem[9962:497627] Courier arrived
+2022-01-14 09:28:12.640574+0100 OrderManagementSystem[9962:497627] Order prepared
+2022-01-14 09:28:12.640971+0100 OrderManagementSystem[9962:497627] Order prepared
+2022-01-14 09:28:12.641355+0100 OrderManagementSystem[9962:497627] Order prepared
+2022-01-14 09:28:12.641705+0100 OrderManagementSystem[9962:497627] Courier arrived
+2022-01-14 09:28:12.642009+0100 OrderManagementSystem[9962:497627] Order picked up
+2022-01-14 09:28:12.642279+0100 OrderManagementSystem[9962:497627] Courier wait time: 5001 ms
+2022-01-14 09:28:12.642551+0100 OrderManagementSystem[9962:497627] Order prepared
+2022-01-14 09:28:12.642838+0100 OrderManagementSystem[9962:497627] Order picked up
+2022-01-14 09:28:12.643151+0100 OrderManagementSystem[9962:497627] Food wait time: 4000 ms
+2022-01-14 09:28:13.638542+0100 OrderManagementSystem[9962:505470] Courier arrived
+2022-01-14 09:28:13.639270+0100 OrderManagementSystem[9962:505470] Order prepared
+2022-01-14 09:28:13.639925+0100 OrderManagementSystem[9962:505470] Order received
+2022-01-14 09:28:13.640272+0100 OrderManagementSystem[9962:505470] Courier arrived
+2022-01-14 09:28:13.640605+0100 OrderManagementSystem[9962:505470] Order prepared
+2022-01-14 09:28:13.640993+0100 OrderManagementSystem[9962:505470] Courier arrived
+2022-01-14 09:28:13.641369+0100 OrderManagementSystem[9962:505470] Order picked up
+2022-01-14 09:28:13.641760+0100 OrderManagementSystem[9962:505470] Courier wait time: 0 ms
+2022-01-14 09:28:13.641919+0100 OrderManagementSystem[9962:505470] Courier dispatched
+2022-01-14 09:28:13.642272+0100 OrderManagementSystem[9962:505470] Order received
+2022-01-14 09:28:13.642420+0100 OrderManagementSystem[9962:505470] Courier dispatched
+2022-01-14 09:28:13.642686+0100 OrderManagementSystem[9962:505470] Order picked up
+2022-01-14 09:28:13.643017+0100 OrderManagementSystem[9962:505470] Food wait time: 1000 ms
+2022-01-14 09:28:13.643338+0100 OrderManagementSystem[9962:505470] Courier arrived
+2022-01-14 09:28:13.643728+0100 OrderManagementSystem[9962:505470] Order picked up
+2022-01-14 09:28:13.646623+0100 OrderManagementSystem[9962:505470] Courier wait time: 6001 ms
+2022-01-14 09:28:13.647002+0100 OrderManagementSystem[9962:505470] Order picked up
+2022-01-14 09:28:13.647339+0100 OrderManagementSystem[9962:505470] Food wait time: 1000 ms
+2022-01-14 09:28:13.647648+0100 OrderManagementSystem[9962:505470] Order picked up
+2022-01-14 09:28:13.647936+0100 OrderManagementSystem[9962:505470] Food wait time: 1000 ms
+2022-01-14 09:28:14.638689+0100 OrderManagementSystem[9962:505470] Order received
+2022-01-14 09:28:14.638992+0100 OrderManagementSystem[9962:505470] Courier dispatched
+2022-01-14 09:28:14.639464+0100 OrderManagementSystem[9962:505470] Order received
+2022-01-14 09:28:14.639634+0100 OrderManagementSystem[9962:505470] Courier dispatched
+2022-01-14 09:28:14.640036+0100 OrderManagementSystem[9962:505470] Order prepared
+2022-01-14 09:28:14.640374+0100 OrderManagementSystem[9962:505470] Courier arrived
+2022-01-14 09:28:15.638833+0100 OrderManagementSystem[9962:505470] Order received
+2022-01-14 09:28:15.639185+0100 OrderManagementSystem[9962:505470] Courier dispatched
+2022-01-14 09:28:15.639700+0100 OrderManagementSystem[9962:505470] Order received
+2022-01-14 09:28:15.639843+0100 OrderManagementSystem[9962:505470] Courier dispatched
+2022-01-14 09:28:15.640213+0100 OrderManagementSystem[9962:505470] Courier arrived
+2022-01-14 09:28:15.640566+0100 OrderManagementSystem[9962:505470] Order picked up
+2022-01-14 09:28:15.640922+0100 OrderManagementSystem[9962:505470] Food wait time: 6000 ms
+2022-01-14 09:28:15.641272+0100 OrderManagementSystem[9962:505470] Order prepared
+2022-01-14 09:28:15.641617+0100 OrderManagementSystem[9962:505470] Order prepared
+2022-01-14 09:28:15.641909+0100 OrderManagementSystem[9962:505470] Courier arrived
+2022-01-14 09:28:15.642180+0100 OrderManagementSystem[9962:505470] Order picked up
+2022-01-14 09:28:15.642435+0100 OrderManagementSystem[9962:505470] Courier wait time: 3000 ms
+2022-01-14 09:28:15.642715+0100 OrderManagementSystem[9962:505470] Order picked up
+2022-01-14 09:28:15.642989+0100 OrderManagementSystem[9962:505470] Food wait time: 7602 ms
+2022-01-14 09:28:16.637681+0100 OrderManagementSystem[9962:505470] Order received
+2022-01-14 09:28:16.637809+0100 OrderManagementSystem[9962:505470] Courier dispatched
+2022-01-14 09:28:16.638159+0100 OrderManagementSystem[9962:505470] Order received
+2022-01-14 09:28:16.638283+0100 OrderManagementSystem[9962:505470] Courier dispatched
+2022-01-14 09:28:17.132364+0100 OrderManagementSystem[9962:505471] Order prepared
+2022-01-14 09:28:17.132726+0100 OrderManagementSystem[9962:505471] Courier arrived
+2022-01-14 09:28:17.638277+0100 OrderManagementSystem[9962:505471] Order received
+2022-01-14 09:28:17.638478+0100 OrderManagementSystem[9962:505471] Courier dispatched
+2022-01-14 09:28:17.638960+0100 OrderManagementSystem[9962:505471] Order received
+2022-01-14 09:28:17.639122+0100 OrderManagementSystem[9962:505471] Courier dispatched
+2022-01-14 09:28:17.639524+0100 OrderManagementSystem[9962:505471] Courier arrived
+2022-01-14 09:28:17.639898+0100 OrderManagementSystem[9962:505471] Order prepared
+2022-01-14 09:28:17.640269+0100 OrderManagementSystem[9962:505471] Order picked up
+2022-01-14 09:28:17.640618+0100 OrderManagementSystem[9962:505471] Food wait time: 2999 ms
+2022-01-14 09:28:18.126738+0100 OrderManagementSystem[9962:505643] Order prepared
+2022-01-14 09:28:18.127315+0100 OrderManagementSystem[9962:505643] Courier arrived
+2022-01-14 09:28:18.127777+0100 OrderManagementSystem[9962:505643] Order picked up
+2022-01-14 09:28:18.128185+0100 OrderManagementSystem[9962:505643] Courier wait time: 3488 ms
+2022-01-14 09:28:18.128616+0100 OrderManagementSystem[9962:505643] Order prepared
+2022-01-14 09:28:18.128998+0100 OrderManagementSystem[9962:505643] Order prepared
+2022-01-14 09:28:18.129432+0100 OrderManagementSystem[9962:505643] Order picked up
+2022-01-14 09:28:18.129758+0100 OrderManagementSystem[9962:505643] Food wait time: 2488 ms
+2022-01-14 09:28:18.130067+0100 OrderManagementSystem[9962:505643] Order picked up
+2022-01-14 09:28:18.130350+0100 OrderManagementSystem[9962:505643] Courier wait time: 9488 ms
+2022-01-14 09:28:18.638470+0100 OrderManagementSystem[9962:506032] Order received
+2022-01-14 09:28:18.638644+0100 OrderManagementSystem[9962:506032] Courier dispatched
+2022-01-14 09:28:18.639018+0100 OrderManagementSystem[9962:506032] Order received
+2022-01-14 09:28:18.639149+0100 OrderManagementSystem[9962:506032] Courier dispatched
+2022-01-14 09:28:18.639460+0100 OrderManagementSystem[9962:506032] Courier arrived
+2022-01-14 09:28:18.639699+0100 OrderManagementSystem[9962:506032] Order prepared
+2022-01-14 09:28:18.639994+0100 OrderManagementSystem[9962:506032] Courier arrived
+2022-01-14 09:28:18.640207+0100 OrderManagementSystem[9962:506032] Courier arrived
+2022-01-14 09:28:18.640393+0100 OrderManagementSystem[9962:506032] Order picked up
+2022-01-14 09:28:18.640563+0100 OrderManagementSystem[9962:506032] Courier wait time: 0 ms
+2022-01-14 09:28:19.638828+0100 OrderManagementSystem[9962:506032] Order received
+2022-01-14 09:28:19.639161+0100 OrderManagementSystem[9962:506032] Courier dispatched
+2022-01-14 09:28:19.639872+0100 OrderManagementSystem[9962:506032] Order received
+2022-01-14 09:28:19.640184+0100 OrderManagementSystem[9962:506032] Courier dispatched
+2022-01-14 09:28:19.640547+0100 OrderManagementSystem[9962:506032] Courier arrived
+2022-01-14 09:28:19.640862+0100 OrderManagementSystem[9962:506032] Order prepared
+2022-01-14 09:28:19.641226+0100 OrderManagementSystem[9962:506032] Order picked up
+2022-01-14 09:28:19.641582+0100 OrderManagementSystem[9962:506032] Food wait time: 2001 ms
+2022-01-14 09:28:19.641941+0100 OrderManagementSystem[9962:506032] Courier arrived
+2022-01-14 09:28:19.642305+0100 OrderManagementSystem[9962:506032] Order prepared
+2022-01-14 09:28:19.642684+0100 OrderManagementSystem[9962:506032] Courier arrived
+2022-01-14 09:28:19.642978+0100 OrderManagementSystem[9962:506032] Courier arrived
+2022-01-14 09:28:19.643340+0100 OrderManagementSystem[9962:506032] Order picked up
+2022-01-14 09:28:19.643666+0100 OrderManagementSystem[9962:506032] Food wait time: 1512 ms
+2022-01-14 09:28:19.643971+0100 OrderManagementSystem[9962:506032] Order prepared
+2022-01-14 09:28:19.646041+0100 OrderManagementSystem[9962:506032] Order picked up
+2022-01-14 09:28:19.646478+0100 OrderManagementSystem[9962:506032] Courier wait time: 1000 ms
+2022-01-14 09:28:20.637679+0100 OrderManagementSystem[9962:506032] Order received
+2022-01-14 09:28:20.637902+0100 OrderManagementSystem[9962:506032] Courier dispatched
+2022-01-14 09:28:20.638360+0100 OrderManagementSystem[9962:506032] Order received
+2022-01-14 09:28:20.638549+0100 OrderManagementSystem[9962:506032] Courier dispatched
+2022-01-14 09:28:21.132997+0100 OrderManagementSystem[9962:505471] Order prepared
+2022-01-14 09:28:21.133395+0100 OrderManagementSystem[9962:505471] Order prepared
+2022-01-14 09:28:21.133660+0100 OrderManagementSystem[9962:505471] Order prepared
+2022-01-14 09:28:21.638887+0100 OrderManagementSystem[9962:505471] Order received
+2022-01-14 09:28:21.639137+0100 OrderManagementSystem[9962:505471] Courier dispatched
+2022-01-14 09:28:21.639686+0100 OrderManagementSystem[9962:505471] Order received
+2022-01-14 09:28:21.639841+0100 OrderManagementSystem[9962:505471] Courier dispatched
+2022-01-14 09:28:21.640204+0100 OrderManagementSystem[9962:505471] Order prepared
+2022-01-14 09:28:21.640578+0100 OrderManagementSystem[9962:505471] Courier arrived
+2022-01-14 09:28:21.640934+0100 OrderManagementSystem[9962:505471] Order picked up
+2022-01-14 09:28:21.641298+0100 OrderManagementSystem[9962:505471] Food wait time: 4506 ms
+2022-01-14 09:28:22.638767+0100 OrderManagementSystem[9962:505471] Order received
+2022-01-14 09:28:22.639066+0100 OrderManagementSystem[9962:505471] Courier dispatched
+2022-01-14 09:28:22.639754+0100 OrderManagementSystem[9962:505471] Order received
+2022-01-14 09:28:22.640053+0100 OrderManagementSystem[9962:505471] Courier dispatched
+2022-01-14 09:28:22.640511+0100 OrderManagementSystem[9962:505471] Order prepared
+2022-01-14 09:28:22.640862+0100 OrderManagementSystem[9962:505471] Order picked up
+2022-01-14 09:28:22.641230+0100 OrderManagementSystem[9962:505471] Courier wait time: 4000 ms
+2022-01-14 09:28:22.641595+0100 OrderManagementSystem[9962:505471] Order prepared
+2022-01-14 09:28:22.641933+0100 OrderManagementSystem[9962:505471] Order prepared
+2022-01-14 09:28:22.642315+0100 OrderManagementSystem[9962:505471] Order picked up
+2022-01-14 09:28:22.642643+0100 OrderManagementSystem[9962:505471] Courier wait time: 3000 ms
+2022-01-14 09:28:22.642954+0100 OrderManagementSystem[9962:505471] Order prepared
+2022-01-14 09:28:22.643253+0100 OrderManagementSystem[9962:505471] Courier arrived
+2022-01-14 09:28:22.643553+0100 OrderManagementSystem[9962:505471] Order picked up
+2022-01-14 09:28:22.643843+0100 OrderManagementSystem[9962:505471] Food wait time: 1506 ms
+2022-01-14 09:28:23.637994+0100 OrderManagementSystem[9962:505471] Order received
+2022-01-14 09:28:23.638141+0100 OrderManagementSystem[9962:505471] Courier dispatched
+2022-01-14 09:28:23.638557+0100 OrderManagementSystem[9962:505471] Order received
+2022-01-14 09:28:23.638697+0100 OrderManagementSystem[9962:505471] Courier dispatched
+2022-01-14 09:28:23.639006+0100 OrderManagementSystem[9962:505471] Courier arrived
+2022-01-14 09:28:23.639259+0100 OrderManagementSystem[9962:505471] Courier arrived
+2022-01-14 09:28:23.639457+0100 OrderManagementSystem[9962:505471] Order picked up
+2022-01-14 09:28:23.639710+0100 OrderManagementSystem[9962:505471] Food wait time: 11999 ms
+2022-01-14 09:28:24.126974+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:28:24.127458+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:28:24.127909+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:28:24.128321+0100 OrderManagementSystem[9962:506096] Courier wait time: 4488 ms
+2022-01-14 09:28:24.638667+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:28:24.638902+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:28:24.639413+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:28:24.639824+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:28:24.640157+0100 OrderManagementSystem[9962:506096] Courier arrived
+2022-01-14 09:28:24.640529+0100 OrderManagementSystem[9962:506096] Courier arrived
+2022-01-14 09:28:24.640691+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:28:24.640988+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:28:24.641255+0100 OrderManagementSystem[9962:506096] Food wait time: 2000 ms
+2022-01-14 09:28:25.637664+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:28:25.637826+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:28:25.638188+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:28:25.638326+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:28:26.638546+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:28:26.638731+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:28:26.639174+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:28:26.639348+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:28:26.639778+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:28:26.640114+0100 OrderManagementSystem[9962:506096] Courier arrived
+2022-01-14 09:28:26.640364+0100 OrderManagementSystem[9962:506096] Courier arrived
+2022-01-14 09:28:26.640589+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:28:26.640902+0100 OrderManagementSystem[9962:506096] Courier wait time: 9506 ms
+2022-01-14 09:28:26.641181+0100 OrderManagementSystem[9962:506096] Courier arrived
+2022-01-14 09:28:26.641411+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:28:26.641619+0100 OrderManagementSystem[9962:506096] Food wait time: 5506 ms
+2022-01-14 09:28:26.641831+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:28:26.642030+0100 OrderManagementSystem[9962:506096] Food wait time: 5000 ms
+2022-01-14 09:28:26.642307+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:28:26.645272+0100 OrderManagementSystem[9962:506096] Food wait time: 4000 ms
+2022-01-14 09:28:27.326860+0100 OrderManagementSystem[9962:497627] Courier arrived
+2022-01-14 09:28:27.327587+0100 OrderManagementSystem[9962:497627] Courier arrived
+2022-01-14 09:28:27.328095+0100 OrderManagementSystem[9962:497627] Order picked up
+2022-01-14 09:28:27.328468+0100 OrderManagementSystem[9962:497627] Food wait time: 6194 ms
+2022-01-14 09:28:27.328875+0100 OrderManagementSystem[9962:497627] Courier arrived
+2022-01-14 09:28:27.329276+0100 OrderManagementSystem[9962:497627] Order picked up
+2022-01-14 09:28:27.329701+0100 OrderManagementSystem[9962:497627] Food wait time: 7688 ms
+2022-01-14 09:28:27.638620+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:28:27.638829+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:28:27.639290+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:28:27.639477+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:28:27.639894+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:28:27.640204+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:28:27.640484+0100 OrderManagementSystem[9962:506096] Courier arrived
+2022-01-14 09:28:28.638526+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:28:28.638664+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:28:28.638985+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:28:28.639074+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:28:28.639342+0100 OrderManagementSystem[9962:506096] Courier arrived
+2022-01-14 09:28:29.637544+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:28:29.637670+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:28:29.637970+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:28:29.638066+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:28:29.638532+0100 OrderManagementSystem[9962:497627] Order prepared
+2022-01-14 09:28:29.638803+0100 OrderManagementSystem[9962:497627] Courier arrived
+2022-01-14 09:28:29.639084+0100 OrderManagementSystem[9962:497627] Order picked up
+2022-01-14 09:28:29.639300+0100 OrderManagementSystem[9962:497627] Courier wait time: 2000 ms
+2022-01-14 09:28:29.639480+0100 OrderManagementSystem[9962:497627] Order picked up
+2022-01-14 09:28:29.639733+0100 OrderManagementSystem[9962:497627] Food wait time: 5512 ms
+2022-01-14 09:28:30.638309+0100 OrderManagementSystem[9962:506096] Courier arrived
+2022-01-14 09:28:30.638713+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:28:30.639071+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:28:30.639375+0100 OrderManagementSystem[9962:506096] Courier wait time: 7000 ms
+2022-01-14 09:28:30.639623+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:28:30.639810+0100 OrderManagementSystem[9962:506096] Food wait time: 2999 ms
+2022-01-14 09:28:30.640000+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:28:30.640075+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:28:30.640288+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:28:30.640361+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:28:30.929531+0100 OrderManagementSystem[9962:505471] Order prepared
+2022-01-14 09:28:30.929944+0100 OrderManagementSystem[9962:505471] Courier arrived
+2022-01-14 09:28:30.930399+0100 OrderManagementSystem[9962:505471] Order prepared
+2022-01-14 09:28:30.930738+0100 OrderManagementSystem[9962:505471] Courier arrived
+2022-01-14 09:28:30.931047+0100 OrderManagementSystem[9962:505471] Order prepared
+2022-01-14 09:28:30.931361+0100 OrderManagementSystem[9962:505471] Order picked up
+2022-01-14 09:28:30.931725+0100 OrderManagementSystem[9962:505471] Food wait time: 0 ms
+2022-01-14 09:28:31.638605+0100 OrderManagementSystem[9962:505471] Order received
+2022-01-14 09:28:31.638820+0100 OrderManagementSystem[9962:505471] Courier dispatched
+2022-01-14 09:28:31.639354+0100 OrderManagementSystem[9962:505471] Order received
+2022-01-14 09:28:31.639909+0100 OrderManagementSystem[9962:505471] Courier arrived
+2022-01-14 09:28:31.640265+0100 OrderManagementSystem[9962:505471] Courier arrived
+2022-01-14 09:28:31.640389+0100 OrderManagementSystem[9962:505471] Courier dispatched
+2022-01-14 09:28:31.640703+0100 OrderManagementSystem[9962:505471] Courier arrived
+2022-01-14 09:28:31.641024+0100 OrderManagementSystem[9962:505471] Order picked up
+2022-01-14 09:28:31.641293+0100 OrderManagementSystem[9962:505471] Food wait time: 12000 ms
+2022-01-14 09:28:32.638661+0100 OrderManagementSystem[9962:505471] Order received
+2022-01-14 09:28:32.638870+0100 OrderManagementSystem[9962:505471] Courier dispatched
+2022-01-14 09:28:32.639330+0100 OrderManagementSystem[9962:505471] Order received
+2022-01-14 09:28:32.639500+0100 OrderManagementSystem[9962:505471] Courier dispatched
+2022-01-14 09:28:32.639865+0100 OrderManagementSystem[9962:505471] Courier arrived
+2022-01-14 09:28:33.638911+0100 OrderManagementSystem[9962:505471] Order received
+2022-01-14 09:28:33.639266+0100 OrderManagementSystem[9962:505471] Courier dispatched
+2022-01-14 09:28:33.639711+0100 OrderManagementSystem[9962:505471] Order received
+2022-01-14 09:28:33.639900+0100 OrderManagementSystem[9962:505471] Courier dispatched
+2022-01-14 09:28:33.640247+0100 OrderManagementSystem[9962:505471] Courier arrived
+2022-01-14 09:28:33.640571+0100 OrderManagementSystem[9962:505471] Order prepared
+2022-01-14 09:28:33.640980+0100 OrderManagementSystem[9962:505471] Order prepared
+2022-01-14 09:28:33.641403+0100 OrderManagementSystem[9962:505471] Order picked up
+2022-01-14 09:28:33.641779+0100 OrderManagementSystem[9962:505471] Courier wait time: 1000 ms
+2022-01-14 09:28:33.642045+0100 OrderManagementSystem[9962:505471] Courier arrived
+2022-01-14 09:28:33.642322+0100 OrderManagementSystem[9962:505471] Order prepared
+2022-01-14 09:28:33.642588+0100 OrderManagementSystem[9962:505471] Order prepared
+2022-01-14 09:28:33.642875+0100 OrderManagementSystem[9962:505471] Order picked up
+2022-01-14 09:28:33.643159+0100 OrderManagementSystem[9962:505471] Courier wait time: 0 ms
+2022-01-14 09:28:33.643520+0100 OrderManagementSystem[9962:505471] Order picked up
+2022-01-14 09:28:33.646160+0100 OrderManagementSystem[9962:505471] Courier wait time: 6312 ms
+2022-01-14 09:28:34.638623+0100 OrderManagementSystem[9962:506032] Order received
+2022-01-14 09:28:34.638827+0100 OrderManagementSystem[9962:506032] Courier dispatched
+2022-01-14 09:28:34.639274+0100 OrderManagementSystem[9962:506032] Order received
+2022-01-14 09:28:34.639432+0100 OrderManagementSystem[9962:506032] Courier dispatched
+2022-01-14 09:28:34.639870+0100 OrderManagementSystem[9962:506032] Order prepared
+2022-01-14 09:28:34.640284+0100 OrderManagementSystem[9962:506032] Courier arrived
+2022-01-14 09:28:34.640573+0100 OrderManagementSystem[9962:506032] Courier arrived
+2022-01-14 09:28:34.640832+0100 OrderManagementSystem[9962:506032] Order prepared
+2022-01-14 09:28:34.641116+0100 OrderManagementSystem[9962:506032] Order picked up
+2022-01-14 09:28:34.641376+0100 OrderManagementSystem[9962:506032] Food wait time: 10000 ms
+2022-01-14 09:28:34.641646+0100 OrderManagementSystem[9962:506032] Order picked up
+2022-01-14 09:28:34.641877+0100 OrderManagementSystem[9962:506032] Courier wait time: 3000 ms
+2022-01-14 09:28:35.638003+0100 OrderManagementSystem[9962:497627] Order received
+2022-01-14 09:28:35.638383+0100 OrderManagementSystem[9962:497627] Courier arrived
+2022-01-14 09:28:35.638671+0100 OrderManagementSystem[9962:497627] Order prepared
+2022-01-14 09:28:35.638941+0100 OrderManagementSystem[9962:497627] Order prepared
+2022-01-14 09:28:35.639190+0100 OrderManagementSystem[9962:497627] Courier arrived
+2022-01-14 09:28:35.639391+0100 OrderManagementSystem[9962:497627] Order picked up
+2022-01-14 09:28:35.639629+0100 OrderManagementSystem[9962:497627] Food wait time: 1999 ms
+2022-01-14 09:28:35.639721+0100 OrderManagementSystem[9962:497627] Courier dispatched
+2022-01-14 09:28:35.639963+0100 OrderManagementSystem[9962:497627] Order received
+2022-01-14 09:28:35.640048+0100 OrderManagementSystem[9962:497627] Courier dispatched
+2022-01-14 09:28:35.640237+0100 OrderManagementSystem[9962:497627] Order picked up
+2022-01-14 09:28:35.640412+0100 OrderManagementSystem[9962:497627] Courier wait time: 10999 ms
+2022-01-14 09:28:35.640603+0100 OrderManagementSystem[9962:497627] Order picked up
+2022-01-14 09:28:35.640773+0100 OrderManagementSystem[9962:497627] Food wait time: 7999 ms
+2022-01-14 09:28:35.643688+0100 OrderManagementSystem[9962:497627] Order picked up
+2022-01-14 09:28:35.644083+0100 OrderManagementSystem[9962:497627] Courier wait time: 4708 ms
+2022-01-14 09:28:35.935130+0100 OrderManagementSystem[9962:506032] Courier arrived
+2022-01-14 09:28:35.935529+0100 OrderManagementSystem[9962:506032] Order prepared
+2022-01-14 09:28:35.935890+0100 OrderManagementSystem[9962:506032] Courier arrived
+2022-01-14 09:28:35.936213+0100 OrderManagementSystem[9962:506032] Courier arrived
+2022-01-14 09:28:35.936473+0100 OrderManagementSystem[9962:506032] Order picked up
+2022-01-14 09:28:35.936729+0100 OrderManagementSystem[9962:506032] Food wait time: 5005 ms
+2022-01-14 09:28:36.637654+0100 OrderManagementSystem[9962:505643] Order received
+2022-01-14 09:28:36.637869+0100 OrderManagementSystem[9962:505643] Courier dispatched
+2022-01-14 09:28:36.638281+0100 OrderManagementSystem[9962:505643] Order received
+2022-01-14 09:28:36.638445+0100 OrderManagementSystem[9962:505643] Courier dispatched
+2022-01-14 09:28:36.638778+0100 OrderManagementSystem[9962:505643] Courier arrived
+2022-01-14 09:28:36.639072+0100 OrderManagementSystem[9962:505643] Order prepared
+2022-01-14 09:28:36.639377+0100 OrderManagementSystem[9962:505643] Order prepared
+2022-01-14 09:28:36.639668+0100 OrderManagementSystem[9962:505643] Order prepared
+2022-01-14 09:28:36.639955+0100 OrderManagementSystem[9962:505643] Order picked up
+2022-01-14 09:28:36.640230+0100 OrderManagementSystem[9962:505643] Courier wait time: 8000 ms
+2022-01-14 09:28:37.638603+0100 OrderManagementSystem[9962:505643] Order received
+2022-01-14 09:28:37.638802+0100 OrderManagementSystem[9962:505643] Courier dispatched
+2022-01-14 09:28:37.639260+0100 OrderManagementSystem[9962:505643] Order received
+2022-01-14 09:28:37.639429+0100 OrderManagementSystem[9962:505643] Courier dispatched
+2022-01-14 09:28:37.639832+0100 OrderManagementSystem[9962:505643] Courier arrived
+2022-01-14 09:28:37.640185+0100 OrderManagementSystem[9962:505643] Courier arrived
+2022-01-14 09:28:37.640476+0100 OrderManagementSystem[9962:505643] Order picked up
+2022-01-14 09:28:37.640787+0100 OrderManagementSystem[9962:505643] Food wait time: 6709 ms
+2022-01-14 09:28:37.641070+0100 OrderManagementSystem[9962:505643] Order prepared
+2022-01-14 09:28:37.641318+0100 OrderManagementSystem[9962:505643] Order picked up
+2022-01-14 09:28:37.641536+0100 OrderManagementSystem[9962:505643] Food wait time: 1000 ms
+2022-01-14 09:28:38.638673+0100 OrderManagementSystem[9962:505470] Order received
+2022-01-14 09:28:38.638875+0100 OrderManagementSystem[9962:505470] Courier dispatched
+2022-01-14 09:28:38.639253+0100 OrderManagementSystem[9962:505470] Order received
+2022-01-14 09:28:38.639441+0100 OrderManagementSystem[9962:505470] Courier dispatched
+2022-01-14 09:28:38.639814+0100 OrderManagementSystem[9962:505470] Order prepared
+2022-01-14 09:28:38.640113+0100 OrderManagementSystem[9962:505470] Courier arrived
+2022-01-14 09:28:38.640404+0100 OrderManagementSystem[9962:505470] Order prepared
+2022-01-14 09:28:38.640662+0100 OrderManagementSystem[9962:505470] Order picked up
+2022-01-14 09:28:38.640952+0100 OrderManagementSystem[9962:505470] Courier wait time: 2704 ms
+2022-01-14 09:28:38.641229+0100 OrderManagementSystem[9962:505470] Order prepared
+2022-01-14 09:28:38.641497+0100 OrderManagementSystem[9962:505470] Courier arrived
+2022-01-14 09:28:38.641749+0100 OrderManagementSystem[9962:505470] Courier arrived
+2022-01-14 09:28:38.642020+0100 OrderManagementSystem[9962:505470] Order picked up
+2022-01-14 09:28:38.642325+0100 OrderManagementSystem[9962:505470] Food wait time: 2704 ms
+2022-01-14 09:28:39.638522+0100 OrderManagementSystem[9962:505470] Order received
+2022-01-14 09:28:39.638659+0100 OrderManagementSystem[9962:505470] Courier dispatched
+2022-01-14 09:28:39.639008+0100 OrderManagementSystem[9962:505470] Order received
+2022-01-14 09:28:39.639151+0100 OrderManagementSystem[9962:505470] Courier dispatched
+2022-01-14 09:28:39.639441+0100 OrderManagementSystem[9962:505470] Courier arrived
+2022-01-14 09:28:39.639683+0100 OrderManagementSystem[9962:505470] Order prepared
+2022-01-14 09:28:39.639956+0100 OrderManagementSystem[9962:505470] Order prepared
+2022-01-14 09:28:39.640270+0100 OrderManagementSystem[9962:505470] Order prepared
+2022-01-14 09:28:39.640512+0100 OrderManagementSystem[9962:505470] Order picked up
+2022-01-14 09:28:39.640704+0100 OrderManagementSystem[9962:505470] Courier wait time: 1000 ms
+2022-01-14 09:28:39.640942+0100 OrderManagementSystem[9962:505470] Order picked up
+2022-01-14 09:28:39.641141+0100 OrderManagementSystem[9962:505470] Courier wait time: 6000 ms
+2022-01-14 09:28:39.641335+0100 OrderManagementSystem[9962:505470] Order picked up
+2022-01-14 09:28:39.641581+0100 OrderManagementSystem[9962:505470] Courier wait time: 3000 ms
+2022-01-14 09:28:40.432973+0100 OrderManagementSystem[9962:497627] Order prepared
+2022-01-14 09:28:40.638504+0100 OrderManagementSystem[9962:497627] Order received
+2022-01-14 09:28:40.638642+0100 OrderManagementSystem[9962:497627] Courier dispatched
+2022-01-14 09:28:40.638987+0100 OrderManagementSystem[9962:497627] Order received
+2022-01-14 09:28:40.639113+0100 OrderManagementSystem[9962:497627] Courier dispatched
+2022-01-14 09:28:41.637772+0100 OrderManagementSystem[9962:505471] Order received
+2022-01-14 09:28:41.637910+0100 OrderManagementSystem[9962:505471] Courier dispatched
+2022-01-14 09:28:41.638238+0100 OrderManagementSystem[9962:505471] Order received
+2022-01-14 09:28:41.638324+0100 OrderManagementSystem[9962:505471] Courier dispatched
+2022-01-14 09:28:41.638535+0100 OrderManagementSystem[9962:505471] Courier arrived
+2022-01-14 09:28:41.638752+0100 OrderManagementSystem[9962:505471] Order picked up
+2022-01-14 09:28:41.638962+0100 OrderManagementSystem[9962:505471] Food wait time: 6999 ms
+2022-01-14 09:28:42.431336+0100 OrderManagementSystem[9962:506032] Order prepared
+2022-01-14 09:28:42.431812+0100 OrderManagementSystem[9962:506032] Order prepared
+2022-01-14 09:28:42.432124+0100 OrderManagementSystem[9962:506032] Order prepared
+2022-01-14 09:28:42.432374+0100 OrderManagementSystem[9962:506032] Order picked up
+2022-01-14 09:28:42.432645+0100 OrderManagementSystem[9962:506032] Courier wait time: 10792 ms
+2022-01-14 09:28:42.432886+0100 OrderManagementSystem[9962:506032] Order prepared
+2022-01-14 09:28:42.433110+0100 OrderManagementSystem[9962:506032] Order picked up
+2022-01-14 09:28:42.433312+0100 OrderManagementSystem[9962:506032] Courier wait time: 7792 ms
+2022-01-14 09:28:42.433487+0100 OrderManagementSystem[9962:506032] Order picked up
+2022-01-14 09:28:42.433687+0100 OrderManagementSystem[9962:506032] Courier wait time: 3792 ms
+2022-01-14 09:28:42.637606+0100 OrderManagementSystem[9962:506032] Order received
+2022-01-14 09:28:42.637761+0100 OrderManagementSystem[9962:506032] Courier dispatched
+2022-01-14 09:28:42.638187+0100 OrderManagementSystem[9962:506032] Order received
+2022-01-14 09:28:42.638349+0100 OrderManagementSystem[9962:506032] Courier dispatched
+2022-01-14 09:28:43.134646+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:28:43.135036+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:28:43.135455+0100 OrderManagementSystem[9962:506096] Courier arrived
+2022-01-14 09:28:43.135768+0100 OrderManagementSystem[9962:506096] Courier arrived
+2022-01-14 09:28:43.136029+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:28:43.136279+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:28:43.136546+0100 OrderManagementSystem[9962:506096] Food wait time: 6496 ms
+2022-01-14 09:28:43.136792+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:28:43.137005+0100 OrderManagementSystem[9962:506096] Food wait time: 704 ms
+2022-01-14 09:28:43.638162+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:28:43.638313+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:28:43.638680+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:28:43.638802+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:28:43.926770+0100 OrderManagementSystem[9962:505470] Courier arrived
+2022-01-14 09:28:43.927126+0100 OrderManagementSystem[9962:505470] Courier arrived
+2022-01-14 09:28:43.927426+0100 OrderManagementSystem[9962:505470] Courier arrived
+2022-01-14 09:28:43.927682+0100 OrderManagementSystem[9962:505470] Order prepared
+2022-01-14 09:28:43.927926+0100 OrderManagementSystem[9962:505470] Order picked up
+2022-01-14 09:28:43.928145+0100 OrderManagementSystem[9962:505470] Food wait time: 792 ms
+2022-01-14 09:28:43.928390+0100 OrderManagementSystem[9962:505470] Order picked up
+2022-01-14 09:28:43.928634+0100 OrderManagementSystem[9962:505470] Food wait time: 5288 ms
+2022-01-14 09:28:44.637720+0100 OrderManagementSystem[9962:505470] Order received
+2022-01-14 09:28:44.637888+0100 OrderManagementSystem[9962:505470] Courier dispatched
+2022-01-14 09:28:44.638264+0100 OrderManagementSystem[9962:505470] Order received
+2022-01-14 09:28:44.638400+0100 OrderManagementSystem[9962:505470] Courier dispatched
+2022-01-14 09:28:45.233822+0100 OrderManagementSystem[9962:505470] Courier arrived
+2022-01-14 09:28:45.234382+0100 OrderManagementSystem[9962:505470] Courier arrived
+2022-01-14 09:28:45.234801+0100 OrderManagementSystem[9962:505470] Order picked up
+2022-01-14 09:28:45.235231+0100 OrderManagementSystem[9962:505470] Food wait time: 4801 ms
+2022-01-14 09:28:45.637657+0100 OrderManagementSystem[9962:505470] Order received
+2022-01-14 09:28:45.637789+0100 OrderManagementSystem[9962:505470] Courier dispatched
+2022-01-14 09:28:45.638150+0100 OrderManagementSystem[9962:505470] Order received
+2022-01-14 09:28:45.638267+0100 OrderManagementSystem[9962:505470] Courier dispatched
+2022-01-14 09:28:45.638864+0100 OrderManagementSystem[9962:506096] Courier arrived
+2022-01-14 09:28:45.639266+0100 OrderManagementSystem[9962:506096] Courier arrived
+2022-01-14 09:28:45.639713+0100 OrderManagementSystem[9962:506096] Courier arrived
+2022-01-14 09:28:45.640024+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:28:45.640262+0100 OrderManagementSystem[9962:506096] Food wait time: 7000 ms
+2022-01-14 09:28:45.640579+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:28:45.640890+0100 OrderManagementSystem[9962:506096] Courier arrived
+2022-01-14 09:28:45.641133+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:28:45.641394+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:28:45.641625+0100 OrderManagementSystem[9962:506096] Food wait time: 1712 ms
+2022-01-14 09:28:45.641839+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:28:45.643730+0100 OrderManagementSystem[9962:506096] Food wait time: 8000 ms
+2022-01-14 09:28:45.644122+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:28:45.644455+0100 OrderManagementSystem[9962:506096] Courier wait time: 9704 ms
+2022-01-14 09:28:46.637684+0100 OrderManagementSystem[9962:505470] Order prepared
+2022-01-14 09:28:46.638009+0100 OrderManagementSystem[9962:505470] Courier arrived
+2022-01-14 09:28:46.638311+0100 OrderManagementSystem[9962:505470] Order received
+2022-01-14 09:28:46.638558+0100 OrderManagementSystem[9962:505470] Order picked up
+2022-01-14 09:28:46.638822+0100 OrderManagementSystem[9962:505470] Courier wait time: 6999 ms
+2022-01-14 09:28:46.638948+0100 OrderManagementSystem[9962:505470] Courier dispatched
+2022-01-14 09:28:46.639233+0100 OrderManagementSystem[9962:505470] Order received
+2022-01-14 09:28:46.639485+0100 OrderManagementSystem[9962:505470] Order picked up
+2022-01-14 09:28:46.639723+0100 OrderManagementSystem[9962:505470] Food wait time: 3503 ms
+2022-01-14 09:28:46.639880+0100 OrderManagementSystem[9962:505470] Courier dispatched
+2022-01-14 09:28:47.236116+0100 OrderManagementSystem[9962:506098] Courier arrived
+2022-01-14 09:28:47.236532+0100 OrderManagementSystem[9962:506098] Order prepared
+2022-01-14 09:28:47.237024+0100 OrderManagementSystem[9962:506098] Order picked up
+2022-01-14 09:28:47.237416+0100 OrderManagementSystem[9962:506098] Courier wait time: 3309 ms
+2022-01-14 09:28:47.638922+0100 OrderManagementSystem[9962:505471] Order received
+2022-01-14 09:28:47.639234+0100 OrderManagementSystem[9962:505471] Courier dispatched
+2022-01-14 09:28:47.639707+0100 OrderManagementSystem[9962:505471] Order received
+2022-01-14 09:28:47.639894+0100 OrderManagementSystem[9962:505471] Courier dispatched
+2022-01-14 09:28:47.640268+0100 OrderManagementSystem[9962:505471] Order prepared
+2022-01-14 09:28:47.640642+0100 OrderManagementSystem[9962:505471] Courier arrived
+2022-01-14 09:28:47.640978+0100 OrderManagementSystem[9962:505471] Order prepared
+2022-01-14 09:28:47.641317+0100 OrderManagementSystem[9962:505471] Courier arrived
+2022-01-14 09:28:47.641650+0100 OrderManagementSystem[9962:505471] Order picked up
+2022-01-14 09:28:47.641964+0100 OrderManagementSystem[9962:505471] Food wait time: 4504 ms
+2022-01-14 09:28:47.642265+0100 OrderManagementSystem[9962:505471] Order prepared
+2022-01-14 09:28:48.638762+0100 OrderManagementSystem[9962:505471] Order received
+2022-01-14 09:28:48.638995+0100 OrderManagementSystem[9962:505471] Courier dispatched
+2022-01-14 09:28:48.639481+0100 OrderManagementSystem[9962:505471] Order received
+2022-01-14 09:28:48.639667+0100 OrderManagementSystem[9962:505471] Courier dispatched
+2022-01-14 09:28:48.640020+0100 OrderManagementSystem[9962:505471] Courier arrived
+2022-01-14 09:28:48.640417+0100 OrderManagementSystem[9962:505471] Courier arrived
+2022-01-14 09:28:48.640760+0100 OrderManagementSystem[9962:505471] Courier arrived
+2022-01-14 09:28:48.641029+0100 OrderManagementSystem[9962:505471] Courier arrived
+2022-01-14 09:28:48.641314+0100 OrderManagementSystem[9962:505471] Order picked up
+2022-01-14 09:28:48.641579+0100 OrderManagementSystem[9962:505471] Food wait time: 1000 ms
+2022-01-14 09:28:48.641861+0100 OrderManagementSystem[9962:505471] Courier arrived
+2022-01-14 09:28:49.638791+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:28:49.638996+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:28:49.639381+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:28:49.639565+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:28:49.639954+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:28:49.640321+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:28:49.640684+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:28:49.641035+0100 OrderManagementSystem[9962:506096] Courier wait time: 1000 ms
+2022-01-14 09:28:50.638228+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:28:50.638466+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:28:50.638998+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:28:50.639212+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:28:50.639591+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:28:50.639972+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:28:50.926678+0100 OrderManagementSystem[9962:506096] Courier arrived
+2022-01-14 09:28:51.638010+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:28:51.638218+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:28:51.638608+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:28:51.638772+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:28:51.639144+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:28:51.639479+0100 OrderManagementSystem[9962:506096] Courier arrived
+2022-01-14 09:28:51.639791+0100 OrderManagementSystem[9962:506096] Courier arrived
+2022-01-14 09:28:51.640069+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:28:51.640337+0100 OrderManagementSystem[9962:506096] Courier wait time: 2999 ms
+2022-01-14 09:28:51.640602+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:28:51.640847+0100 OrderManagementSystem[9962:506096] Food wait time: 1000 ms
+2022-01-14 09:28:52.638594+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:28:52.638754+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:28:52.639097+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:28:52.639248+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:28:52.639553+0100 OrderManagementSystem[9962:506096] Courier arrived
+2022-01-14 09:28:52.639857+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:28:52.640185+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:28:52.640460+0100 OrderManagementSystem[9962:506096] Food wait time: 7000 ms
+2022-01-14 09:28:52.640720+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:28:52.640954+0100 OrderManagementSystem[9962:506096] Courier arrived
+2022-01-14 09:28:52.641194+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:28:52.641429+0100 OrderManagementSystem[9962:506096] Courier wait time: 5403 ms
+2022-01-14 09:28:52.641672+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:28:52.641903+0100 OrderManagementSystem[9962:506096] Food wait time: 5000 ms
+2022-01-14 09:28:52.927161+0100 OrderManagementSystem[9962:506098] Order prepared
+2022-01-14 09:28:53.638839+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:28:53.639094+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:28:53.639580+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:28:53.639803+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:28:53.640156+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:28:53.640537+0100 OrderManagementSystem[9962:506096] Courier arrived
+2022-01-14 09:28:53.640898+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:28:53.641215+0100 OrderManagementSystem[9962:506096] Courier wait time: 6000 ms
+2022-01-14 09:28:53.641509+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:28:53.641785+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:28:53.642074+0100 OrderManagementSystem[9962:506096] Courier wait time: 8405 ms
+2022-01-14 09:28:53.642342+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:28:53.642597+0100 OrderManagementSystem[9962:506096] Food wait time: 4000 ms
+2022-01-14 09:28:54.637874+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:28:54.638176+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:28:54.638697+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:28:54.638965+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:28:55.637821+0100 OrderManagementSystem[9962:506098] Courier arrived
+2022-01-14 09:28:55.638189+0100 OrderManagementSystem[9962:506098] Order received
+2022-01-14 09:28:55.638527+0100 OrderManagementSystem[9962:506098] Order prepared
+2022-01-14 09:28:55.638805+0100 OrderManagementSystem[9962:506098] Order picked up
+2022-01-14 09:28:55.639036+0100 OrderManagementSystem[9962:506098] Food wait time: 2999 ms
+2022-01-14 09:28:55.639118+0100 OrderManagementSystem[9962:506098] Courier dispatched
+2022-01-14 09:28:55.639330+0100 OrderManagementSystem[9962:506098] Courier arrived
+2022-01-14 09:28:55.639611+0100 OrderManagementSystem[9962:506098] Order received
+2022-01-14 09:28:55.639738+0100 OrderManagementSystem[9962:506098] Courier dispatched
+2022-01-14 09:28:55.639989+0100 OrderManagementSystem[9962:506098] Order picked up
+2022-01-14 09:28:55.640215+0100 OrderManagementSystem[9962:506098] Courier wait time: 6999 ms
+2022-01-14 09:28:55.640400+0100 OrderManagementSystem[9962:506098] Courier arrived
+2022-01-14 09:28:55.640600+0100 OrderManagementSystem[9962:506098] Order picked up
+2022-01-14 09:28:55.640812+0100 OrderManagementSystem[9962:506098] Food wait time: 7999 ms
+2022-01-14 09:28:56.135204+0100 OrderManagementSystem[9962:497627] Courier arrived
+2022-01-14 09:28:56.135606+0100 OrderManagementSystem[9962:497627] Order prepared
+2022-01-14 09:28:56.638642+0100 OrderManagementSystem[9962:497627] Order received
+2022-01-14 09:28:56.638789+0100 OrderManagementSystem[9962:497627] Courier dispatched
+2022-01-14 09:28:56.639102+0100 OrderManagementSystem[9962:497627] Order received
+2022-01-14 09:28:56.639191+0100 OrderManagementSystem[9962:497627] Courier dispatched
+2022-01-14 09:28:56.639485+0100 OrderManagementSystem[9962:497627] Order prepared
+2022-01-14 09:28:56.639746+0100 OrderManagementSystem[9962:497627] Courier arrived
+2022-01-14 09:28:56.640000+0100 OrderManagementSystem[9962:497627] Order picked up
+2022-01-14 09:28:56.640203+0100 OrderManagementSystem[9962:497627] Courier wait time: 11000 ms
+2022-01-14 09:28:56.917552+0100 OrderManagementSystem[9962:505471] Order prepared
+2022-01-14 09:28:56.918052+0100 OrderManagementSystem[9962:505471] Order prepared
+2022-01-14 09:28:56.919201+0100 OrderManagementSystem[9962:505471] Order picked up
+2022-01-14 09:28:56.919673+0100 OrderManagementSystem[9962:505471] Courier wait time: 783 ms
+2022-01-14 09:28:56.920199+0100 OrderManagementSystem[9962:505471] Order picked up
+2022-01-14 09:28:56.920649+0100 OrderManagementSystem[9962:505471] Courier wait time: 5991 ms
+2022-01-14 09:28:57.638634+0100 OrderManagementSystem[9962:505471] Order received
+2022-01-14 09:28:57.638778+0100 OrderManagementSystem[9962:505471] Courier dispatched
+2022-01-14 09:28:57.639146+0100 OrderManagementSystem[9962:505471] Order received
+2022-01-14 09:28:57.639286+0100 OrderManagementSystem[9962:505471] Courier dispatched
+2022-01-14 09:28:57.639569+0100 OrderManagementSystem[9962:505471] Courier arrived
+2022-01-14 09:28:57.639802+0100 OrderManagementSystem[9962:505471] Order picked up
+2022-01-14 09:28:57.640019+0100 OrderManagementSystem[9962:505471] Food wait time: 7001 ms
+2022-01-14 09:28:58.030580+0100 OrderManagementSystem[9962:505471] Courier arrived
+2022-01-14 09:28:58.637838+0100 OrderManagementSystem[9962:505471] Order received
+2022-01-14 09:28:58.638044+0100 OrderManagementSystem[9962:505471] Courier dispatched
+2022-01-14 09:28:58.638429+0100 OrderManagementSystem[9962:505471] Order received
+2022-01-14 09:28:58.638554+0100 OrderManagementSystem[9962:505471] Courier dispatched
+2022-01-14 09:28:58.638880+0100 OrderManagementSystem[9962:505471] Order prepared
+2022-01-14 09:28:58.639196+0100 OrderManagementSystem[9962:505471] Courier arrived
+2022-01-14 09:28:58.639461+0100 OrderManagementSystem[9962:505471] Order picked up
+2022-01-14 09:28:58.639733+0100 OrderManagementSystem[9962:505471] Courier wait time: 3000 ms
+2022-01-14 09:28:58.640042+0100 OrderManagementSystem[9962:505471] Order prepared
+2022-01-14 09:28:58.640275+0100 OrderManagementSystem[9962:505471] Order prepared
+2022-01-14 09:28:58.640495+0100 OrderManagementSystem[9962:505471] Order picked up
+2022-01-14 09:28:58.640703+0100 OrderManagementSystem[9962:505471] Courier wait time: 0 ms
+2022-01-14 09:28:58.927023+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:28:58.927504+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:28:58.927973+0100 OrderManagementSystem[9962:506096] Courier arrived
+2022-01-14 09:28:59.638701+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:28:59.638896+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:28:59.639412+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:28:59.639695+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:28:59.640126+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:28:59.640571+0100 OrderManagementSystem[9962:506096] Courier arrived
+2022-01-14 09:28:59.640907+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:28:59.641189+0100 OrderManagementSystem[9962:506096] Courier wait time: 11000 ms
+2022-01-14 09:28:59.641473+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:28:59.641715+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:28:59.642001+0100 OrderManagementSystem[9962:506096] Courier arrived
+2022-01-14 09:28:59.642248+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:28:59.642463+0100 OrderManagementSystem[9962:506096] Courier wait time: 3000 ms
+2022-01-14 09:28:59.642683+0100 OrderManagementSystem[9962:506096] Courier arrived
+2022-01-14 09:28:59.642910+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:28:59.645705+0100 OrderManagementSystem[9962:506096] Food wait time: 6712 ms
+2022-01-14 09:29:00.638327+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:29:00.638516+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:29:00.639181+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:29:00.639322+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:29:00.639744+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:29:00.640153+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:29:00.640652+0100 OrderManagementSystem[9962:506096] Courier wait time: 9000 ms
+2022-01-14 09:29:00.641023+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:29:00.641328+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:29:00.641606+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:29:00.641905+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:29:00.642233+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:29:00.642466+0100 OrderManagementSystem[9962:506096] Courier wait time: 999 ms
+2022-01-14 09:29:01.638302+0100 OrderManagementSystem[9962:506098] Courier arrived
+2022-01-14 09:29:01.638630+0100 OrderManagementSystem[9962:506098] Order prepared
+2022-01-14 09:29:01.638980+0100 OrderManagementSystem[9962:506098] Order received
+2022-01-14 09:29:01.639255+0100 OrderManagementSystem[9962:506098] Courier arrived
+2022-01-14 09:29:01.639466+0100 OrderManagementSystem[9962:506098] Courier arrived
+2022-01-14 09:29:01.639742+0100 OrderManagementSystem[9962:506098] Order picked up
+2022-01-14 09:29:01.639987+0100 OrderManagementSystem[9962:506098] Courier wait time: 1999 ms
+2022-01-14 09:29:01.640097+0100 OrderManagementSystem[9962:506098] Courier dispatched
+2022-01-14 09:29:01.640326+0100 OrderManagementSystem[9962:506098] Order received
+2022-01-14 09:29:01.640439+0100 OrderManagementSystem[9962:506098] Courier dispatched
+2022-01-14 09:29:01.640655+0100 OrderManagementSystem[9962:506098] Order picked up
+2022-01-14 09:29:01.640869+0100 OrderManagementSystem[9962:506098] Food wait time: 1000 ms
+2022-01-14 09:29:01.641068+0100 OrderManagementSystem[9962:506098] Order picked up
+2022-01-14 09:29:01.641247+0100 OrderManagementSystem[9962:506098] Food wait time: 2711 ms
+2022-01-14 09:29:01.643721+0100 OrderManagementSystem[9962:506098] Order picked up
+2022-01-14 09:29:01.644168+0100 OrderManagementSystem[9962:506098] Food wait time: 3000 ms
+2022-01-14 09:29:01.822783+0100 OrderManagementSystem[9962:497627] Order prepared
+2022-01-14 09:29:01.823072+0100 OrderManagementSystem[9962:497627] Courier arrived
+2022-01-14 09:29:02.637884+0100 OrderManagementSystem[9962:505471] Courier arrived
+2022-01-14 09:29:02.638229+0100 OrderManagementSystem[9962:505471] Order received
+2022-01-14 09:29:02.638520+0100 OrderManagementSystem[9962:505471] Courier arrived
+2022-01-14 09:29:02.638794+0100 OrderManagementSystem[9962:505471] Order prepared
+2022-01-14 09:29:02.639047+0100 OrderManagementSystem[9962:505471] Courier arrived
+2022-01-14 09:29:02.639139+0100 OrderManagementSystem[9962:505471] Courier dispatched
+2022-01-14 09:29:02.639368+0100 OrderManagementSystem[9962:505471] Order received
+2022-01-14 09:29:02.639457+0100 OrderManagementSystem[9962:505471] Courier dispatched
+2022-01-14 09:29:02.639699+0100 OrderManagementSystem[9962:505471] Order picked up
+2022-01-14 09:29:02.639920+0100 OrderManagementSystem[9962:505471] Courier wait time: 0 ms
+2022-01-14 09:29:03.638019+0100 OrderManagementSystem[9962:505471] Order received
+2022-01-14 09:29:03.638474+0100 OrderManagementSystem[9962:505471] Courier arrived
+2022-01-14 09:29:03.638995+0100 OrderManagementSystem[9962:505471] Order picked up
+2022-01-14 09:29:03.639490+0100 OrderManagementSystem[9962:505471] Food wait time: 3999 ms
+2022-01-14 09:29:03.639624+0100 OrderManagementSystem[9962:505471] Courier dispatched
+2022-01-14 09:29:03.639919+0100 OrderManagementSystem[9962:505471] Order received
+2022-01-14 09:29:03.640064+0100 OrderManagementSystem[9962:505471] Courier dispatched
+2022-01-14 09:29:03.640376+0100 OrderManagementSystem[9962:505471] Courier arrived
+2022-01-14 09:29:03.640715+0100 OrderManagementSystem[9962:505471] Order picked up
+2022-01-14 09:29:03.640995+0100 OrderManagementSystem[9962:505471] Food wait time: 3000 ms
+2022-01-14 09:29:04.516671+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:29:04.517165+0100 OrderManagementSystem[9962:506096] Courier arrived
+2022-01-14 09:29:04.517605+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:29:04.518047+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:29:04.518394+0100 OrderManagementSystem[9962:506096] Food wait time: 8382 ms
+2022-01-14 09:29:04.518791+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:29:04.519099+0100 OrderManagementSystem[9962:506096] Courier wait time: 5590 ms
+2022-01-14 09:29:04.519419+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:29:04.519779+0100 OrderManagementSystem[9962:506096] Courier wait time: 2694 ms
+2022-01-14 09:29:04.638705+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:29:04.638871+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:29:04.639252+0100 OrderManagementSystem[9962:506096] Order received
+2022-01-14 09:29:04.639384+0100 OrderManagementSystem[9962:506096] Courier dispatched
+2022-01-14 09:29:04.639748+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:29:04.640154+0100 OrderManagementSystem[9962:506096] Courier arrived
+2022-01-14 09:29:04.640492+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:29:04.640751+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:29:04.641046+0100 OrderManagementSystem[9962:506096] Courier wait time: 2001 ms
+2022-01-14 09:29:04.641297+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:29:04.641518+0100 OrderManagementSystem[9962:506096] Courier arrived
+2022-01-14 09:29:04.641718+0100 OrderManagementSystem[9962:506096] Courier arrived
+2022-01-14 09:29:04.641936+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:29:04.642134+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:29:04.642308+0100 OrderManagementSystem[9962:506096] Food wait time: 4001 ms
+2022-01-14 09:29:04.642526+0100 OrderManagementSystem[9962:506096] Courier arrived
+2022-01-14 09:29:05.710862+0100 OrderManagementSystem[9962:505470] Order prepared
+2022-01-14 09:29:05.711355+0100 OrderManagementSystem[9962:505470] Order prepared
+2022-01-14 09:29:05.711754+0100 OrderManagementSystem[9962:505470] Order picked up
+2022-01-14 09:29:05.712204+0100 OrderManagementSystem[9962:505470] Courier wait time: 7680 ms
+2022-01-14 09:29:06.638943+0100 OrderManagementSystem[9962:505643] Courier arrived
+2022-01-14 09:29:06.639319+0100 OrderManagementSystem[9962:505643] Courier arrived
+2022-01-14 09:29:06.639770+0100 OrderManagementSystem[9962:505643] Order picked up
+2022-01-14 09:29:06.640117+0100 OrderManagementSystem[9962:505643] Food wait time: 2000 ms
+2022-01-14 09:29:06.640488+0100 OrderManagementSystem[9962:505643] Order prepared
+2022-01-14 09:29:06.640852+0100 OrderManagementSystem[9962:505643] Order picked up
+2022-01-14 09:29:06.641150+0100 OrderManagementSystem[9962:505643] Courier wait time: 2000 ms
+2022-01-14 09:29:07.935470+0100 OrderManagementSystem[9962:506097] Courier arrived
+2022-01-14 09:29:07.935907+0100 OrderManagementSystem[9962:506097] Order prepared
+2022-01-14 09:29:07.936304+0100 OrderManagementSystem[9962:506097] Courier arrived
+2022-01-14 09:29:07.936594+0100 OrderManagementSystem[9962:506097] Order prepared
+2022-01-14 09:29:07.936821+0100 OrderManagementSystem[9962:506097] Courier arrived
+2022-01-14 09:29:07.937035+0100 OrderManagementSystem[9962:506097] Order picked up
+2022-01-14 09:29:07.937228+0100 OrderManagementSystem[9962:506097] Food wait time: 3297 ms
+2022-01-14 09:29:07.937474+0100 OrderManagementSystem[9962:506097] Order picked up
+2022-01-14 09:29:07.937678+0100 OrderManagementSystem[9962:506097] Courier wait time: 0 ms
+2022-01-14 09:29:09.026421+0100 OrderManagementSystem[9962:505643] Order prepared
+2022-01-14 09:29:09.027011+0100 OrderManagementSystem[9962:505643] Courier arrived
+2022-01-14 09:29:09.027447+0100 OrderManagementSystem[9962:505643] Order picked up
+2022-01-14 09:29:09.027795+0100 OrderManagementSystem[9962:505643] Food wait time: 1090 ms
+2022-01-14 09:29:10.510640+0100 OrderManagementSystem[9962:497627] Courier arrived
+2022-01-14 09:29:10.511218+0100 OrderManagementSystem[9962:497627] Courier arrived
+2022-01-14 09:29:11.630629+0100 OrderManagementSystem[9962:506096] Courier arrived
+2022-01-14 09:29:11.631016+0100 OrderManagementSystem[9962:506096] Courier arrived
+2022-01-14 09:29:11.631393+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:29:11.631738+0100 OrderManagementSystem[9962:506096] Food wait time: 12704 ms
+2022-01-14 09:29:11.632089+0100 OrderManagementSystem[9962:506096] Order prepared
+2022-01-14 09:29:11.632358+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:29:11.632637+0100 OrderManagementSystem[9962:506096] Food wait time: 6992 ms
+2022-01-14 09:29:11.632913+0100 OrderManagementSystem[9962:506096] Order picked up
+2022-01-14 09:29:11.633188+0100 OrderManagementSystem[9962:506096] Courier wait time: 3695 ms
+2022-01-14 09:29:12.335554+0100 OrderManagementSystem[9962:505643] Order prepared
+2022-01-14 09:29:12.336125+0100 OrderManagementSystem[9962:505643] Order prepared
+2022-01-14 09:29:12.336511+0100 OrderManagementSystem[9962:505643] Order picked up
+2022-01-14 09:29:12.336864+0100 OrderManagementSystem[9962:505643] Courier wait time: 1824 ms
+2022-01-14 09:29:12.337210+0100 OrderManagementSystem[9962:505643] Courier arrived
+2022-01-14 09:29:12.337630+0100 OrderManagementSystem[9962:505643] Order prepared
+2022-01-14 09:29:12.338006+0100 OrderManagementSystem[9962:505643] Courier arrived
+2022-01-14 09:29:12.338354+0100 OrderManagementSystem[9962:505643] Order prepared
+2022-01-14 09:29:12.338632+0100 OrderManagementSystem[9962:505643] Order prepared
+2022-01-14 09:29:12.338968+0100 OrderManagementSystem[9962:505643] Order picked up
+2022-01-14 09:29:12.339263+0100 OrderManagementSystem[9962:505643] Courier wait time: 9697 ms
+2022-01-14 09:29:12.339564+0100 OrderManagementSystem[9962:505643] Order picked up
+2022-01-14 09:29:12.339875+0100 OrderManagementSystem[9962:505643] Courier wait time: 1824 ms
+2022-01-14 09:29:12.340171+0100 OrderManagementSystem[9962:505643] Order picked up
+2022-01-14 09:29:12.342410+0100 OrderManagementSystem[9962:505643] Food wait time: 10512 ms
+2022-01-14 09:29:12.342685+0100 OrderManagementSystem[9962:505643] Order picked up
+2022-01-14 09:29:12.342948+0100 OrderManagementSystem[9962:505643] Courier wait time: 7696 ms
+2022-01-14 09:29:13.935297+0100 OrderManagementSystem[9962:506032] Order prepared
+2022-01-14 09:29:13.936003+0100 OrderManagementSystem[9962:506032] Courier arrived
+2022-01-14 09:29:13.936521+0100 OrderManagementSystem[9962:506032] Order picked up
+2022-01-14 09:29:13.936862+0100 OrderManagementSystem[9962:506032] Food wait time: 8224 ms
+2022-01-14 09:29:13.937206+0100 OrderManagementSystem[9962:506032] Order picked up
+2022-01-14 09:29:13.937539+0100 OrderManagementSystem[9962:506032] Courier wait time: 9296 ms
+2022-01-14 09:29:15.727021+0100 OrderManagementSystem[9962:505643] Order prepared
+2022-01-14 09:29:15.727416+0100 OrderManagementSystem[9962:505643] Order prepared
+2022-01-14 09:29:15.727825+0100 OrderManagementSystem[9962:505643] Courier arrived
+2022-01-14 09:29:15.728183+0100 OrderManagementSystem[9962:505643] Order picked up
+2022-01-14 09:29:15.728542+0100 OrderManagementSystem[9962:505643] Courier wait time: 3392 ms
+2022-01-14 09:29:15.728892+0100 OrderManagementSystem[9962:505643] Order picked up
+2022-01-14 09:29:15.729168+0100 OrderManagementSystem[9962:505643] Courier wait time: 9088 ms
+2022-01-14 09:29:15.729488+0100 OrderManagementSystem[9962:505643] Order picked up
+2022-01-14 09:29:15.729786+0100 OrderManagementSystem[9962:505643] Food wait time: 6701 ms
+2022-01-14 09:29:17.638827+0100 OrderManagementSystem[9962:506097] Courier arrived
+2022-01-14 09:29:17.639201+0100 OrderManagementSystem[9962:506097] Order picked up
+2022-01-14 09:29:17.639612+0100 OrderManagementSystem[9962:506097] Food wait time: 5304 ms
+2022-01-14 09:29:17.639932+0100 OrderManagementSystem[9962:506097] Average order wait time: 4567 ms
+2022-01-14 09:29:17.640170+0100 OrderManagementSystem[9962:506097] Average courier wait time: 4694 ms
+
+```
+
+</details>
+
 
 ## Author
 
