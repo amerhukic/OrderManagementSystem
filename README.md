@@ -44,9 +44,9 @@ The project was developed as an iOS app that is used to run the simulation. To r
 
 For those who are interested in how the output looks like, here are some example runs:
 
-1. 
 <details> 
   <summary>FIFO strategy simulation</summary>
+  ```
 2022-01-14 09:22:09.722676+0100 OrderManagementSystem[9962:490547] -------------------------------------------------------------------------
 2022-01-14 09:22:09.724332+0100 OrderManagementSystem[9962:490547] Starting First-in-first-out strategy order management system simulation
 2022-01-14 09:22:09.724484+0100 OrderManagementSystem[9962:490547] -------------------------------------------------------------------------
@@ -844,6 +844,7 @@ For those who are interested in how the output looks like, here are some example
 2022-01-14 09:23:30.728556+0100 OrderManagementSystem[9962:490547] Food wait time: 3914 ms
 2022-01-14 09:23:30.728949+0100 OrderManagementSystem[9962:490547] Average order wait time: 1490 ms
 2022-01-14 09:23:30.729311+0100 OrderManagementSystem[9962:490547] Average courier wait time: 1027 ms
+```
 </details>
 
 ## Author
